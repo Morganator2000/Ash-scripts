@@ -1,0 +1,1620 @@
+#Commands that you will use frequently
+#(use * [item])
+#(autosell * [item])
+#(mallsell * [item])
+#(stash put * [item])
+#(pulverize -1 [item])
+#(make * [item])
+
+#First, use a bunch of items in your inventory to get more items. Also meat.
+
+use * ancient vinyl coin purse
+use * boxcar turtle
+use * big slimy cyst
+use * black pension check
+use * black picnic basket
+use * booze bindle
+use * Boozehounds Anonymous token
+use * briefcase
+use * canopic jar
+use * chest of the Bonerdagon
+use * fisherman's sack
+use * frat army fgf
+use * giant jar of protein powder
+use * government per-diem
+use * gnollish toolbox
+use * gnomish toolbox
+use * handful of tips
+use * Hippy army MPE
+use * Jolly Roger charrrm bracelet
+use * knob goblin lunchbox
+use * Knob Kitchen grab-bag
+use * lost key
+use * Old coin purse
+use * old leather wallet
+use * penultimate fantasy chest
+use * pile of candy
+use * red box
+use * returned thinknerd package
+use * scroll of pasta summoning
+use * shiny stones
+use * six pack of mountain stream
+use * smudged alchemical recipe
+use * stuffed treasure chest
+use * The lost pill bottle
+use * tonic djinn
+use * very overdue library book
+use * warm subject gift certificate
+
+
+#Then we're going to craft a few things. Note that sauceror potions will need to be manually crafted (there's a reminder for it).
+
+make * duct tape wallet
+use * duct tape wallet
+make * large cocoa eggshell fragment
+make * cocoa egg
+make * fishy fish lasagna
+make * gnat lasagna
+make * long pork lasagna
+make * sausage wonton
+make * tofu wonton
+make * grue egg omelette
+make * rusty metal key
+use * orcish meat locker
+make * opium grenade
+make * gatorskin umbrella
+
+#Once I've figured out how to multi-use items a few times, they'll go here too
+
+#Put these in the closet for later use
+
+closet put * adorable seal larva
+closet put * friendly cheez blob
+closet put * macaroni duck
+closet put * Memory of some delicious amino acids
+closet put * Memory of an A
+closet put * Memory of a C
+closet put * Memory of a G
+closet put * Memory of a T
+closet put * Memory of a CA base pair
+closet put * Memory of a CG base pair
+closet put * Memory of a CT base pair
+closet put * Memory of a GT base pair
+closet put * Memory of an AG base pair
+closet put * Memory of an AT
+closet put * Stray chihuahua
+closet put * untamable turtle
+closet put * unusual disco ball
+
+#Now to start getting rid of things.
+
+#Mallsell the valuable items. I'm also going to undercut now so I don't have to do it later.
+
+mallsell -300 11-leaf clover
+mallsell * 334 scroll
+mallsell -1 Asleep in the Cemetery
+mallsell * autumn dollar
+mallsell * bag of cheat-os
+mallsell * baggie of powdered sugar
+mallsell * bar of freeze-dried water
+mallsell * bed of coals
+mallsell * Benetton's Medley of Diversity
+mallsell -1 Biddy Cracker's Old-Fashioned Cookbook
+mallsell * black eyedrops
+mallsell -1 Blizzards I Have Died In
+mallsell * bowling ball
+mallsell * bugbear purification pill
+mallsell * bus pass
+mallsell * calavera concertina
+mallsell * can of sterno
+mallsell * charrrm bracelet
+mallsell -1 Chorale of Companionship
+mallsell -1 comfy coffin
+mallsell * Death Blossom
+mallsell * decanter of fine scotch
+mallsell * dieting pill
+mallsell * disembodied brain
+mallsell * Disposable Instant Camera
+mallsell -5 Dogsgotnonoz pills
+mallsell -1 drum machine
+mallsell -1 Elron's Explosive Etude
+mallsell * expensive cigar
+mallsell * evil golden arches
+mallsell * fairy gravy boat
+mallsell * fancy beef jerky
+mallsell -1 filth-encrusted futon
+mallsell * fishy fish lasagna
+mallsell -6 fizzing spore pod
+mallsell * flamin' bindle
+mallsell * flamin' whatshisname
+mallsell * Fleshazole™
+mallsell -1 freezin' bindle
+mallsell -1 frigid air mattress
+mallsell * glark cable
+mallsell * gnat lasagna
+mallsell * guy made of bee pollen
+mallsell * hobo fortress blueprints
+mallsell * iiti Kitty phone charm
+mallsell * imp air
+mallsell * incredible pizza
+mallsell * ivory cue ball
+mallsell * jar of frostigkraut
+mallsell -1 Kissin' Cousins
+mallsell * large box
+mallsell * leathery bat skin
+mallsell -1 Let Me Be!
+mallsell * long pork lasagna
+mallsell -1 lowercase N
+mallsell * lucky-ish pill
+mallsell * lucky surprise egg
+mallsell * mariachi toothpaste
+mallsell -10 Marvin's marvelous pill
+mallsell -1 Maxing, Relaxing
+mallsell * medium slimy cyst
+mallsell * Munchies pill
+mallsell -20 Napalm In The Morning™ candle
+mallsell -1 natty blue ascot
+mallsell * opera mask
+mallsell -1 orange peel hat
+mallsell * pewter claymore
+mallsell * pile of dusty animal bones
+mallsell -1 polka-dot bow tie
+mallsell * popular tart
+mallsell -1 Prelude of Precision
+mallsell -10 rainbow glitter candle
+mallsell * ratarang
+mallsell * Red Fox Glove
+mallsell * Red Pill
+mallsell -1 rusty hedge trimmers
+mallsell * rusty piece of rebar
+mallsell -10 savings bond
+mallsell * scented massage oil
+mallsell -1 Sensual Massage for Creeps
+mallsell * short writ of habeas corpus
+mallsell -1 sleazy bindle
+mallsell -10 slimy alveolus
+mallsell * small box
+mallsell * small slimy cyst
+mallsell -10 Smoldering Clover™ candle
+mallsell -10 soggy used band-aid
+mallsell * spectral jelly
+mallsell -1 spooky bindle
+mallsell * spooky music box mechanism
+mallsell -1 stained mattress
+mallsell * Steam Card: Dungeon Fist (#2)
+mallsell -1 stinkin' bindle
+mallsell -2 stone wool
+mallsell -1 Summer Nights
+mallsell -1 Tales from the Fireside
+mallsell * tiny slimy cyst
+mallsell * T.U.R.D.S. Key
+mallsell -1 The Ballad of Richie Thingfinder
+mallsell * Thinknerd blind-packed toy
+mallsell * tiny dancer
+mallsell * tomb ratchet
+mallsell * towel
+mallsell -1 Travels with Jerry
+mallsell * triad summoning scroll
+mallsell * twist of lime
+mallsell * Uncle Jick's Brownie Mix
+mallsell * vitachoconutriment capsule
+mallsell * wad of slimy rags
+mallsell * weremoose spit
+
+undercut
+
+#pulverize these equipments. Some of these are a "keep 1"
+
+pulverize * 'WILL WORK FOR BOOZE' sign
+pulverize * 1337 7r0uZ0RZ
+pulverize * 4-dimensional guitar
+pulverize -1 5-alarm saucepan
+pulverize -1 8-billed baseball cap
+pulverize * A butt tuba
+pulverize * accord ion
+pulverize * accordion file
+pulverize * Accordion of Jordion
+pulverize * accordionoid rocca
+pulverize * Acid-squirting flower
+pulverize * acoustic guitarrr
+pulverize -1 alarm accordion
+pulverize * amok putter
+pulverize * ancient ice cream scoop
+pulverize -1 ancient saucehelm
+pulverize * ancient stone fist
+pulverize * ancient stone head
+pulverize -1 angelhair culottes
+pulverize -1 ankh of badahnkadh
+pulverize -1 antique spyglass
+pulverize * armgun
+pulverize * Arrrgyle socks
+pulverize * asbestos apron
+pulverize * asparagus knife
+pulverize * attorney's badge
+pulverize * autocalliope
+pulverize * badass belt
+pulverize * badge of authority
+pulverize -1 bag of unfinished business
+pulverize * balaclava
+pulverize -1 bandolier of the spaghetti elemental
+pulverize * Baritone accordion
+pulverize * batblade
+pulverize * battered hubcap
+pulverize -1 beaten-up chucks
+pulverize * beer bong
+pulverize -1 beer helmet
+pulverize * beer-battered accordion
+pulverize * bejeweled cufflinks
+pulverize -1 bejeweled pledge pin
+pulverize * big bad voodoo mask
+pulverize -1 big red clown nose
+pulverize -1 bjorn's hammer
+pulverize * black blade
+pulverize * black cloak
+pulverize -1 bling of the new wave
+pulverize -1 bloodied surgical dungarees
+pulverize -1 bloody clown pants
+pulverize * bone abacus
+pulverize * bone bandoneon
+pulverize * bone flute
+pulverize * bonerdagon necklace
+pulverize -1 BOOtonniere
+pulverize * boss bat bling
+pulverize * boss bat britches
+pulverize * bottle opener belt buckle
+pulverize * boxing glove
+pulverize * breadchucks
+pulverize * broken sword
+pulverize * bronze breastplate
+pulverize * brown felt tophat
+pulverize * bullet necklace
+pulverize -1 bullet-proof corduroys
+pulverize * bum cheek
+pulverize * buoybottoms
+pulverize * butterfly knife
+pulverize -1 C.A.R.N.I.V.O.R.E. button
+pulverize * cardboard katana
+pulverize * Charleston shoes
+pulverize * charming flute
+pulverize * Chopsticks
+pulverize -1 claw of the infernal seal
+pulverize * claybender glasses
+pulverize -1 clown shoes
+pulverize * coal shovel
+pulverize -1 cod cape
+pulverize * Codpiece of the Goblin King
+pulverize * coffin lid
+pulverize -1 colander of em-er'il
+pulverize * cold water bottle
+pulverize * Colonel Mustard's Lonely Spades Club Jacket
+pulverize * compression stocking
+pulverize * corn holder
+pulverize * corncob pipe
+pulverize * Corporal Fennel's Lonely Clubs Club Jacket
+pulverize * creepy doll head
+pulverize * creepy mask
+pulverize * creepy voice box
+pulverize * crowbar
+pulverize * cup of infinite pencils
+pulverize * curmudgel
+pulverize * cyber-mattock
+pulverize -1 danglin' chad's loincloth
+pulverize -1 dead guy's watch
+pulverize * didgeridooka
+pulverize * Dirty hobo gloves
+pulverize -1 disco 'fro pick
+pulverize -1 disco banjo
+pulverize * dishrag
+pulverize -1 distressed denim pants
+pulverize * double-barreled sling
+pulverize -1 drafty drawers
+pulverize * draggin' ball hat
+pulverize * dress pants
+pulverize -1 dubious loincloth
+pulverize * duskwalker fangs
+pulverize -1 eerie fetish
+pulverize * eggbeater
+pulverize -1 el sombrero de lopez
+pulverize -1 elder turtle shell
+pulverize * elegant nightstick
+pulverize * elmley shades
+pulverize -1 enchanted handwarmer
+pulverize -1 extreme mittens
+pulverize -1 extreme scarf
+pulverize * f3d0r4
+pulverize * Fancy opera glasses
+pulverize -1 FantasyRealm Mage's Hat
+pulverize -1 FantasyRealm Rogue's Mask
+pulverize -1 FantasyRealm Warrior's Helm
+pulverize -1 filthy corduroys
+pulverize -1 filthy knitted dread sack
+pulverize * filthy pestle
+pulverize * finger cymbals
+pulverize * fire poi
+pulverize * flaming crutch
+pulverize * flaming talons
+pulverize * flask flops
+pulverize * flimsy clipboard
+pulverize * flowing hippy skirt
+pulverize -1 foolscap fool's cap
+pulverize * frayed rope belt
+pulverize * frigid hankyū
+pulverize * frilly shirt
+pulverize * frozen nunchaku
+pulverize -1 frozen turtle shell
+pulverize -1 frying brainpan
+pulverize * furniture dolly
+pulverize * ga-ga radio
+pulverize * gaia beads
+pulverize -1 galapagosian cuisses
+pulverize * garish pinky ring
+pulverize -1 garter of the turtle poacher
+pulverize -1 General Sage's Lonely Diamonds Club Jacket
+pulverize * ghost accordion
+pulverize * ghost toga
+pulverize * Giant artisanal rice peeler
+pulverize * giant cactus quill
+pulverize * giant designer sunglasses
+pulverize * giant foam finger
+pulverize * giant gym membership card
+pulverize * giant motorcycle boots
+pulverize * giant penguin keychain
+pulverize -1 giant pinky ring
+pulverize * giant safety pin
+pulverize * giant turkey leg
+pulverize * Glass Balls of the Goblin King
+pulverize * glowing red eye
+pulverize -1 gnawed-up dog bone
+pulverize * gnollish pie server
+pulverize * goat beard
+pulverize * goatskin umbrella
+pulverize * goblin autoblowgun
+pulverize * goblin hunting spear
+pulverize * gold lamé pants
+pulverize -1 goth kid t-shirt
+pulverize -1 grandfather watch
+pulverize * grassy cutlass
+pulverize * Grateful undead t-shirt
+pulverize -1 gravyskin belt of the sauceblob
+pulverize -1 groping claw
+pulverize * grungy bandana
+pulverize * Grungy flannel shirt
+pulverize * guancertina
+pulverize * guard turtle shell
+pulverize -1 guts necklace
+pulverize * half-melted spoon
+pulverize * half-sized guitar
+pulverize -1 Half-size scalpel
+pulverize * happiness
+pulverize * harem girl t-shirt
+pulverize * haunted paddle-ball
+pulverize * headhunter necktie
+pulverize * heavy leather-bound tome
+pulverize * hippy bongo
+pulverize * hippy medical kit
+pulverize * hippy protest button
+pulverize * hors d'oeuvre tray
+pulverize * hot plate
+pulverize -1 hothammer
+pulverize * infernal fife
+pulverize * infernal insoles
+pulverize -1 intimidating coiffure
+pulverize * irate sombrero
+pulverize * jacob's rung
+pulverize * jaunty feather
+pulverize * jefferson wings
+pulverize * jungle drum
+pulverize * Keel-haulin' knife
+pulverize * keg shield
+pulverize * kick-ass kicks
+pulverize * Kiss the knob apron
+pulverize * knob bugle
+pulverize * knob goblin deluxe scimitar
+pulverize -1 knob goblin elite helm
+pulverize -1 knob goblin elite pants
+pulverize -1 knob goblin elite polearm
+pulverize -1 knob goblin harem pants
+pulverize -1 knob goblin harem veil
+pulverize * knob goblin melon baller
+pulverize * knob goblin pants
+pulverize * knob goblin scimitar
+pulverize * knob goblin tongs
+pulverize * knob goblin uberpants
+pulverize -1 krakrox's loincloth
+pulverize -1 la hebilla del cinturon de lopez
+pulverize * leather chaps
+pulverize * leather mask
+pulverize -1 lederhosen of the night
+pulverize * little black book
+pulverize -1 loadstone
+pulverize * lockenstock sandals
+pulverize -1 longhaired hippy wig
+pulverize * lucky bottlecap
+pulverize * lucky cat collar
+pulverize * Lupine sword
+pulverize -1 mace of the tortoise
+pulverize * mama's squeezebox
+pulverize * maxwell's silver hammer
+pulverize * mesh cap
+pulverize * midriff scrub
+pulverize -1 mohawk wig
+pulverize * moose antlers
+pulverize * Mr. Joe's bangles
+pulverize * mullet wig
+pulverize -1 newman's own trousers
+pulverize * ninja hot pants
+pulverize * Non-Euclidean non-accordion
+pulverize * ocarina of space
+pulverize -1 oil shell
+pulverize -1 old sweatpants
+pulverize * orc wrist
+pulverize -1 orcish baseball cap
+pulverize -1 orcish cargo shorts
+pulverize -1 orcish frat-paddle
+pulverize * orcish stud finder
+pulverize * oven mitts
+pulverize * oversized pipe
+pulverize * oversized pizza cutter
+pulverize * oversized skullcap
+pulverize * panhandle panhandling hat
+pulverize -1 pasta spoon of peril
+pulverize -1 peace accordion
+pulverize * pentatonic accordion
+pulverize * perforated battle paddle
+pulverize -1 pillow shell
+pulverize * Pine-Fresh air freshener
+pulverize * pipe wrench
+pulverize * pitchfork
+pulverize * plastic guitar
+pulverize * pointed stick
+pulverize * Private Pepper's Lonely Hearts Club Jacket
+pulverize * professor what t-shirt
+pulverize -1 prohie's hat
+pulverize * punk rock jacket
+pulverize * pygmy briefs
+pulverize -1 pygmy concertinette
+pulverize * pygmy nose-bone
+pulverize * pygmy spear
+pulverize * ram stick
+pulverize -1 rare oboe
+pulverize * rave whistle
+pulverize * red badge
+pulverize * red book
+pulverize * red coat
+pulverize * red masque
+pulverize * red shirt
+pulverize -1 red shoe
+pulverize * red silk skirt
+pulverize * red X shield
+pulverize * red-hot poker
+pulverize -1 reinforced beaded headband
+pulverize * remaindered axe
+pulverize -1 remorseless knife
+pulverize * ridiculously huge sword
+pulverize * ridiculously overelaborate ninja weapon
+pulverize * ring of half-assed regeneration
+pulverize -1 rock and roll legend
+pulverize * round green sunglasses
+pulverize -1 round purple sunglasses
+pulverize * rubber gloves
+pulverize * rubber ribcage
+pulverize * rusty chain necklace
+pulverize -1 rusty grave robbing shovel
+pulverize * sabre teeth
+pulverize * Saturday night special
+pulverize * sawblade shield
+pulverize -1 Scalp of gorgolok
+pulverize * scorpion whip
+pulverize * serpentine sword
+pulverize * sewer snake
+pulverize -1 shellacked shell
+pulverize * shiny butcherknife
+pulverize -1 shocked shell
+pulverize * short-handled mop
+pulverize * silver cheese-slicer
+pulverize * silver pate knife
+pulverize -1 silver shrimp fork
+pulverize * sk8board
+pulverize * sleep mask
+pulverize -1 Slow Talkin' Elliot's dogtags
+pulverize * smirking shrunken head
+pulverize * snake shield
+pulverize * snarling wolf shield
+pulverize * snow queen crown
+pulverize -1 snowboarder pants
+pulverize -1 snowstick
+pulverize * sock garters
+pulverize * soggy wofl t-shirt
+pulverize * sommelier's towel
+pulverize * space tourist phaser
+pulverize * spaghetti cult mask
+pulverize * spaghetti cult rosary
+pulverize * spangly mariachi pants
+pulverize * spangly mariachi vest
+pulverize * spangly sombrero
+pulverize * sphygmomanometer
+pulverize * spiked femur
+pulverize * stolen necklace
+pulverize -1 surgical apron
+pulverize -1 surgical mask
+pulverize -1 tailbone shield
+pulverize * tarnished tastevin
+pulverize -1 teacher's pen
+pulverize * three-legged pants
+pulverize * tiny ninja sword
+pulverize * tip jar
+pulverize * tommy gun
+pulverize -1 tonguebone
+pulverize -1 transparent pants
+pulverize * troll britches
+pulverize -1 tube sock
+pulverize * unrequired jacket
+pulverize * vampire collar
+pulverize -2 vengeful spirit
+pulverize * viking helmet
+pulverize -1 volartta's bellbottoms
+pulverize * war tongs
+pulverize * weighted paperclip chain
+pulverize * whalebone corset
+pulverize * Whatsian Ionic Pliers
+pulverize -1 whatsit-covered turtle shell
+pulverize * white hat hacker t-shirt
+pulverize * white satin pants
+pulverize * white satin shield
+pulverize * white sword
+pulverize * Whoompa Fur Pants
+pulverize * wicker shield
+pulverize -1 wolfskull mask
+pulverize * wonderwall shield
+pulverize * wooden stakes
+pulverize * wool hat
+pulverize -1 wreath of laurels
+pulverize * wrench bracelet
+pulverize * ye olde navy fleece
+pulverize * yohohoyo
+pulverize -1 Zim Merman's guitar
+
+# Throw these into the clan stash.
+
+stash put -5 "DRINK ME" potion
+stash put * AutumnFest ale
+stash put * autumn-spice donut
+stash put -20 banana candle
+stash put -200 bottle of gin
+stash put -200 bottle of rum
+stash put -200 bottle of tequila
+stash put -200 bottle of vodka
+stash put -200 bottle of whiskey
+stash put * designer handbag
+stash put -5 ear candle
+stash put * meatball
+stash put -10 natural magick candle
+stash put * recipe of before yore: boris's beer
+stash put * recipe of before yore: honey bun of boris
+stash put * recipe of before yore: ratatouille de jarlsberg
+stash put * recipe of before yore: jarlsberg's vegetable soup
+stash put * recipe of before yore: pete's wily whey bar
+stash put * recipe of before yore: st. pete's sneaky smoothie
+stash put * recipe of before yore: boris's bread
+stash put * recipe of before yore: roasted vegetable of j.
+stash put * recipe of before yore: pete's rich ricotta
+stash put * recipe of before yore: roasted vegetable focaccia
+stash put * recipe of before yore: plain calzone
+stash put * recipe of before yore: baked veggie ricotta
+stash put * recipe of before yore: deep dish of legend
+stash put * recipe of before yore: calzone of legend
+stash put * recipe of before yore: pizza of legend
+stash put * roll of toilet paper
+stash put -1 Scent of a Human™ candle
+display put -1 spectre scepter
+stash put * stuffed crazy bastard sword
+stash put * stuffed martini
+stash put -1 The Beast Within™ candle
+stash put * useless powder
+stash put -20 votive of confidence
+
+#autosell the junk. Some of the more useful items will be kept around
+
+autosell -2 Aluminum Epsilon of Humility
+autosell -2 Blue Diamond of Honesty
+autosell -2 Copper Alpha of Sincerity
+autosell -2 Green Clover of Justice
+autosell -2 Iron Beta of Industry
+autosell -2 Lead Zeta of Chastity
+autosell -2 Nickel Gamma of Frugality
+autosell -2 Orange Star of Sacrifice
+autosell -2 Pink Heart of Spirit
+autosell -2 Purple Horseshoe of Honor
+autosell -2 Red Balloon of Valor
+autosell -2 Uranium Omega of Temperance
+autosell -2 Yellow Moon of Compassion
+autosell -2 Zinc Delta of Tranquility
+autosell * 1-ball
+autosell * 2-ball
+autosell * 20-lb can of rice and beans
+autosell * 30669 scroll
+autosell * 33398 scroll
+autosell * 3-ball
+autosell * 4-ball
+autosell * 5-ball
+autosell * 6-ball
+autosell * 7-ball
+autosell -1 7-foot dwarven mattock
+autosell * 8-ball
+autosell * 9-ball
+autosell -3 abominable blubber
+autosell * accidental cider
+autosell * actual tapas
+autosell * adder
+autosell * adder bladder
+autosell * agnolotti arboli
+autosell * all-purpose cleaner
+autosell * amok pudding
+autosell -1 amulet of extreme plot significance
+autosell * ancient frozen dinner
+autosell -5 ancient magi-wipes
+autosell * ancient poisoned dart
+autosell * ancient protein powder
+autosell * angry farmer candy
+autosell * annoying pitchfork
+autosell -1 antique accordion
+autosell * Argarggagarg's fang
+autosell * around the world
+autosell * ancient pills
+autosell * ant agonist
+autosell * ant hoe
+autosell * ant pick
+autosell * ant pitchfork
+autosell * ant rake
+autosell * ant sickle
+autosell * anticheese
+autosell * antique greaves
+autosell * antique helmet
+autosell * antique packet of ketchup
+autosell * antique shield
+autosell * antique spear
+autosell * Artisanal limoncello
+autosell * asbestos ore
+autosell * ASCII shirt
+autosell * awful poetry journal
+autosell * baby killer bee
+autosell * backwoods screwdriver
+autosell -5 bag of pygmy blood
+autosell * baggy rave pants
+autosell * balaclava baklava
+autosell * ballroom blintz
+autosell * banana peel
+autosell * Bar skin
+autosell * bargain flash powder
+autosell * barrrnacle
+autosell * baseball
+autosell * bat guano
+autosell * batgut
+autosell * batzle
+autosell * Battlie Light Saver
+autosell * batwing
+autosell * beach glass bead
+autosell * beer bomb
+autosell * beer-scented teddy bear
+autosell * beer-soaked mop
+autosell * big bass drum
+autosell * bilge wine
+autosell * bit-o-cactus
+autosell * black & tan
+autosell -3 black eye shadow
+autosell * black forest cake
+autosell * black forest ham
+autosell * black label
+autosell -3 black no. 2
+autosell * black pudding
+autosell * black snake skin
+autosell * Blackfly Chardonnay
+autosell * bloodstain stick
+autosell * blowdart
+autosell -1 book of matches
+autosell * booty chest charrrm
+autosell * booze-soaked cherry
+autosell * boring spaghetti
+autosell * bottle of alcohol
+autosell * bottle of cooking sherry
+autosell * bottle of laundry sherry
+autosell * bottle of monsieur bubble
+autosell * bottle of popskull
+autosell -5 bottle of ultravitamins
+autosell * bottlecap turtle
+autosell * bowl of cottage cheese
+autosell * box turtle
+autosell * brain-meltingly-hot chicken wings
+autosell * brass gear
+autosell * bread wand
+autosell * breakfast mess
+autosell * broken skull
+autosell -10 bronzed locust
+autosell * brown paper bag mask
+autosell * brown paper pants
+autosell * brown sugar cane
+autosell * bubblewrap ore
+autosell -12 bubblin' crude
+autosell * bucket of honey
+autosell -1 bugbear beanie
+autosell -1 Bugbear bungguard
+autosell * bunch of square grapes
+autosell * cactus fruit
+autosell * can of red minotaur
+autosell * Can of swiller
+autosell * candy necklace
+autosell * cannonball charrrm
+autosell * carbonated water lily
+autosell * cardboard ore
+autosell * cardboard wakizashi
+autosell * carob chunks
+autosell * carton of snake milk
+autosell * cast
+autosell * cat appendix
+autosell * catgut
+autosell * centipede eggs
+autosell * chaos butterfly
+autosell * cheap Chinese beer
+autosell * cheap cigar butt
+autosell * cheap plastic blowgun
+autosell * chicle de salchicha
+autosell * Chinese curse words
+autosell * chintzy accordion pin
+autosell * chintzy disco ball pendant
+autosell * chintzy noodle ring
+autosell * chintzy saucepan earring
+autosell * chintzy seal pendant
+autosell * chintzy turtle brooch
+autosell -10 chipotle wasabi cilantro aioli
+autosell * chorizo brownies
+autosell * chorizo taco
+autosell * chrome ore
+autosell * chunk of hot iron
+autosell -5 cigar box turtle
+autosell * cigarette lighter
+autosell * clay peace-sign bead
+autosell * cloaca grenade
+autosell * cloaca-cola
+autosell * clown skin
+autosell * club necklace
+autosell * clutch of dodecapede eggs
+autosell * coal dust
+autosell * cobb's knob wurstbrau
+autosell * cocktail napkin
+autosell * cold ninja mask
+autosell * colon annihilation sauce
+autosell * colorful toad
+autosell * combat fan
+autosell * comfy pillow
+autosell * communications windchimes
+autosell * concentrated magicalness pill
+autosell -2 Copper Alpha of Sincerity
+autosell * copper ha'penny charrrm
+autosell * Cookbook of the Damned
+autosell * cool mushroom
+autosell * cool spore pod
+autosell * cornuthaum
+autosell * costume sword
+autosell * crazy hobo notebook
+autosell * crazy little turkish delight
+autosell * cream stout
+autosell * creamsicle
+autosell * creepy ginger ale
+autosell * Crimbo Candy Cookbook
+autosell * crowbarrr
+autosell * Crown of the Goblin King
+autosell * crude voodoo doll
+autosell * crudles
+autosell * cruelty-free wine
+autosell * crusty hula hoop
+autosell * cupcake-in-a-cup
+autosell * Dad's brandy
+autosell * dance card
+autosell * deactivated putty buddy
+autosell * dead meat bun
+autosell * decorative fountain
+autosell * delicious noodles
+autosell * delicious spicy noodles
+autosell * demon skin
+autosell * dense meat stack
+autosell * dented harmonica
+autosell * depantsing bomb
+autosell * Desiccated apricot
+autosell * devil hair pasta
+autosell * diamond necklace
+autosell * diamond studded cane
+autosell * dinner roll
+autosell * dire fudgesicle
+autosell -1 disco ball
+autosell -1 disco mask
+autosell * disease
+autosell * disturbing fanfic
+autosell * dolphin King's crown
+autosell * dope gangsta bling-bling
+autosell * Dr. Hobo's scalpel
+autosell * drab sonata
+autosell * dragon snaps
+autosell * dried face
+autosell * droopy doll eye
+autosell * drum of tommy ammo
+autosell * dueling turtle
+autosell * dungeoneer's dungarees
+autosell * duskwalker syringe
+autosell * dusty bottle of Marsala
+autosell * dusty bottle of Merlot
+autosell * dusty bottle of Muscat
+autosell * dusty bottle of Pinot Noir
+autosell * dusty bottle of Port
+autosell * dusty bottle of Zinfandel
+autosell * dyspepsi grenade
+autosell * Dyspepsi-Cola
+autosell * eagle's milk
+autosell * ectoplasmic orbs
+autosell * electric snakebite
+autosell * elfin shortbread
+autosell * empty cloaca-cola bottle
+autosell * enchanted barbell
+autosell -3 enchanted bean
+autosell * enchanted toothpick
+autosell * energy drink IV
+autosell -3 enormous belt buckle
+autosell * enormous hoop earring
+autosell * exploding hacky-sac
+autosell * extra-flat panini
+autosell -1 extreme bi-polar fleece vest
+autosell -1 eyepatch
+autosell * fabric hardener
+autosell * fabric softener
+autosell * facehugging alien
+autosell * fancy bath salts
+autosell * Feng Shui for Big Dumb Idiots
+autosell * ferret bait
+autosell * fettucini Inconnu
+autosell * filthy hippy poncho
+autosell * fire of unknown origin
+autosell * fish-liver oil
+#autosell * fish-oil smoke bomb
+autosell * flaming mushroom
+autosell -1 flaregun
+autosell * flavorless gruel
+autosell * fleetwood chain
+autosell * fleetwood macaroni
+autosell * floorboard cruft
+autosell * flute of flat champagne
+autosell -1 foam noodle
+autosell * foon
+autosell * frat brats
+autosell * freshwater pearl necklace
+autosell * fricasseed brains
+autosell * fried air
+autosell * frigid ninja stars
+autosell * frozen mushroom
+autosell * funny bone
+autosell * furry fur
+autosell * furry green turtle
+autosell * furry pill
+autosell * fusilli marrownarrow
+autosell * fuzzy busby
+autosell * fuzzy earmuffs
+autosell * fuzzy montera
+autosell * gator shades
+autosell * gearbox necklace
+autosell * genalen bottle
+autosell * ghost key
+autosell * ghuol ears
+autosell * ghuol egg
+autosell * ghuol guolash
+autosell -1 giant discarded bottlecap
+autosell -1 giant discarded plastic fork
+autosell -1 giant discarded torn-up glove
+autosell * giant grain of protein powder
+autosell * giant heirloom grape tomato
+autosell * giant marshmallow
+autosell * giant moxie weed
+autosell * giant needle
+autosell * ginger snaps
+autosell * Gin-soaked blotter paper
+autosell -3 giraffe-necked turtle
+autosell * glass gnoll eye
+autosell * glass of baboon milk
+autosell * glob of cream cheese
+autosell * glob of enchanted icing
+autosell * glob of spoiled mayo
+autosell * glowing fungus
+autosell * glowing spore pod
+autosell * glowstick on a string
+autosell * gnatwing
+autosell * gnauga hide
+autosell * gnocchetti di Nietzsche
+autosell * gnoll lips
+autosell * gnoll teeth
+autosell * Gnollish flyswatter
+autosell * gnollish plunger
+autosell * gnollish slotted spoon
+autosell * goat cheese pizza
+autosell * gob of wet hair
+autosell * gold boozehounds anonymous token
+autosell * gold bowling ball
+autosell -2 gold wedding ring
+autosell -1 grave robbing shovel
+autosell * great big capacitor
+autosell * green manalishi
+autosell * gremlin juice
+autosell * grinning turtle
+autosell * grog
+autosell * grouchy restless spirit
+autosell * grumpy old man charrrm
+autosell -1 guilty sprout
+autosell -1 guitar pick
+autosell * gummi turtle
+autosell * gun cleaning kit
+autosell * gunky chicken
+autosell * guard turtle shell
+autosell * half of a gold tooth
+autosell * half-baked potion
+autosell * halfberd
+autosell * hand grenegg
+autosell * handful of hand chalk
+autosell * handful of moss
+autosell * handful of sawdust
+autosell * handful of walnuts
+autosell * handsomeness potion
+autosell * Hard spore pod
+autosell * haunted battery
+autosell * haunted hell ramen
+autosell -1 head mirror
+autosell * heart necklace
+autosell -3 heart of the volcano
+autosell * heavy D
+autosell * hedgeturtle
+autosell * heimandatz's heart
+autosell * hell ramen
+autosell * hellion cube
+autosell -1 helmet turtle
+autosell * hemp string
+autosell * henna face paint
+autosell -1 hermit permit
+autosell * hill of beans
+autosell -1 Hollandaise helmet
+autosell * honey-dipped locust
+autosell * hot coal
+autosell * hot date
+autosell * hot katana blade
+autosell * hot spore pod
+autosell * hot wing
+autosell * huge spoon
+autosell * ice-cold fotie
+autosell * ice-cold sir schlitz
+autosell * Ice-cold willer
+autosell * icy katana hilt
+autosell * Imitation White Russian
+autosell * imp ale
+autosell * imp unity ring
+autosell * industrial strength starch
+autosell -1 inflatable duck
+autosell * ingot turtle
+autosell * insanely spicy bean burrito
+autosell * irradiated turtle
+autosell * jabañero-flavored chewing gum
+autosell * Jack-in-the-box
+autosell * jingling spore pod
+autosell * jocko homo's head
+autosell * Jolly Roger charrrm
+autosell * jumping bean burrito 
+autosell * jungle floor wax
+autosell -1 ketchup hound
+autosell -1 killing jar
+autosell * kneecapping stick
+autosell * Knob Goblin elite shirt
+autosell * knob goblin firecracker
+autosell * Knob Goblin learning pill
+autosell * knob goblin love potion
+autosell * knob goblin perfume
+autosell * knob goblin seltzer
+autosell * knob goblin spatula
+autosell * knob goblin steroids
+autosell * knob goblin visor
+autosell * knob jelly donut
+autosell * knob ka-bobs
+autosell * knob mushroom
+autosell * knob nuts
+autosell * knob sausage
+autosell * Knob stroganoff
+autosell * Knob stuffed shells
+autosell * knobby helmet turtle
+autosell * knoll mushroom
+autosell * leaf of grass
+autosell * leather bookmark
+autosell * leathery cat skin
+autosell * leathery rat skin
+autosell * leftovers of indeterminate origin
+autosell * lemon popsicle
+autosell * leotarrrd
+autosell * lihc eye
+autosell * lihc face
+autosell * lime-and-chile-flavored chewing gum
+autosell * linguini immondizia bianco
+autosell * linoleum ore
+autosell * long skinny balloon
+autosell * loose teeth
+autosell * low-budget shield
+autosell * lump of diamond
+autosell * lynyrd snare
+autosell * Mad train wine
+autosell * magic whistle
+autosell * magical baguette
+autosell * magicalness-in-a-can
+autosell * Magilaser blastercannon
+autosell -1 makeshift cape
+autosell -1 makeshift skirt
+autosell -1 makeshift turban
+autosell * mana curds
+autosell * mangled finger
+autosell * maple syrup
+autosell * mariachi g-string
+autosell -1 mariachi hat
+autosell * martini
+autosell * marzipan skull
+autosell * meat stack
+autosell * meat vortex
+autosell * meleegra pills
+autosell * melted jell-o shot
+autosell * menudo ravioli
+autosell * metallic A
+autosell * Mick's IcyVapoHotness Rub
+autosell * mind flayer corpse
+autosell -1 miner's helm
+autosell -1 miner's pants
+autosell * miniature boiler
+autosell * molotov cocktail cocktail
+autosell -1 Mother's necklace
+autosell * monkey wrench
+autosell * moose chocolate
+autosell * moose thought
+autosell * mornington crescent roll
+autosell * mostly-broken sunglasses
+autosell * mother's little helper
+autosell * mountain stream soda
+autosell * mouse skull
+autosell * moxie weed
+autosell * mt. mclargehuge oyster
+autosell * misty cloak
+autosell * misty cape
+autosell * misty robe
+autosell * mushroom filet
+autosell * mushroom pizza
+autosell * Nardz energy beverage
+autosell * Necrotelicomnicon
+autosell -500 new age healing crystal
+autosell -500 new age hurting crystal
+autosell * ninja mop
+autosell * oil of parrrlay
+autosell * one pill
+autosell * open sauce
+autosell -10 orcish hand lotion
+autosell -10 orcish nailing lube
+autosell -10 orcish rubber
+autosell * Original G
+autosell * O'RLY manual
+autosell * ornate picture frame
+autosell * out-of-tune biwa
+autosell * overcookie
+autosell * pacifier necklace
+autosell * PADL phone
+autosell -1 pail
+autosell * painful penne pasta
+autosell * painting of a glass of wine
+autosell * paisley spore pod
+autosell * Pants of the slug lord
+autosell * Panty raider camouflage
+autosell -1 pasta spoon
+autosell * Patchouli incense stick
+autosell * patchouli oil bomb
+autosell -1 peanut brittle shield
+autosell * pec oil
+autosell * pencil kunai
+autosell * pencil stub
+autosell * pestopiary
+autosell * phat turquoise bead
+autosell * philosopher's scone
+autosell * photoprotoneutron torpedo
+autosell * physiostim pill
+autosell * pickle-flavored chewing gum
+autosell * pie man was not meant to eat
+autosell * piece of wedding cake
+autosell * pigeon egg
+autosell * pile of gold coins
+autosell * pill cup
+autosell -2 Pink Heart of Spirit
+autosell * pink slime
+autosell * pirate pelvis
+autosell * plaid swatch
+autosell * plain bagel
+autosell * plain pizza
+autosell * plain snowcone
+autosell * plot hole
+autosell * pocket theremin
+autosell * pointy mushroom
+autosell * polysniff perfume
+autosell -1 pool cue
+autosell * pool of liquid metal
+autosell -20 pool torpedo
+autosell * potion of fishy speed
+autosell * poultrygeist
+autosell * poutine
+autosell * powdered donut
+autosell * powdered organs
+autosell * pr0n legs
+autosell * pr0n m4nic0tti
+autosell * pr0n taco
+autosell * premium malt liquor
+autosell * probability potion
+autosell * procrastination potion
+autosell -10 programmable turtle
+autosell * Protein paste
+autosell * Psychotic Train wine
+autosell * pygmy blowgun
+autosell * pygmy phone number
+autosell * Pygmy pygment
+autosell * quasi-ethereal macaroni fragments
+autosell * ram horns
+autosell * ram's face lager
+autosell * rat appendix
+autosell * rat appendix kabob
+autosell * rat appendix stir-fry
+autosell * ratgut
+autosell * ratini
+autosell * rave visor
+autosell * ravioli della hippy
+autosell -1 ravioli hat
+autosell * raw bread
+autosell * razor-sharp can lid
+autosell * really dense meat stack
+autosell * really thick spine
+autosell * red-and-green sweater
+autosell -10 red blood cells
+autosell * red button
+autosell * red eye
+autosell -1 red foxglove
+autosell * red-hot boilermaker
+autosell * red letter
+autosell * red red wine
+autosell * Red Rover BB gun
+autosell * red rum
+autosell * red velvet cake
+autosell * red wagon
+autosell * redrum
+autosell -1 rice bowl
+autosell * rickety old unicycle
+autosell * ring of aggravate monster
+autosell * roasted duck
+autosell * robot grease
+autosell * rocky raccoon
+autosell * royal jelly
+autosell * rubber WWBD? bracelet
+autosell * rubber WWJD? bracelet
+autosell * rubber WWSPD? bracelet
+autosell * rubber WWtNSD? bracelet
+autosell * rum and cola
+autosell * rum barrel charrrm
+autosell * safari jack's moustache
+autosell * safarrri hat
+autosell * sake bomb
+autosell * salacious crumbs
+autosell * samurai turtle
+autosell -1 saucepan
+autosell * sausage pizza
+autosell * savoy truffle
+autosell -1 seal-clubbing club
+autosell -1 seal-skull helmet
+autosell * sewer turtle
+autosell * sham champagne
+autosell * sheet cake
+autosell * shells a la shellfish
+autosell * shingle
+autosell * shiny hood ornament
+autosell * shiny tribal beads
+autosell * short calculator
+autosell * shot of rotgut
+autosell * shuriken salad
+autosell * silver salt-shaker
+autosell * silver tongue charrrm
+autosell * Sinful Desires
+autosell -5 single-use dust mask
+autosell * skeleton bone
+autosell * skeletortoise
+autosell * skewer
+autosell * sleeping wereturtle
+autosell -20 slimy fermented bile bladder
+autosell -20 slimy sweetbreads
+autosell * smart skull
+autosell * snailmail bits
+autosell * snifter of thoroughly aged brandy
+autosell * solid gold pegleg
+autosell -1 sonar-in-a-biscuit
+autosell * soup turtle
+autosell * space blanket
+autosell * space tours tripple
+autosell * spade necklace
+autosell * spagecialetti
+autosell * spaghetti con calaveras
+autosell * spaghetti with ghost balls
+autosell * spaghetti with Skullheads
+autosell * Spam Witch sammich
+autosell * spark plug earring
+autosell * spiced rum
+autosell * spicy noodles
+autosell * Spider Web
+autosell * sponge cake
+autosell * spooky alphabet block
+autosell -5 spooky mushroom
+autosell * spooky shrunken head
+autosell * spooky sound effects record
+autosell * spooky stick
+autosell * spork
+autosell * squat-thrust magazine
+autosell * stale baguette
+autosell * stalk of asparagus
+autosell * Steam Card: Dungeon Fist (#1)
+autosell * Steam Card: Dungeon Fist (#3)
+autosell * Steam Card: Space Trip (#1)
+autosell * Steam Card: Space Trip (#2)
+autosell * Steam Card: Space Trip (#3)
+autosell * Steam Card: Meteoid (#1)
+autosell * Steam Card: Meteoid (#2)
+autosell * Steam Card: Meteoid (#3)
+autosell * Steam Card: DemonStar (#1)
+autosell * Steam Card: DemonStar (#2)
+autosell * Steam Card: DemonStar (#3)
+autosell * Steam Card: Jackass Plumber (#1)
+autosell * Steam Card: Jackass Plumber (#2)
+autosell * Steam Card: Jackass Plumber (#3)
+autosell * stinky mushroom
+autosell -1 stolen accordion
+autosell * stolen office supplies
+autosell * stolen sushi
+autosell * stone of eXtreme power
+autosell * strawberry daiquiri
+autosell * strongness elixir
+autosell * stuffed angry cow
+autosell * stuffed astral badger
+autosell * stuffed baby gravy fairy
+autosell * stuffed Baron von Ratsworth
+autosell * stuffed Cheshire bitten
+autosell * stuffed cocoabo
+autosell * stuffed flaming gravy fairy
+autosell * stuffed frozen gravy fairy
+autosell * stuffed hand turkey
+autosell * stuffed MagiMechTech MicroMechaMech
+autosell * stuffed Meat
+autosell * stuffed mind flayer
+autosell * stuffed mink
+autosell * stuffed monocle
+autosell * stuffed scary death orb
+autosell -1 stuffed shoulder parrot
+autosell * stuffed sleazy gravy fairy
+autosell * stuffed snowy owl
+autosell * stuffed spooky gravy fairy
+autosell * stuffed stinky gravy fairy
+autosell * stuffed teddy butler
+autosell * stuffed tin of caviar
+autosell * stuffed undead elbow macaroni
+autosell * stunt nuts
+autosell * stylish swimsuit
+autosell * styrofoam ore
+autosell * succulent marrow
+autosell * suggestive strozzapreti
+autosell -1 sunken chest
+autosell * suntan lotion of moxiousness
+autosell * supernova champagne
+autosell * Super-spiky hair gel
+autosell * suspicious-looking fedora
+autosell * Swabbie™ swab
+autosell * swamp haunch
+autosell -1 swashbuckling pants
+autosell * Sweet roll Alabama
+autosell * syncopated turtle
+autosell * synthetic marrow
+autosell * t8r tots
+autosell * taco shell
+autosell * Tambourine bells
+autosell * tap shoes
+autosell * tarrrnish charrrm
+autosell * tassel
+autosell * Tasty fun good rice candy
+autosell * teddy bear backpack
+autosell * teeny-tiny ninja stars
+autosell -1 tenderizing hammer
+autosell * tequila grenade
+autosell * terrible poem
+autosell * that gum you like
+autosell * the funk
+autosell * the mariachi's guitar case
+autosell * third-hand nunchaku
+autosell * Thistle wine
+autosell * throwing fork
+autosell * throwing knife
+autosell * throwing spoon
+autosell * Tiger-lily's milk
+autosell * tiny bowler
+autosell * tiny house
+autosell -1 tires
+autosell * true grit
+autosell * typical tavern swill
+autosell * Tom's of the Spanish Main Toothpaste
+autosell * tongue depressor
+autosell * tortoboggan
+autosell * torquois
+autosell * towel
+autosell * trollhouse cookies
+autosell * tube of dread wax
+autosell * tube of hair oil
+autosell * tube of herbal ointment
+autosell * Tuesday's ruby
+autosell -1 turtle totem
+autosell * turtle wax
+autosell * turtle-shaped rock
+autosell * turtlemail bits
+autosell * uncooked chorizo
+autosell * unflavored wine cooler
+autosell * unidentified jerky
+autosell * unnamed cocktail
+autosell * unrefined mountain stream syrup
+autosell * valuable trinket
+autosell * vampire chowder
+autosell * veiny spore pod
+autosell * very overdue library book
+autosell * vial of squid ink
+autosell * vial of the glistening
+autosell * vinegar-soaked lemon slice
+autosell * vitamin g pill
+autosell * void burger
+autosell * void lager
+autosell * void stone
+autosell * vorpal blade
+autosell * wad of tofu
+autosell * warm mushroom
+autosell * water pipe bomb
+autosell -1 water wings
+autosell * watered-down Red Minotaur
+autosell * white chocolate chips
+autosell * white collar
+autosell * white lightning
+autosell * white picket fence
+autosell * white snake skin
+autosell * Wind-up ensign
+autosell * Wind-up navigation droid
+autosell * Wind-up owl
+autosell * Wind-up vampire teeth
+autosell * Wind-up whatsian robot
+autosell * witty rapier
+autosell * wolf mask
+autosell * world's smallest violin
+autosell * worn tophat
+autosell * woven baling wire bracelets
+autosell * wussiness potion
+autosell * X-37 gun
+autosell * Yak skin
+autosell * yakisoba's hat
+autosell * ye olde bawdy limerick
+autosell * ye olde meade
+autosell * ye olde medieval insult
+autosell * yummy tummy bean
+autosell -1 Ze™ goggles
+
+#Get rid of those god-damnned avatar-changing potions. No one likes you.
+
+autosell * A muse-bouche
+autosell * Agent Corrigan's cigarette
+autosell * alien autoautopsy kit
+autosell * alien hologram projector
+autosell * artisanal hand-squeezed wheatgrass juice
+autosell * ASCII fu manchu
+autosell * assassin's cheese knife
+autosell * bag of random words
+autosell * baggie of regular-sized tardigrades
+autosell * baloney rotgut
+autosell * Bangyomaman battle juice
+autosell * batarang
+autosell * black friar's tonsure
+autosell * black magic powder
+autosell * blob of acid
+autosell * blue oyster badge
+autosell * booby trap
+autosell * bottle of Red-Out
+autosell * BRICKO stud
+autosell * brigand brittle
+autosell * bronze polish
+autosell * BUBBLE GUM
+autosell * bubblin' chemistry solution
+autosell * bucket of fish juice
+autosell * bull blubber
+autosell * button rouge
+autosell * can of drain cleaner
+autosell * captured boozles
+autosell * carton of gaspers
+autosell * censored can label
+autosell * Charity's choker
+autosell * cheap clip-on ninja tie
+autosell * child-sized dracula cloak
+autosell * clove-flavored lip balm
+autosell * coal contact lenses
+autosell * compressed air canister
+autosell * conjured ice cream
+autosell * costume rental shop
+autosell * Cracklin' Oat Bran
+autosell * creepy nursery rhyme
+autosell * crident
+autosell * cube of ectoplasm
+autosell * damp bar rag
+autosell * dancing fan
+autosell * demonic surgical gloves
+autosell * devil-summoning hat
+autosell * disposable lighter
+autosell * drinks tray
+autosell * Dweebisol™ inhaler
+autosell * ectoplasm au jus
+autosell * eldritch dough
+autosell * electric copperhead potion
+autosell * embezzler's oil
+autosell * Enchanted Flyswatter
+autosell * enchanted muesli
+autosell * Enchanted Plunger
+autosell * eyebrow lifter
+autosell * filthy armor
+autosell * filthy monkey head
+autosell * fireclutch
+autosell * Fitspiration™ poster
+autosell * flashy pirate dreadlocks
+autosell * flask of rainwater
+autosell * flayed mind
+autosell * forest spirit rattle
+autosell * frog lip-print
+autosell * Fu Manchu Wax
+autosell * funky eyepatch
+autosell * gamer slurry
+autosell * garbage juice slurpee
+autosell * gazely stare
+autosell * Gearhead Goo
+autosell * giant breath mint
+autosell * giant neckbeard
+autosell * giant tube of black lipstick
+autosell * gilt perfume bottle
+autosell * glass of gnat milk
+autosell * glass of warm milk
+autosell * Gnollish Crossdress
+autosell * gold toothbrush
+autosell * good ash
+autosell * government-issue identification badge
+autosell * grease trap
+autosell * grey cube
+autosell * grimy lab coat
+autosell * hand of cards
+autosell * handful of fire
+autosell * handful of stubble
+autosell * handyman "hand soap"
+autosell * haunted flame
+autosell * hawkface potion
+autosell * henna tattoo
+autosell * holistic headache remedy
+autosell * hustler shades
+autosell * Iceberglar scarf
+autosell * icy hairspray
+autosell * Iiti Kitty Gumdrop
+autosell * illuminati earpiece
+autosell * infrablack lipstick
+autosell * invisibility cream
+autosell * iron torso box
+autosell * janglin' bones
+autosell * janitor's mop
+autosell * jazzy cigarette holder
+autosell * Knob Goblin Mutagen
+autosell * kobold kibble
+autosell * Kudzu slaw
+autosell * leather glove
+autosell * Leonard's glasses
+autosell * Lewd Lemmy Hair Oil
+autosell * little red .epub file
+autosell * lucky cat's paw
+autosell * lump of goofball ore
+autosell * lynyrd skinner toothblack
+autosell * Mansquito's blood
+autosell * mercenary headband
+autosell * Missing Eye Simulation Device
+autosell * muscle oil
+autosell * ninja eyeblack
+autosell * ninja fear powder
+autosell * novelty fruit hat
+autosell * oil-filled donut
+autosell * one glove
+autosell * Osk'r Chow
+autosell * page of the Necrohobocon
+autosell * perpendicular guano
+autosell * pickpocket protector
+autosell * piggy tattoo
+autosell * pirate cream pie
+autosell * plague pie
+autosell * plastic Jefferson wings
+autosell * plunge-leg
+autosell * porkpocket
+autosell * punk patch
+autosell * pygmy adder oil
+autosell * pygmy dart
+autosell * pygmy papers
+autosell * pygmy witchhazel
+autosell * question juice
+autosell * radioactive spider venom
+autosell * ravenous eye
+autosell * Red Army camouflage kit
+autosell * red-hot jawbreaker
+autosell * Redeye™ Eyedrops
+autosell * Rogue Windmill Rouge
+autosell * salt water taffy
+autosell * scrunchie tourniquet
+autosell * Scuba Snack
+autosell * secret mummy herbs and spices
+autosell * shamanic ham
+autosell * Shivering Chèvre
+autosell * shopkeeper beard
+autosell * short deposition
+autosell * sinister-looking cat
+autosell * skelelton spine
+autosell * skeletal banana
+autosell * skeleton beans
+autosell * Skullery Maid's Knee
+autosell * Smart Bone Dust
+autosell * smellbook
+autosell * smut orc sunglasses
+autosell * space marine flash grenade
+autosell * spare neck bolts
+autosell * spicy jerky stick
+autosell * spooky gravy fairy warlock hat
+autosell * spray chrome
+autosell * steampunk potion
+autosell * stick-on gnome beard
+autosell * Stone Golem pebbles
+autosell * straw pole
+autosell * Tears of the Quiet Healer
+autosell * temporary tribal tattoo
+autosell * temporary yak tattoo
+autosell * The Author's inkwell
+autosell * the kindest cold cut
+autosell * tiny canopic jar
+autosell * tomato soup poster
+autosell * totally sweet mohawk helmet
+autosell * tube of pendulum lube
+autosell * tube of villain white
+autosell * turtle mud
+autosell * una poca de gracia
+autosell * unholy water
+autosell * vial of patchouli oil
+autosell * vial of swamp vapors
+autosell * voodoo glowskull
+autosell * votive candle
+autosell * warehouse clerk's glasses
+autosell * warehouse walkie-talkie
+autosell * White Chocolate Golem Seeds
+autosell * wrestling mask
+autosell * x-ray mirror
+autosell * zombie hollandaise
+autosell * Überraschthexengebräu
+
+#Send some stuff to Buffy
+send * antique bottle of cough syrup, * black sheepskin diploma, * bubbly potion, * funky dried mushroom, * glittery mascara, * handful of nuts and berries, * Mae West, * melted Jell-o shot, * pirate tract, -100 scroll of drastic healing, * smoky potion, * yellow paisley oyster egg to Buffy
+
+#Finish off with a few reminders of things you can craft
+print **********************************************************
+print Consider making lucky surprise eggs.
+print If you're a sauceror, be sure to make milks of magnesium,
+print potions of temporary gr8ness, and blackberry polites.
+
+#TO DO:
+#lair of the ninja snowmen?
+#Acquire yak skins
+#autosell clingfilm... eventually
+#Add the sea... eventually
+#little canadia
+#infernal seals
+#spring break beach
+#maze of sewer tunnels
+#back to the stone age locations

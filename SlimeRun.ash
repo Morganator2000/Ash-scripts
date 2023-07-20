@@ -50,34 +50,47 @@ string combat_run_away(int round, monster enemy, string text){
 
 void maintain_ML(int minML) {
     int currentML = monster_level_adjustment();
-    while (currentML < minML) {
-        #calculate current ML and ML increase needed
+    cli_execute("mood maintainML");
+    cli_execute("mood clear");
+    if (currentML < minML) {
         int MLIncr = minML - currentML;
         #prioritize the slime res items first.
         if (have_effect($effect[Slimebreath]) == 0 && MLIncr > 1) {
-            //code to acquire and use a slimy alveolus
+            cli_execute("trigger lose_effect, Slimebreath, chew 1 slimy alveolus");
             MLIncr = MLIncr - 50;
         }
         if (have_effect($effect[Grimace]) == 0 && MLIncr > 1) {
-            //code to acquire and use a slimy sweetbreads
+            cli_execute("trigger lose_effect, Grimace, eat 1 slimy sweetbreads");
             MLIncr = MLIncr - 25;
         }
         if (have_effect($effect[bilious]) == 0 && MLIncr > 1) {
-            //code to acquire and use a slimy sweetbreads
+            cli_execute("trigger lose_effect, Bilious, drink 1 slimy fermented bile bladder");
             MLIncr = MLIncr - 25;
         }
-        #then go by a ML per meat basis. Good luck.
-        //code to maintain the minML.
-        //This will involve buying stuff.
+        #then go by a ML per meat basis. Good luck. Here's the code for various effects.
+        // cli_execute("trigger lose_effect, Pride of the Puffin, cast 1 Pride of the Puffin");
+        // cli_execute("trigger lose_effect, Angering Pizza Purists, eat 1 plain calzone");
+        // cli_execute("trigger lose_effect, Bloodthirsty, drink 1 blood and blood");
+        // cli_execute("trigger lose_effect, Gelded, use 1 chocolate filthy lucre");
+        // cli_execute("trigger lose_effect, Manbait, use 1 the most dangerous bait");
+        // cli_execute("trigger lose_effect, Misplaced Rage, use 1 angry agate");
+        // cli_execute("trigger lose_effect, Para-lyzed Jaw, use 1 Para-pop");
+        // cli_execute("trigger lose_effect, Red Lettered, use 1 red letter");
+        // cli_execute("trigger lose_effect, Too Noir for Soir, eat 1 hardboiled-egg"); //There are two items that can give this effect. Use both?
+        // cli_execute("trigger lose_effect, Tortious, use 1 mocking turtle");
         //maybe get the code to buy the biggest boosts first. Or maybe ml per meat is a better metric.
+        mood_execute(1);
         currentML = monster_level_adjustment();
     }
     print("ML boosted to " + monster_level_adjustment());
+    if (currentML < minML) {
+        abort("ML cannot be boosted this high.");
+    }
 }
 
 boolean cleanupTime() {
-    visit_url( "clan_slimetube.php?action=chamois" );
-    if ( have_effect( $effect[Coated in Slime] ) > 0 ) {
+    visit_url("clan_slimetube.php?action=chamois");
+    if (have_effect( $effect[Coated in Slime]) > 0 ) {
         ## Something must have gone wrong.
         return false;
     } else {
@@ -86,13 +99,13 @@ boolean cleanupTime() {
     }
 }
 
-void main (int turnsToAdventure) {
+void main (int turnsToAdventure, int minML) {
     # Keep track of how many adventures we have done.
     int adventureCounter = 0;
     boolean slimed = false;
 
     # If you enter a number greater than your current adventures, it will use all of them.
-    if( turnsToAdventure > my_adventures() ) turnsToAdventure = my_adventures();
+    if(turnsToAdventure > my_adventures()) turnsToAdventure = my_adventures();
 
     #Now the adventure loop. This will repeat as long as there are adventures remaining.
     while( my_adventures() > 0 && (turnsToAdventure-adventureCounter) > 0 ) {
@@ -119,7 +132,9 @@ void main (int turnsToAdventure) {
             while(slimeDamage > my_hp()) {
                 cli_execute("cast * cocoon"); //Is there a better way to heal?
             }
-            // maintain_ML(minML);
+            // if (minML < monster_level_adjustment()) {
+            //     maintain_ML(minML);
+            // }
             int temporaryAdvCounter = my_adventures();
             adventure(1, $location[The Slime Tube]); //Add a way to heal in combat if needed. 
             if (temporaryAdvCounter > my_adventures()) {

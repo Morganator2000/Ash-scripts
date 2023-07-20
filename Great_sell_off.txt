@@ -51,7 +51,7 @@ use * warm subject gift certificate
 
 #Then we're going to craft a few things. Note that sauceror potions will need to be manually crafted (there's a reminder for it).
 
-make * duct tape wallet
+/*make * duct tape wallet
 use * duct tape wallet
 make * large cocoa eggshell fragment
 make * cocoa egg
@@ -64,7 +64,7 @@ make * grue egg omelette
 make * rusty metal key
 use * orcish meat locker
 make * opium grenade
-make * gatorskin umbrella
+make * gatorskin umbrella*/
 
 #Once I've figured out how to multi-use items a few times, they'll go here too
 
@@ -503,6 +503,7 @@ pulverize * Saturday night special
 pulverize * sawblade shield
 pulverize -1 Scalp of gorgolok
 pulverize * scorpion whip
+pulverize * security flashlight
 pulverize * serpentine sword
 pulverize * sewer snake
 pulverize -1 shellacked shell
@@ -533,6 +534,7 @@ pulverize * spangly sombrero
 pulverize * sphygmomanometer
 pulverize * spiked femur
 pulverize * stolen necklace
+pulverize * sturdy cane
 pulverize -1 surgical apron
 pulverize -1 surgical mask
 pulverize -1 tailbone shield
@@ -606,6 +608,8 @@ stash put * recipe of before yore: calzone of legend
 stash put * recipe of before yore: pizza of legend
 stash put * roll of toilet paper
 stash put -1 Scent of a Human™ candle
+stash put -20 slimy fermented bile bladder
+stash put -20 slimy sweetbreads
 display put -1 spectre scepter
 stash put * stuffed crazy bastard sword
 stash put * stuffed martini
@@ -748,6 +752,7 @@ autosell * carbonated water lily
 autosell * cardboard ore
 autosell * cardboard wakizashi
 autosell * carob chunks
+autosell * carton of rotten eggs
 autosell * carton of snake milk
 autosell * cast
 autosell * cat appendix
@@ -851,6 +856,7 @@ autosell * dyspepsi grenade
 autosell * Dyspepsi-Cola
 autosell * eagle's milk
 autosell * ectoplasmic orbs
+autosell * Effermint™ tablets
 autosell * electric snakebite
 autosell * elfin shortbread
 autosell * empty cloaca-cola bottle
@@ -1227,8 +1233,7 @@ autosell * skeleton bone
 autosell * skeletortoise
 autosell * skewer
 autosell * sleeping wereturtle
-autosell -20 slimy fermented bile bladder
-autosell -20 slimy sweetbreads
+autosell * slingshot
 autosell * smart skull
 autosell * snailmail bits
 autosell * snifter of thoroughly aged brandy
@@ -1379,6 +1384,7 @@ autosell * warm mushroom
 autosell * water pipe bomb
 autosell -1 water wings
 autosell * watered-down Red Minotaur
+autosell * Way More Tears™ pepper spray
 autosell * weremoose spit
 autosell * white chocolate chips
 autosell * white collar

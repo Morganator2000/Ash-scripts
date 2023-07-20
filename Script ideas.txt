@@ -1,0 +1,8 @@
+Purchase the cheapest spleen adventure items
+	choose a quantity
+	optionally consume
+	optionally use 1 mojo filter
+Automate a day of Fantasy Realm adventuring
+Automate the isleWar quest to my liking
+Do pre-volcano mine actions
+Hobopolis sewers item acquisition

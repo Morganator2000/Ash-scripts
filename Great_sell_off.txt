@@ -207,6 +207,17 @@ mallsell * Uncle Jick's Brownie Mix
 mallsell * vitachoconutriment capsule
 mallsell * wad of slimy rags
 mallsell * war tongs
+mallsell * Xiblaxian cache locator simcode
+mallsell * Xiblaxian direct marketing simcode
+mallsell * Xiblaxian encrypted political prisoner
+mallsell * Xiblaxian holo-buddy simcode
+mallsell * Xiblaxian holo-schematic: residence cube
+mallsell * Xiblaxian holo-schematic: space whiskey
+mallsell * Xiblaxian holo-schematic: stealth cowl
+mallsell * Xiblaxian holo-schematic: stealth trousers
+mallsell * Xiblaxian holo-schematic: stealth vest
+mallsell * Xiblaxian holo-schematic: ultraburrito
+mallsell * Xiblaxian holo-schematic: xeno-goggles
 
 undercut
 
@@ -616,6 +627,8 @@ stash put * stuffed martini
 stash put -2 The Beast Within™ candle
 stash put * useless powder
 stash put -20 votive of confidence
+stash put * Xiblaxian holo-training simcode
+stash put * Xiblaxian holo-wrist-puter simcode
 
 #autosell the junk. Some of the more useful items will be kept around
 

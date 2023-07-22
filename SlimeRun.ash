@@ -113,6 +113,7 @@ void main (int turnsToAdventure, int minML) {
         #It will skip this part if you're already covered in slime.
         if (have_effect($effect[Coated in Slime]) == 0) {
             cli_execute("uneffect annoyance");
+            change_mcd(0);
             cli_execute("maximize -ml"); //use other -ml items if needed?
             int temporaryAdvCounter = my_adventures();
             adv1($location[The Slime Tube], -1, "combat_run_away"); //if this adventure is a non-combat, you need to do it again.
@@ -124,7 +125,17 @@ void main (int turnsToAdventure, int minML) {
             }
         }
         cli_execute("outfit +slime"); 
-        cli_execute("cast annoyance");
+        cli_execute("cast annoyance"); //this will be removed once maintain_ML is fixed
+        boolean mcd_max() { //this will be removed once maintain_ML is fixed
+            int maxmcd = 10;
+            if(canadia_available()) {
+                maxmcd = 11;
+            }
+            if(current_mcd() == maxmcd) {
+                return true;
+            }
+            return change_mcd(maxmcd);
+        }
         int slimeDamage = slime_damage();
 
         #Now that you're covered in slime, fight slimes until the damage exceeds your max hp.

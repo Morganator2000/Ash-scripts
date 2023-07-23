@@ -1622,7 +1622,7 @@ autosell * zombie hollandaise
 autosell * Überraschthexengebräu
 
 #Send some stuff to Buffy
-send * antique bottle of cough syrup, * black sheepskin diploma, * bubbly potion, * funky dried mushroom, * glittery mascara, * handful of nuts and berries, * Mae West, * melted Jell-o shot, * pirate tract, -100 scroll of drastic healing, * smoky potion, * yellow paisley oyster egg to Buffy
+send * antique bottle of cough syrup, * black sheepskin diploma, * blood of the Wereseal, * bubbly potion, * bucket of wine, * funky dried mushroom, * glittery mascara, * handful of nuts and berries, * Mae West, * melted Jell-o shot, * pirate tract, * scroll of drastic healing, * seal-brain elixir, * shot of flower schnapps, * sleazy hi mein, * smoky potion, * yellow paisley oyster egg to Buffy
 
 #Finish off with a few reminders of things you can craft
 print **********************************************************

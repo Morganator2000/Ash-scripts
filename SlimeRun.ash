@@ -54,6 +54,17 @@ void maintain_ML(int minML) {
     cli_execute("mood clear");
     if (currentML < minML) {
         int MLIncr = minML - currentML;
+        //Start with the monster aggravation device, as this is "free" ml
+        boolean mcd_max() {
+            int maxmcd = 10;
+            if(canadia_available()) {
+                maxmcd = 11;
+            }
+            if(current_mcd() == maxmcd) {
+                return true;
+            }
+            return change_mcd(maxmcd);
+        }
         #prioritize the slime res items first.
         if (have_effect($effect[Slimebreath]) == 0 && MLIncr > 1) {
             cli_execute("trigger lose_effect, Slimebreath, chew 1 slimy alveolus");
@@ -67,6 +78,7 @@ void maintain_ML(int minML) {
             cli_execute("trigger lose_effect, Bilious, drink 1 slimy fermented bile bladder");
             MLIncr = MLIncr - 25;
         }
+        
         #then go by a ML per meat basis. Good luck. Here's the code for various effects.
         // cli_execute("trigger lose_effect, Pride of the Puffin, cast 1 Pride of the Puffin");
         // cli_execute("trigger lose_effect, Angering Pizza Purists, eat 1 plain calzone");
@@ -125,6 +137,7 @@ void main (int turnsToAdventure, int minML) {
             }
         }
         cli_execute("outfit +slime"); 
+        cli_execute("equip tiny stillsuit");
         cli_execute("cast annoyance"); //this will be removed once maintain_ML is fixed
         boolean mcd_max() { //this will be removed once maintain_ML is fixed
             int maxmcd = 10;
@@ -180,9 +193,10 @@ void main (int turnsToAdventure, int minML) {
 
 }
 
+#TODO: Math is not mathing. Sometimes the number of adventures spent will exceed the number I wanted to spend. Find out why
+    #Probably has something to do with the non-combats or losing combat.
 #TODO: implement the code for maintaining ML into the void main.
 #TODO: maintain_ML should check fullness, drunkness, and spleen damage
 #TODO: make an ideal slime +ml outfit?
-#TODO: eat, drink, and chew basic slime items?
 #TODO... maybe: use a -ml effect if you're just a small step away from the next low tier, then unnaffect it. 
                 #Possibly uneffect the "cheap" +ml effects.

@@ -139,15 +139,10 @@ void main (int turnsToAdventure, int minML) {
         cli_execute("outfit +slime"); 
         cli_execute("equip tiny stillsuit");
         cli_execute("cast annoyance"); //this will be removed once maintain_ML is fixed
-        boolean mcd_max() { //this will be removed once maintain_ML is fixed
-            int maxmcd = 10;
-            if(canadia_available()) {
-                maxmcd = 11;
-            }
-            if(current_mcd() == maxmcd) {
-                return true;
-            }
-            return change_mcd(maxmcd);
+        if(canadia_available()) {//this will be removed once maintain_ML is fixed
+            change_mcd(11);
+        } else {
+            change_mcd(10);
         }
         int slimeDamage = slime_damage();
 

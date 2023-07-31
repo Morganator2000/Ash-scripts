@@ -51,7 +51,7 @@ use * warm subject gift certificate
 
 #Then we're going to craft a few things. Note that sauceror potions will need to be manually crafted (there's a reminder for it).
 
-/*make * duct tape wallet
+make * duct tape wallet
 use * duct tape wallet
 make * large cocoa eggshell fragment
 make * cocoa egg
@@ -64,7 +64,7 @@ make * grue egg omelette
 make * rusty metal key
 use * orcish meat locker
 make * opium grenade
-make * gatorskin umbrella*/
+make * gatorskin umbrella
 
 #Once I've figured out how to multi-use items a few times, they'll go here too
 
@@ -1079,7 +1079,6 @@ autosell * marzipan skull
 autosell * meat stack
 autosell * meat vortex
 autosell * meleegra pills
-autosell * melted jell-o shot
 autosell * menudo ravioli
 autosell * metallic A
 autosell * Mick's IcyVapoHotness Rub

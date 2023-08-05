@@ -1,25 +1,36 @@
 http://127.0.0.1:60080/choice.php?forceoption=5 // to get Breathitin
 
 void main() {
-    //use 1 day ticket if you don't already hace access
+    //TODO: use 1 day ticket if you don't already have access
 
-    //equip smooth velvet, get volcoino
+    //TODO: equip smooth velvet, get volcoino
+    cli_execute("outfit smooth velvet");
 
-    //check if a second volcoino is easily available. If yes, get it.
+    //TODO: check if a second volcoino is easily available. If yes, get it.
 
-    //eat, including milk
+    //TODO: eat, including milk
+    cli_execute("try; use 1 milk of magnesium");
 
     //switch to stooper then drink, including ode
+    cli_execute("familiar stooper");
+    int liver_left = inebriety_limit() - my_inebriety();
+    while (have_effect($effect[Ode to Booze]) < liver_left) {
+        cli_execute("cast ode");
+    }
+    buy(liver_left, $item[Elemental Caipiroska]);
+    drink(liver_left, $item[Elemental Caipiroska]);
+    
 
-    //spleen, using a mojo filter, then one more spleen item
+    //TODO: spleen, using a mojo filter, then one more spleen item
 
     //Equip volcano mining gear
+    cli_execute("outfit volcano mining");
 
-    //numberology if available. If not, mark how many adventures it would take to mine, then do that.
+    //TODO: numberology if available. If not, mark how many adventures it would take to mine, then do that.
 
-    //grab breathitin or other spleen item, then 20 mining adventures. Do this 5 times.
+    //TODO: grab breathitin or other spleen item, then 20 mining adventures. Do this 5 times.
 
-    //use remaining adventures to mine, running minevolcano.ash
+    //TODO: use remaining adventures to mine, running minevolcano.ash
 
     //overdrink
 

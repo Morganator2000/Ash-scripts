@@ -41,7 +41,9 @@ void main(numberOfLasagnas) {
         basics = msg + dryNoodle + dish;
         buySavory = false;
     }
-    //Second, which lasagna will give the most profit
+
+    //Second, for each lasagna, figure out which parts of it you should buy.
+    //third, which lasagna will give the most profit
     int lp_profit = lp_lasag -
     int ff_profit = ff_lasag -
     int gn_profit = gn_lasag -

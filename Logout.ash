@@ -30,7 +30,7 @@ void main () {
 	cli_execute("try; teatree royaltea"); 
 	cli_execute("try; hatter All-Hallow's Steve's fright wig"); 
 	cli_execute("try; fortune buff item"); 
-	cli_execute("try; concert d"); //add option to also grab frat boy's Wrinklered
+	cli_execute("try; concert d");
 	cli_execute("try; concert w");
 
 	#go underwater

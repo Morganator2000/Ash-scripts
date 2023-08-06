@@ -9,7 +9,14 @@
 
 string throw_things(int round, monster enemy, string text){
     if(round == 1) {return "item cosmic bowling ball/new age hurting crystal";}
-    else return "item specter scepter";
+    else return "item new age healing crystal/new age hurting crystal";
+} //TODO: make sure you have a throwable item
+
+void equip_fantasy_gear() {
+    equip($slot[weapon], $item[LyleCo premium magnifying glass]);
+    equip($slot[acc2], $item[fantasyrealm g. e. m.]);
+    equip($slot[acc3], $item[fantasyrealm g. e. m.]);
+    equip($slot[familiar], $item[none]);
 }
 
 void main() {
@@ -18,12 +25,29 @@ void main() {
         abort("You need 45 adventures to run this script");
     }
     #Get FantasyRealm starter gear
+    if ($item[fantasyrealm g. e. m.].available_amount() == 0) {
+        int hat_choice;
+        switch (my_primestat()) {
+            case $stat[muscle]:
+                hat_choice = 1;
+                break;
+            case $stat[mysticality]:
+                hat_choice = 2;
+                break;
+            case $stat[moxie]:
+                hat_choice = 3;
+                break;
+            default:
+                abort("Why can't you pick a hat?");
+        }
+        visit_url("place.php?whichplace=realm_fantasy&action=fr_initcenter");
+        visit_url("choice.php?whichchoice=1280&option=" + hat_choice);
 
+    }
     #Begin with combats. The only hour you're losing for now are the ones to unlock the Foreboding Cave and The Druidic Campsite
-
     #Bandit crossroad (no hours spent)
     cli_execute("maximize mus");
-    adventure(5, $location[The Bandit Crossroads], "throw_things");
+    adventure(5, $location[The Bandit Crossroads]);
     print("Finished at the Bandit Crossroad", "green");
 
     #Putrid Swamp (no hours spent)

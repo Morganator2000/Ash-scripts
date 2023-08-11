@@ -47,6 +47,7 @@ void main() {
     #Begin with combats. The only hour you're losing for now are the ones to unlock the Foreboding Cave and The Druidic Campsite
     #Bandit crossroad (no hours spent)
     cli_execute("maximize mus");
+    equip_fantasy_gear();
     adventure(5, $location[The Bandit Crossroads]);
     print("Finished at the Bandit Crossroad", "green");
 

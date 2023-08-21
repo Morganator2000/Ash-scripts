@@ -41,3 +41,5 @@ void main() {
     print("Extrovermectin™: " + e);
     print("Homebodyl™: " + h);
 }
+
+#TODO: Somehow check the current Cold Cabinet items and highlight the ones available.

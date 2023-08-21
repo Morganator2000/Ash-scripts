@@ -15,10 +15,10 @@ void main() {
     int acc = mall_price($item[Anti-Creep Cream]);
     int agc = mall_price($item[Anti-Goosebump Cream]);
     int apc = mall_price($item[Anti-Pain Cream]);
-    int fl = mall_price($item[Fleshazole&trade]);
-    int b = mall_price($item[Breathitin&trade]);
-    int e = mall_price($item[Extrovermectin&trade]);
-    int h = mall_price($item[Homebodyl&trade]);
+    int fl = mall_price($item[Fleshazole]);
+    int b = mall_price($item[Breathitin]);
+    int e = mall_price($item[Extrovermectin]);
+    int h = mall_price($item[Homebodyl]);
 
     print("Frozen Tofu Pop: " + ftp);
     print("Bone Broth: " + bb);

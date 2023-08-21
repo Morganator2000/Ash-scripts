@@ -58,6 +58,8 @@ void main() {
     #Mystic wood (1 hour spent)
     adventure(5, $location[The Mystic Wood], "throw_things");
     //add choice adventure to unlock campsite
+    adv1($location[The Mystic Wood]);
+    run_choice(2);
     print("Finished at the Mystic Wood", "green");
 
     #Druidic Campsite (no hours spent)

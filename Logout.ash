@@ -4,11 +4,15 @@
 #pick from garden if "ripe"
 
 void main () {
-	use(1, $item[circle drum]);
-	use(1, $item[fishy pipe]);
-	use(1, $item[red and green rain stick]);
-	use(1, $item[portable steam unit]);
-	use_skill(1, $skill[Summon Carrot]);
+	cli_execute("try; use 1 circle drum");
+	if (item_amount($item[fishy pipe]) > 0){
+		cli_execute("try; use 1 fishy pipe");
+	}
+	cli_execute("try; use 1 red and green rain stick");
+	cli_execute("try; use 1 portable steam unit");
+	if (have_skill($skill[Summon Carrot])) {
+		use_skill(1, $skill[Summon Carrot]);
+	}
 	use_skill(3, $skill[Feel Disappointed]);
 	use_skill(3, $skill[Feel Excitement]);
 	use_skill(3, $skill[Feel Lonely]);
@@ -34,40 +38,44 @@ void main () {
 	cli_execute("try; concert w");
 
 	#go underwater
-	print("Going underwater", "blue");
-	equip($item[old SCUBA tank]);
-	equip($item[das boot]);
-	cli_execute("try; mom stats");
-	cli_execute("try; skate band shell");
-	cli_execute("try; skate merry-go-round");
-	cli_execute("try; skate eels");
+	if (item_amount($item[old SCUBA tank]) > 0 && item_amount($item[das boot]) > 0) {
+		print("Going underwater", "blue");
+		equip($item[old SCUBA tank]);
+		equip($item[das boot]);
+		cli_execute("try; mom stats");
+		cli_execute("try; skate band shell");
+		cli_execute("try; skate merry-go-round");
+		cli_execute("try; skate eels");
+	}
 
-	print("Now summoning dice... repeatedly", "blue");
+	if (have_skill($skill[Summon Dice])) {
+		print("Now summoning dice... repeatedly", "blue");
 
-	int rests_used=get_property("timesRested").to_int();
-	int rests_left=total_free_rests()-rests_used;
-	int visits_left = 3 - get_property("nunsVisits").to_int();
-	boolean shower = to_boolean(get_property("_aprilShower"));
-	#summon dice, while also using mp restores
-	while(my_mp() >= mp_cost($skill[Summon Dice]) || rests_left > 0 || visits_left > 0 || !shower) {
-		while(my_mp() >= mp_cost($skill[Summon Dice])) {
-			use_skill(1, $skill[Summon Dice]);
+		int rests_used=get_property("timesRested").to_int();
+		int rests_left=total_free_rests()-rests_used;
+		int visits_left = 3 - get_property("nunsVisits").to_int();
+		boolean shower = to_boolean(get_property("_aprilShower"));
+		#summon dice, while also using mp restores
+		while(my_mp() >= mp_cost($skill[Summon Dice]) || rests_left > 0 || visits_left > 0 || !shower) {
+			while(my_mp() >= mp_cost($skill[Summon Dice])) {
+				use_skill(1, $skill[Summon Dice]);
+			}
+			while(my_mp() < mp_cost($skill[Summon Dice]) && (rests_left > 0 || visits_left > 0 || !shower)) {
+				use(1, $item[eternal car battery]);
+				while(my_mp() < mp_cost($skill[Summon Dice]) && rests_left > 0) {
+					cli_execute("rest");
+					--rests_left;
+				}
+				while(my_mp() < mp_cost($skill[Summon Dice]) && visits_left > 0) {
+					cli_execute("try; nuns mp");
+					--visits_left;
+				}
+				while(my_mp() < mp_cost($skill[Summon Dice]) && !shower ){
+					cli_execute("shower hot");
+					shower = true;
+				}
+			} 
 		}
-		while(my_mp() < mp_cost($skill[Summon Dice]) && (rests_left > 0 || visits_left > 0 || !shower)) {
-			use(1, $item[eternal car battery]);
-			while(my_mp() < mp_cost($skill[Summon Dice]) && rests_left > 0) {
-				cli_execute("rest");
-				--rests_left;
-			}
-			while(my_mp() < mp_cost($skill[Summon Dice]) && visits_left > 0) {
-				cli_execute("try; nuns mp");
-				--visits_left;
-			}
-			while(my_mp() < mp_cost($skill[Summon Dice]) && !shower ){
-				cli_execute("shower hot");
-				shower = true;
-			}
-		} 
 	}
 	#end by maximizing adventures
 	cli_execute("maximize adv");

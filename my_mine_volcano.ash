@@ -2,14 +2,21 @@ http://127.0.0.1:60080/choice.php?forceoption=5 // to get Breathitin
 
 void main() {
     //TODO: use 1 day ticket if you don't already have access
-
+    if (!can_adventure($Location[The SMOOCH Army HQ])) {
+        cli_execute("try; use 1 one-day ticket to That 70s Volcano")
+    }
     //TODO: equip smooth velvet, get volcoino
     cli_execute("outfit smooth velvet");
 
     //TODO: check if a second volcoino is easily available. If yes, get it.
 
     //TODO: eat, including milk
+    if (available_amount($item[milk of magnesium]) == 0){
+        buy(1, $item[milk of magnesium])
+    }
     cli_execute("try; use 1 milk of magnesium");
+    int stomach_left = fullness_limit() - my_fullness();
+    eat(stomach_left, )
 
     //switch to stooper then drink, including ode
     cli_execute("familiar stooper");

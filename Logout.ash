@@ -27,10 +27,15 @@ void main () {
    	}
 	cli_execute("swim sprints");
 	cli_execute("ballpit");
-	cli_execute("maximize pool skill");
-	cli_execute("pool 3");
-	cli_execute("pool 3");
-	cli_execute("pool 3");
+	#play pool
+	if (get_property("_poolGames") != 3){
+		cli_execute("maximize pool skill");
+		games_played = get_property("_poolGames");
+		while (games_played <3) {
+			cli_execute("pool 3");
+			++games_played;
+		}
+	}
 	cli_execute("try; teatree royaltea"); 
 	cli_execute("try; hatter All-Hallow's Steve's fright wig"); 
 	cli_execute("try; fortune buff item"); 

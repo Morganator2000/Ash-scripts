@@ -1,31 +1,48 @@
 void main (String request) {
-    //print(_monkeyPawWishesUsed);
     switch (request) {
         case "-combat":
             if (have_effect($effect[Disquiet Riot]) == 0) {
                 monkey_paw($effect[Disquiet Riot]);
-                break;
+            } else {
+                abort("Something's not right.");
             }
+            break;
         case "init":
         case "initiative":
             if (have_effect($effect[Hare-o-dynamic]) == 0) {
                 monkey_paw($effect[Hare-o-dynamic]);
-                break;
+            } else {
+                abort("Something's not right.");
             }
+            break;
         case "item":
         case "items":
             if (have_effect($effect[Always be Collecting]) == 0){
                 monkey_paw($effect[Always be Collecting]);
-                break;
+            } else {
+                abort("Something's not right.");
+            }
+            break;
+        case "meat":
+            if (have_effect($effect[Shadow Waters]) == 0){
+                monkey_paw($effect[Shadow Waters]);
+            } else if (have_effect($effect[Covetin' Drunk]) == 0){
+                monkey_paw($effect[Covetin' Drunk]);
+            } else if (have_effect($effect[Always be Collecting]) == 0){
+                monkey_paw($effect[Always be Collecting]);
+            } else {
+                abort("Something's not right.");
             }
             break;
         case "ml":
             if (have_effect($effect[Sweetbreads Flamb&eacute;]) == 0) {
                 monkey_paw($effect[Sweetbreads Flamb&eacute;]);
-                break;
+            } else { 
+                abort("Something's not right.");
             }
             break;
         default:
             abort("Unknown request. Type something like \"-combat\" or \"meat\"");
     }
+    print("You have " + 5-get_property("_monkeyPawWishesUsed") + "wishes remaining.");
 }

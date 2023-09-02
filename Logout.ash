@@ -30,7 +30,7 @@ void main () {
 	#play pool
 	if (get_property("_poolGames") != 3){
 		cli_execute("maximize pool skill");
-		games_played = get_property("_poolGames");
+		int games_played = to_int(get_property("_poolGames"));
 		while (games_played <3) {
 			cli_execute("pool 3");
 			++games_played;

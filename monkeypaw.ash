@@ -61,9 +61,17 @@ void main (String request) {
                 abort("Something's not right.");
             }
             break;
+        case "mus":
+        case "muscle":
+            if (have_effect($effect[A Contender]) == 0) {
+                monkey_paw($effect[A Contender]);
+            } else { 
+                abort("Something's not right.");
+            }
+            break;
         default:
             abort("Unknown request. Type something like \"-combat\" or \"meat\"");
     }
-    int wishes_remaining = 5 - get_property("_monkeyPawWishesUsed")
+    int wishes_remaining = 5 - to_int(get_property("_monkeyPawWishesUsed"));
     print("You have " + wishes_remaining + "wishes remaining.");
 }

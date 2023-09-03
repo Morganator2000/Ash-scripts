@@ -1,5 +1,25 @@
 void main (String request) {
+    if (get_property("_monkeyPawWishesUsed") == 5) {
+        abort("You have no wishes remaining");
+    }
     switch (request) {
+        case "cold dmg":
+        case "cold damage": //Not tested.
+            if (have_effect($effect[Staying Frosty]) == 0) {
+                monkey_paw($effect[Staying Frosty]);
+            } else {
+                abort("Something's not right.");
+            }
+            break;
+        case "cold spell":
+        case "cold spell dmg":
+        case "cold spell damage":
+            if (have_effect($effect[Cold as Ice]) == 0) {
+                monkey_paw($effect[Cold as Ice]);
+            } else {
+                abort("Something's not right.");
+            }
+            break;
         case "-combat":
             if (have_effect($effect[Disquiet Riot]) == 0) {
                 monkey_paw($effect[Disquiet Riot]);
@@ -44,5 +64,6 @@ void main (String request) {
         default:
             abort("Unknown request. Type something like \"-combat\" or \"meat\"");
     }
-    print("You have " + 5-get_property("_monkeyPawWishesUsed") + "wishes remaining.");
+    int wishes_remaining = 5 - get_property("_monkeyPawWishesUsed")
+    print("You have " + wishes_remaining + "wishes remaining.");
 }

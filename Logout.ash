@@ -67,7 +67,7 @@ void main () {
 				use_skill(1, $skill[Summon Dice]);
 			}
 			while(my_mp() < mp_cost($skill[Summon Dice]) && (rests_left > 0 || visits_left > 0 || !shower)) {
-				use(1, $item[eternal car battery]);
+				cli_execute("try; use 1 eternal car battery");
 				while(my_mp() < mp_cost($skill[Summon Dice]) && rests_left > 0) {
 					cli_execute("rest");
 					--rests_left;

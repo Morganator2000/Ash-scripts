@@ -40,4 +40,5 @@ void main () {
     cli_execute("Mallsell -1 " + $item[Crimbuccaneer tricorn]);
     cli_execute("Mallsell -1 " + $item[Crimbuccaneer breeches]);
     cli_execute("Mallsell -1 " + $item[Crimbuccaneer fledges (mint)]);
+    cli_execute("undercut");
 }

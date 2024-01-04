@@ -13,7 +13,7 @@ void main() {
     print("Elf Guard eyedrops: " + available_amount($item[Elf Guard eyedrops]));
     print("Elf Guard strategic map: " + available_amount($item[Elf Guard strategic map]));
     print("Pirates", "red");
-    print("Crimbuccaneer flotsam: " + available_amount($item[Crimbuccaneer flotsam]));
+    print("Crimbuccaneer flotsam: " + item_amount($item[Crimbuccaneer flotsam]));
     print("Crimbuccaneer premium booty sack: " + available_amount($item[Crimbuccaneer premium booty sack]));
     print("Crimbuccaneer shirt: " + available_amount($item[Crimbuccaneer shirt]));
     print("Crimbuccaneer invasion map: " + available_amount($item[Crimbuccaneer invasion map]));
@@ -25,30 +25,30 @@ void main() {
     print("Elves", "green");
     print("ancient Elf dessert spoon: " + available_amount($item[ancient Elf dessert spoon]));
     print("sundae ration: " + available_amount($item[sundae ration]));
-    print("Elf Guard Field Manual: Culinary Arts: " + (available_amount($item[Elf Guard Field Manual: Culinary Arts]) + available_amount($item[Elf Guard Field Manual: Culinary Arts (used)])));
-    print("peppermint tack: " + available_amount($item[peppermint tack]));
+    print("Elf Guard Field Manual: Culinary Arts: " + (available_amount($item[Elf Guard Field Manual: Culinary Arts])));
+    print("peppermint tack (crafting item): " + available_amount($item[peppermint tack]));
     print("Elf Guard clipboard: " + available_amount($item[Elf Guard clipboard]));
-    print("Elf Guard payroll bag: " + available_amount($item[Elf Guard payroll bag]));
+    print("Elf Guard payroll bag (gives MPC): " + available_amount($item[Elf Guard payroll bag]));
     print("Pirates", "red");
-    print("pegfinger: " + available_amount($item[pegfinger]));
-    print("whalesteak   : " + available_amount($item[whalesteak]));
+    print("pegfinger (MPC drop): " + available_amount($item[pegfinger]));
+    print("whalesteak (crafting item): " + available_amount($item[whalesteak]));
     print();
     
     print("Armory", "blue");
     print("Elves", "green");
-    print("Elf Guard mouthknife: " + available_amount($item[Elf Guard mouthknife]));
-    print("Elf Guard SCUBA tank: " + available_amount($item[Elf Guard SCUBA tank]));
-    print("Kelflar vest: " + available_amount($item[Kelflar vest]));
-    print("Elvish underarmor: " + available_amount($item[Elvish underarmor]));
-    print("red and white claret: " + available_amount($item[red and white claret]));
-    print("Elf Guard red and white beret: " + available_amount($item[Elf Guard red and white beret]));
+    print("Elf Guard mouthknife (elf warefare): " + available_amount($item[Elf Guard mouthknife]));
+    print("Elf Guard SCUBA tank (underwater): " + available_amount($item[Elf Guard SCUBA tank]));
+    print("Kelflar vest (elf warfare): " + available_amount($item[Kelflar vest]));
+    print("Elvish underarmor (DA): " + available_amount($item[Elvish underarmor]));
+    print("red and white claret (crafting item): " + available_amount($item[red and white claret]));
+    print("Elf Guard red and white beret (pvp): " + available_amount($item[Elf Guard red and white beret]));
     print("Pirates", "red");
-    print("shipwright's hammer: " + available_amount($item[shipwright's hammer]));
-    print("gunwale: " + available_amount($item[gunwale]));
-    print("cannonbomb: " + available_amount($item[cannonbomb]));
-    print("free boots: " + available_amount($item[free boots]));
-    print("whale cerebrospinal fluid: " + available_amount($item[whale cerebrospinal fluid]));
-    print("Crimbuccaneer runebone: " + available_amount($item[Crimbuccaneer runebone]));
+    print("shipwright's hammer (pirate warfare): " + available_amount($item[shipwright's hammer]));
+    print("gunwale (mus): " + available_amount($item[gunwale]));
+    print("cannonbomb (kill elves): " + available_amount($item[cannonbomb]));
+    print("free boots (sleaze res): " + available_amount($item[free boots]));
+    print("whale cerebrospinal fluid (warfare effectiveness): " + available_amount($item[whale cerebrospinal fluid]));
+    print("Crimbuccaneer runebone (myst): " + available_amount($item[Crimbuccaneer runebone]));
     print();
     
     print("Bar", "blue");
@@ -96,5 +96,4 @@ void main() {
     
 }   
 
-#TODO Add used books to count and familiar
 #TODO Add items to sell before end of crimbo

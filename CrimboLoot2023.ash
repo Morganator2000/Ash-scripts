@@ -1,4 +1,4 @@
-void main(boolean mallsell) {
+void main() {
     cli_execute("clear");
     print("Elf Guard MPCs: " + available_amount($item[Elf Guard MPC]), "green");
     print("Pieces of 12: " + available_amount($item[Crimbuccaneer piece of 12]), "red");
@@ -53,35 +53,35 @@ void main(boolean mallsell) {
     
     print("Bar", "blue");
     print("Elves", "green");
-    print("Elf Guard hangover cure: " + available_amount($item[Elf Guard hangover cure]));
-    print("peppermint bomb: " + available_amount($item[peppermint bomb]));
-    print("Elf Guard broom: " + available_amount($item[Elf Guard broom]));
-    print("officer's nog: " + available_amount($item[officer's nog]));
-    print("Elf Guard Field Manual: Wilderness Sleeping: " + available_amount($item[Elf Guard Field Manual: Wilderness Sleeping]));
+    print("Elf Guard hangover cure (remove drunkness): " + available_amount($item[Elf Guard hangover cure]));
+    print("peppermint bomb (banish pirate): " + available_amount($item[peppermint bomb]));
+    print("Elf Guard broom (clean bar): " + available_amount($item[Elf Guard broom]));
+    print("officer's nog (booze): " + available_amount($item[officer's nog]));
+    print("Elf Guard Field Manual: Wilderness Sleeping (skill): " + available_amount($item[Elf Guard Field Manual: Wilderness Sleeping]));
     print("Pirates", "red");
-    print("grog nuts: " + available_amount($item[grog nuts]));
-    print("punching mirror: " + available_amount($item[punching mirror]));
-    print("sawed-off blunderbuss: " + available_amount($item[sawed-off blunderbuss]));
-    print("Crimbuccaneer tavern swab: " + available_amount($item[Crimbuccaneer tavern swab]));
-    print("old-school pirate grog: " + available_amount($item[old-school pirate grog]));
-    print("Cocktails of the Age of Sail: " + available_amount($item[Cocktails of the Age of Sail]));
+    print("grog nuts (food): " + available_amount($item[grog nuts]));
+    print("punching mirror (pvp): " + available_amount($item[punching mirror]));
+    print("sawed-off blunderbuss (pirate warfare): " + available_amount($item[sawed-off blunderbuss]));
+    print("Crimbuccaneer tavern swab (clean bar): " + available_amount($item[Crimbuccaneer tavern swab]));
+    print("old-school pirate grog (crafting item): " + available_amount($item[old-school pirate grog]));
+    print("Cocktails of the Age of Sail (skill): " + available_amount($item[Cocktails of the Age of Sail]));
     print();
     
     print("Factory", "blue");
     print("Elves", "green");
-    print("Elf Army machine parts: " + available_amount($item[Elf Army machine parts]));
-    print("massive wrench: " + available_amount($item[massive wrench]));
-    print("military-grade peppermint oil: " + available_amount($item[military-grade peppermint oil]));
-    print("Elf Guard fuel tank: " + available_amount($item[Elf Guard fuel tank]));
-    print("Elf Guard tinsel grenade: " + available_amount($item[Elf Guard tinsel grenade]));
-    print("Elf Guard honor present: " + available_amount($item[Elf Guard honor present]));
+    print("Elf Army machine parts (armory item): " + available_amount($item[Elf Army machine parts]));
+    print("massive wrench (elf warfare): " + available_amount($item[massive wrench]));
+    print("military-grade peppermint oil (crafting): " + available_amount($item[military-grade peppermint oil]));
+    print("Elf Guard fuel tank (adventures): " + available_amount($item[Elf Guard fuel tank]));
+    print("Elf Guard tinsel grenade (kill pirates): " + available_amount($item[Elf Guard tinsel grenade]));
+    print("Elf Guard honor present (rare item): " + available_amount($item[Elf Guard honor present]));
     print("Pirates", "red");
-    print("Crimbuccaneer mologrog cocktail: " + available_amount($item[Crimbuccaneer mologrog cocktail]));
-    print("Crimbuccaneer bombjacket: " + available_amount($item[Crimbuccaneer bombjacket]));
-    print("Crimbuccaneer whale oil: " + available_amount($item[Crimbuccaneer whale oil]));
-    print("Crimbuccaneer lantern: " + available_amount($item[Crimbuccaneer lantern]));
-    print("Crimbuccaneer rigging lasso: " + available_amount($item[Crimbuccaneer rigging lasso]));
-    print("baby rigging snake: " + available_amount($item[baby rigging snake]));
+    print("Crimbuccaneer mologrog cocktail (booze): " + available_amount($item[Crimbuccaneer mologrog cocktail]));
+    print("Crimbuccaneer bombjacket (moxie): " + available_amount($item[Crimbuccaneer bombjacket]));
+    print("Crimbuccaneer whale oil (crafting item): " + available_amount($item[Crimbuccaneer whale oil]));
+    print("Crimbuccaneer lantern (items): " + available_amount($item[Crimbuccaneer lantern]));
+    print("Crimbuccaneer rigging lasso (banish elf): " + available_amount($item[Crimbuccaneer rigging lasso]));
+    print("baby rigging snake (familiar): " + available_amount($item[baby rigging snake]));
     print();
     
     print("Other", "blue");
@@ -93,10 +93,7 @@ void main(boolean mallsell) {
     print("Crimbuccaneer tricorn: " + available_amount($item[Crimbuccaneer tricorn]));
     print("Crimbuccaneer breeches: " + available_amount($item[Crimbuccaneer breeches]));
     print("Crimbuccaneer fledges (mint): " + available_amount($item[Crimbuccaneer fledges (mint)]));
-    
-    if (mallsell) {
-        
-    }
+    print();
 }   
 
 #TODO Add items to sell before end of crimbo

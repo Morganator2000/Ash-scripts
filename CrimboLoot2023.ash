@@ -1,4 +1,4 @@
-void main() {
+void main(boolean mallsell) {
     cli_execute("clear");
     print("Elf Guard MPCs: " + available_amount($item[Elf Guard MPC]), "green");
     print("Pieces of 12: " + available_amount($item[Crimbuccaneer piece of 12]), "red");
@@ -6,28 +6,28 @@ void main() {
 
     print("Ambuela's Cottage", "blue");
     print("Elves", "green");
-    print("Elf Guard officer's sidearm: " + available_amount($item[Elf Guard officer's sidearm]));
-    print("Elf Guard insignia (general): " + available_amount($item[Elf Guard insignia (general)]));
-    print("Elf Guard commandeering gloves: " + available_amount($item[Elf Guard commandeering gloves]));
-    print("Elf Guard Field Manual: Extortion: " + available_amount($item[Elf Guard Field Manual: Extortion]));
-    print("Elf Guard eyedrops: " + available_amount($item[Elf Guard eyedrops]));
-    print("Elf Guard strategic map: " + available_amount($item[Elf Guard strategic map]));
+    print("Elf Guard officer's sidearm (elf warefare): " + available_amount($item[Elf Guard officer's sidearm]));
+    print("Elf Guard insignia (general) (adventures): " + available_amount($item[Elf Guard insignia (general)]));
+    print("Elf Guard commandeering gloves (elf warfare): " + available_amount($item[Elf Guard commandeering gloves]));
+    print("Elf Guard Field Manual: Extortion (skill): " + available_amount($item[Elf Guard Field Manual: Extortion]));
+    print("Elf Guard eyedrops (items): " + available_amount($item[Elf Guard eyedrops]));
+    print("Elf Guard strategic map (increase pieces of 12): " + available_amount($item[Elf Guard strategic map]));
     print("Pirates", "red");
-    print("Crimbuccaneer flotsam: " + item_amount($item[Crimbuccaneer flotsam]));
-    print("Crimbuccaneer premium booty sack: " + available_amount($item[Crimbuccaneer premium booty sack]));
-    print("Crimbuccaneer shirt: " + available_amount($item[Crimbuccaneer shirt]));
-    print("Crimbuccaneer invasion map: " + available_amount($item[Crimbuccaneer invasion map]));
-    print("Crimbuccaneer captain's purse: " + available_amount($item[Crimbuccaneer captain's purse]));
-    print("brown pirate pants: " + available_amount($item[brown pirate pants]));
+    print("Crimbuccaneer flotsam (armory item): " + item_amount($item[Crimbuccaneer flotsam]));
+    print("Crimbuccaneer premium booty sack (rare item): " + available_amount($item[Crimbuccaneer premium booty sack]));
+    print("Crimbuccaneer shirt (weight): " + available_amount($item[Crimbuccaneer shirt]));
+    print("Crimbuccaneer invasion map (Increase MPC): " + available_amount($item[Crimbuccaneer invasion map]));
+    print("Crimbuccaneer captain's purse (Pieces of 12): " + available_amount($item[Crimbuccaneer captain's purse]));
+    print("brown pirate pants (spooky res): " + available_amount($item[brown pirate pants]));
     print();
 
     print("Cafe", "blue");
     print("Elves", "green");
-    print("ancient Elf dessert spoon: " + available_amount($item[ancient Elf dessert spoon]));
-    print("sundae ration: " + available_amount($item[sundae ration]));
-    print("Elf Guard Field Manual: Culinary Arts: " + (available_amount($item[Elf Guard Field Manual: Culinary Arts])));
+    print("ancient Elf dessert spoon (spell damage): " + available_amount($item[ancient Elf dessert spoon]));
+    print("sundae ration (food): " + available_amount($item[sundae ration]));
+    print("Elf Guard Field Manual: Culinary Arts (skill): " + (available_amount($item[Elf Guard Field Manual: Culinary Arts])));
     print("peppermint tack (crafting item): " + available_amount($item[peppermint tack]));
-    print("Elf Guard clipboard: " + available_amount($item[Elf Guard clipboard]));
+    print("Elf Guard clipboard (items): " + available_amount($item[Elf Guard clipboard]));
     print("Elf Guard payroll bag (gives MPC): " + available_amount($item[Elf Guard payroll bag]));
     print("Pirates", "red");
     print("pegfinger (MPC drop): " + available_amount($item[pegfinger]));
@@ -94,6 +94,9 @@ void main() {
     print("Crimbuccaneer breeches: " + available_amount($item[Crimbuccaneer breeches]));
     print("Crimbuccaneer fledges (mint): " + available_amount($item[Crimbuccaneer fledges (mint)]));
     
+    if (mallsell) {
+        
+    }
 }   
 
 #TODO Add items to sell before end of crimbo

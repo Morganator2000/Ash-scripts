@@ -94,6 +94,4 @@ void main() {
     print("Crimbuccaneer breeches: " + available_amount($item[Crimbuccaneer breeches]));
     print("Crimbuccaneer fledges (mint): " + available_amount($item[Crimbuccaneer fledges (mint)]));
     print();
-}   
-
-#TODO Add items to sell before end of crimbo
+}

@@ -4,11 +4,11 @@ void main (String request) {
     }
     switch (request) {
         case "cold dmg":
-        case "cold damage": //Not tested.
+        case "cold damage":
             if (have_effect($effect[Staying Frosty]) == 0) {
                 monkey_paw($effect[Staying Frosty]);
             } else {
-                abort("Something's not right.");
+                abort("Add a new effect.");
             }
             break;
         case "cold spell":
@@ -17,14 +17,14 @@ void main (String request) {
             if (have_effect($effect[Cold as Ice]) == 0) {
                 monkey_paw($effect[Cold as Ice]);
             } else {
-                abort("Something's not right.");
+                abort("Add a new effect.");
             }
             break;
         case "-combat":
             if (have_effect($effect[Disquiet Riot]) == 0) {
                 monkey_paw($effect[Disquiet Riot]);
             } else {
-                abort("Something's not right.");
+                abort("Add a new effect.");
             }
             break;
         case "init":
@@ -32,7 +32,7 @@ void main (String request) {
             if (have_effect($effect[Hare-o-dynamic]) == 0) {
                 monkey_paw($effect[Hare-o-dynamic]);
             } else {
-                abort("Something's not right.");
+                abort("Add a new effect.");
             }
             break;
         case "item":
@@ -40,7 +40,7 @@ void main (String request) {
             if (have_effect($effect[Always be Collecting]) == 0){
                 monkey_paw($effect[Always be Collecting]);
             } else {
-                abort("Something's not right.");
+                abort("Add a new effect.");
             }
             break;
         case "meat":
@@ -51,24 +51,30 @@ void main (String request) {
             } else if (have_effect($effect[Always be Collecting]) == 0){
                 monkey_paw($effect[Always be Collecting]);
             } else {
-                abort("Something's not right.");
+                abort("Add a new effect.");
             }
             break;
         case "ml":
             if (have_effect($effect[Sweetbreads Flamb&eacute;]) == 0) {
                 monkey_paw($effect[Sweetbreads Flamb&eacute;]);
             } else { 
-                abort("Something's not right.");
+                abort("Add a new effect.");
             }
             break;
+        case "mox":
+        case "moxie":
+            abort("Add a new effect.");
         case "mus":
         case "muscle":
             if (have_effect($effect[A Contender]) == 0) {
                 monkey_paw($effect[A Contender]);
             } else { 
-                abort("Something's not right.");
+                abort("Add a new effect.");
             }
             break;
+        case "myst":
+        case "mysticality":
+            abort("Add a new effect.");
         default:
             abort("Unknown request. Type something like \"-combat\" or \"meat\"");
     }

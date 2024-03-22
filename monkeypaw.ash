@@ -73,5 +73,5 @@ void main (String request) {
             abort("Unknown request. Type something like \"-combat\" or \"meat\"");
     }
     int wishes_remaining = 5 - to_int(get_property("_monkeyPawWishesUsed"));
-    print("You have " + wishes_remaining + "wishes remaining.");
+    print("You have " + wishes_remaining + " wishes remaining.");
 }

@@ -7,6 +7,10 @@ void main (String request) {
         case "cold damage":
             if (have_effect($effect[Staying Frosty]) == 0) {
                 monkey_paw($effect[Staying Frosty]);
+            } else if (have_effect($effect[Permafrosty]) == 0) {
+                monkey_paw($effect[Permafrosty]);
+            } else if (have_effect($effect[Void Between the Stars]) == 0) {
+                monkey_paw($effect[Void Between the Stars]);
             } else {
                 abort("Add a new effect.");
             }

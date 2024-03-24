@@ -90,6 +90,7 @@ void main (String request) {
             } else { 
                 abort("Add a new effect.");
             }
+            break;
         default:
             abort("Unknown request. Type something like \"-combat\" or \"meat\"");
     }

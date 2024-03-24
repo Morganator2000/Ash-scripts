@@ -79,6 +79,17 @@ void main (String request) {
         case "myst":
         case "mysticality":
             abort("Add a new effect.");
+        case "sleaze dmg":
+        case "sleaze damage":
+            if (have_effect($effect[Fifty Ways to Bereave Your Lover]) == 0) {
+                monkey_paw($effect[Fifty Ways to Bereave Your Lover]);
+            } else if (have_effect($effect[Gutterminded]) == 0) {
+                monkey_paw($effect[Gutterminded]);
+            } else if (have_effect($effect[Cuts Like a Buttered Knife]) == 0) {
+                monkey_paw($effect[Cuts Like a Buttered Knife]);
+            } else { 
+                abort("Add a new effect.");
+            }
         default:
             abort("Unknown request. Type something like \"-combat\" or \"meat\"");
     }

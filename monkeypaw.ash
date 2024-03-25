@@ -43,17 +43,20 @@ void main (String request) {
         case "items":
             if (have_effect($effect[Always be Collecting]) == 0){
                 monkey_paw($effect[Always be Collecting]);
+            } else if (have_effect($effect[Your #1 Problem]) == 0){
+                monkey_paw($effect[Your #1 Problem]);
             } else {
                 abort("Add a new effect.");
             }
             break;
         case "meat":
-            if (have_effect($effect[Shadow Waters]) == 0){
-                monkey_paw($effect[Shadow Waters]);
-            } else if (have_effect($effect[Covetin' Drunk]) == 0){
-                monkey_paw($effect[Covetin' Drunk]);
-            } else if (have_effect($effect[Always be Collecting]) == 0){
+            if (have_effect($effect[Always be Collecting]) == 0){
+                print("Always");
                 monkey_paw($effect[Always be Collecting]);
+            } else if (have_effect($effect[Low on the Hog]) == 0){
+                monkey_paw($effect[Low on the Hog]);
+            } else if (have_effect($effect[Trufflin']) == 0){
+                monkey_paw($effect[Trufflin']);
             } else {
                 abort("Add a new effect.");
             }

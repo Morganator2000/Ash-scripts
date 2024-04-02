@@ -31,6 +31,23 @@ void main (String request) {
                 abort("Add a new effect.");
             }
             break;
+        case "combat":
+            if (have_effect($effect[Taunt of Horus]) == 0) {
+                monkey_paw($effect[Taunt of Horus]);
+            } else {
+                abort("Add a new effect.");
+            }
+            break;
+        case "hot dmg":
+        case "hot damage":
+            if (have_effect($effect[Dragged Through the Coals]) == 0) {
+                monkey_paw($effect[Dragged Through the Coals]);
+            } else if (have_effect($effect[Abyssal Blood]) == 0) {
+                monkey_paw($effect[Abyssal Blood]); #Untested
+            } else {
+                abort("Add a new effect.");
+            }
+            break;
         case "init":
         case "initiative":
             if (have_effect($effect[Hare-o-dynamic]) == 0) {

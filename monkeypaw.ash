@@ -38,6 +38,15 @@ void main (String request) {
                 abort("Add a new effect.");
             }
             break;
+        case "da":
+            if (have_effect($effect[Inscrutable exoskeleton]) == 0) {
+                monkey_paw($effect[Inscrutable exoskeleton]);
+            } else if (have_effect($effect[Feeling Peaceful]) == 0) {
+                monkey_paw($effect[Feeling Peaceful]);
+            } else {
+                abort("Add a new effect.");
+            }
+            break;
         case "hot dmg":
         case "hot damage":
             if (have_effect($effect[Dragged Through the Coals]) == 0) {

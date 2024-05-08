@@ -77,7 +77,6 @@ void main (String request) {
             break;
         case "meat":
             if (have_effect($effect[Always be Collecting]) == 0){
-                print("Always");
                 monkey_paw($effect[Always be Collecting]);
             } else if (have_effect($effect[Low on the Hog]) == 0){
                 monkey_paw($effect[Low on the Hog]);
@@ -116,6 +115,13 @@ void main (String request) {
                 monkey_paw($effect[Gutterminded]);
             } else if (have_effect($effect[Cuts Like a Buttered Knife]) == 0) {
                 monkey_paw($effect[Cuts Like a Buttered Knife]);
+            } else { 
+                abort("Add a new effect.");
+            }
+            break;
+        case "spooky res":
+            if (have_effect($effect[You Can Taste the Darkness]) == 0) {
+                monkey_paw($effect[You Can Taste the Darkness]);
             } else { 
                 abort("Add a new effect.");
             }

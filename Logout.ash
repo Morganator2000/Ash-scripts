@@ -14,11 +14,13 @@ void main () {
 	if (have_skill($skill[Summon Carrot])) {
 		use_skill(1, $skill[Summon Carrot]);
 	}
-	use_skill(3, $skill[Feel Disappointed]);
-	use_skill(3, $skill[Feel Excitement]);
-	use_skill(3, $skill[Feel Lonely]);
-	use_skill(3, $skill[Feel Nervous]);
-	use_skill(3, $skill[Feel Peaceful]);
+	if (have_skill($skill[Emotionally Chipped])) {
+		use_skill(3, $skill[Feel Disappointed]);
+		use_skill(3, $skill[Feel Excitement]);
+		use_skill(3, $skill[Feel Lonely]);
+		use_skill(3, $skill[Feel Nervous]);
+		use_skill(3, $skill[Feel Peaceful]);
+	}
 	cli_execute("try; numberology 69");
 
 	visit_url("place.php?whichplace=monorail&action=monorail_lyle");

@@ -119,9 +119,26 @@ void main (String request) {
                 abort("Add a new effect.");
             }
             break;
+        case "spooky dmg":
+        case "spooky damage":
+            if (have_effect($effect[Eyes All Black]) == 0) {#not tested
+                monkey_paw($effect[Eyes All Black]);
+            } else { 
+                abort("Add a new effect.");
+            }
+            break;
+
         case "spooky res":
             if (have_effect($effect[You Can Taste the Darkness]) == 0) {
                 monkey_paw($effect[You Can Taste the Darkness]);
+            } else { 
+                abort("Add a new effect.");
+            }
+            break;
+        case "stench dmg":
+        case "stench damage":
+            if (have_effect($effect[Sewer-Drenched]) == 0) { #not tested
+                monkey_paw($effect[Sewer-Drenched]);
             } else { 
                 abort("Add a new effect.");
             }

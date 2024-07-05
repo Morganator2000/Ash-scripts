@@ -27,6 +27,8 @@ void main (String request) {
         case "-combat":
             if (have_effect($effect[Disquiet Riot]) == 0) {
                 monkey_paw($effect[Disquiet Riot]);
+            } else if (have_effect($effect[Patent Invisibility]) == 0) {
+                monkey_paw($effect[Patent Invisibility]);
             } else {
                 abort("Add a new effect.");
             }

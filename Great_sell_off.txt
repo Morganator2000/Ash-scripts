@@ -507,7 +507,6 @@ pulverize * ring of half-assed regeneration
 pulverize -1 rock and roll legend
 pulverize * rubber gloves
 pulverize * rubber ribcage
-pulverize * rusty chain necklace
 pulverize -1 rusty grave robbing shovel
 pulverize * sabre teeth
 pulverize * Saturday night special

@@ -3,6 +3,7 @@
 #Overdrink maybe
 #pick from garden if "ripe"
 #TODO: add monkeypaw for something.
+#TODO: use giant black monolith
 
 void main () {
 	cli_execute("try; use 1 circle drum");

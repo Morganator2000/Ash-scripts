@@ -43,7 +43,7 @@ string combat_run_away(int round, monster enemy, string text){
     #green smoke bomb
     else if (item_amount($item[green smoke bomb]) >= 1) {return "item green smoke bomb";} 
     #CLEESH to not consume an adventure
-    else if (combat_skill_available($skill[CLEESH])) {return "skill CLEESH";}
+    else if (combat_skill_available($skill[CLEESH])) {return "skill CLEESH"; "attack with weapon";}
     #abort if there are no runaway options
     else {return abort("You have no way of running away for free.");}
 }

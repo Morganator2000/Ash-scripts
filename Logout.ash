@@ -46,6 +46,10 @@ void main () {
 	cli_execute("try; concert d");
 	cli_execute("try; concert w");
 
+	if (in_bad_moon()) {
+		cli_execute("try; styx moxie");
+	}
+
 	#go underwater
 	if (item_amount($item[old SCUBA tank]) > 0 && item_amount($item[das boot]) > 0) {
 		print("Going underwater", "blue");

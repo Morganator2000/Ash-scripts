@@ -91,7 +91,9 @@ void main (String request) {
         case "ml":
             if (have_effect($effect[Sweetbreads Flamb&eacute;]) == 0) {
                 monkey_paw($effect[Sweetbreads Flamb&eacute;]);
-            } else { 
+            } else if (have_effect($effect[Too Noir For Snoir]) == 0){
+                monkey_paw($effect[Too Noir For Snoir]);
+            }else { 
                 abort("Add a new effect.");
             }
             break;

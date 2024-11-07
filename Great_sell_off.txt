@@ -8,8 +8,6 @@
 
 #First, use a bunch of items in your inventory to get more items. Also meat.
 
-pull all
-
 use * ancient vinyl coin purse
 use * boxcar turtle
 use * big slimy cyst
@@ -59,14 +57,11 @@ make * fishy fish lasagna
 make * gnat lasagna
 make * long pork lasagna
 make * sausage wonton
-make * tofu wonton
 make * grue egg omelette
 make * rusty metal key
 use * orcish meat locker
 make * opium grenade
 make * gatorskin umbrella
-
-#Once I've figured out how to multi-use items a few times, they'll go here too
 
 #Put these in the closet for later use
 
@@ -106,7 +101,7 @@ mallsell * Benetton's Medley of Diversity
 mallsell -1 Biddy Cracker's Old-Fashioned Cookbook
 mallsell * black eyedrops
 mallsell -1 Blizzards I Have Died In
-mallsell * bowling ball
+mallsell -1 bowling ball
 mallsell * bus pass
 mallsell * calavera concertina
 mallsell * can of sterno
@@ -175,6 +170,7 @@ mallsell * round green sunglasses
 mallsell -1 round purple sunglasses
 mallsell -1 rusty hedge trimmers
 mallsell * rusty piece of rebar
+mallsell * sausage wonton
 mallsell -10 savings bond
 mallsell * scented massage oil
 mallsell -1 Sensual Massage for Creeps
@@ -198,7 +194,7 @@ mallsell * T.U.R.D.S. Key
 mallsell -1 The Ballad of Richie Thingfinder
 mallsell * Thinknerd blind-packed toy
 mallsell * tiny dancer
-mallsell * tomb ratchet
+mallsell -1 tomb ratchet
 mallsell * towel
 mallsell -1 Travels with Jerry
 mallsell * triad summoning scroll
@@ -770,7 +766,7 @@ autosell * cast
 autosell * cat appendix
 autosell * catgut
 autosell * centipede eggs
-autosell * chaos butterfly
+autosell -1 chaos butterfly
 autosell * cheap Chinese beer
 autosell * cheap cigar butt
 autosell * cheap plastic blowgun
@@ -1077,6 +1073,7 @@ autosell * martini
 autosell * marzipan skull
 autosell * meat stack
 autosell * meat vortex
+autosell * megatofu
 autosell * meleegra pills
 autosell * menudo ravioli
 autosell * metallic A
@@ -1085,6 +1082,7 @@ autosell * mind flayer corpse
 autosell -1 miner's helm
 autosell -1 miner's pants
 autosell * miniature boiler
+autosell * mixed wildflower greens
 autosell * molotov cocktail cocktail
 autosell -1 Mother's necklace
 autosell * monkey wrench

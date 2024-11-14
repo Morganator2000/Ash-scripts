@@ -51,4 +51,7 @@ void main() {
     while (have_skill($skill[Make Sweat-Ade])) {
         use_skill($skill[Make Sweat-Ade]);
     }
+
+    #TODO: discard karma
+    #TODO: run logout
 }

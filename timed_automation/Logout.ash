@@ -4,6 +4,8 @@
 #pick from garden if "ripe"
 #TODO: add monkeypaw for something.
 #TODO: use giant black monolith
+#TODO: spend mr. store credits
+#TODO: mayam calendar
 
 void main () {
 	cli_execute("try; use 1 circle drum");

@@ -686,7 +686,7 @@ autosell * antique packet of ketchup
 autosell * antique shield
 autosell * antique spear
 autosell * Artisanal limoncello
-autosell * asbestos ore
+autosell -1 asbestos ore
 autosell * ASCII shirt
 autosell * awful poetry journal
 autosell * baby killer bee
@@ -781,7 +781,7 @@ autosell * chintzy turtle brooch
 autosell -10 chipotle wasabi cilantro aioli
 autosell * chorizo brownies
 autosell * chorizo taco
-autosell * chrome ore
+autosell -1 chrome ore
 autosell * chunk of hot iron
 autosell -5 cigar box turtle
 autosell * cigarette lighter
@@ -1049,7 +1049,7 @@ autosell * lihc eye
 autosell * lihc face
 autosell * lime-and-chile-flavored chewing gum
 autosell * linguini immondizia bianco
-autosell * linoleum ore
+autosell -1 linoleum ore
 autosell * long skinny balloon
 autosell * loose teeth
 autosell * low-budget shield
@@ -1102,6 +1102,9 @@ autosell * mushroom filet
 autosell * mushroom pizza
 autosell * Nardz energy beverage
 autosell * Necrotelicomnicon
+autosell -1 ninja carabiner
+autosell -1 ninja crampons
+autosell -1 ninja rope
 autosell -500 new age healing crystal
 autosell -500 new age hurting crystal
 autosell * ninja mop

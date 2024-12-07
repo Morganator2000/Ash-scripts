@@ -77,6 +77,8 @@ void main () {
 
     if (allgood) {
         print("You have everything you need. Have fun sewer diving! Watch out for cages!", "green");
+        equip($item[Gatorskin Umbrella]);
+        equip($item[Hobo Code Binder]);
     }
 
 }

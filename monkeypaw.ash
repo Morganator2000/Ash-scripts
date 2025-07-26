@@ -15,6 +15,13 @@ void main (String request) {
                 abort("Add a new effect.");
             }
             break;
+        case "cold res":
+            if (have_effect($effect[Fever From the Flavor]) == 0) {
+                monkey_paw($effect[Fever From the Flavor]);
+            } else {
+                abort("Add a new effect.");
+            }
+            break;
         case "cold spell":
         case "cold spell dmg":
         case "cold spell damage":
@@ -49,12 +56,56 @@ void main (String request) {
                 abort("Add a new effect.");
             }
             break;
+        case "exp":
+            switch(my_primestat())  {
+            case $stat[Muscle]:
+            if (have_effect($effect[HGH-charged]) == 0){
+                monkey_paw($effect[HGH-charged]);
+            }
+            break;
+            case $stat[Mysticality]:
+            if (have_effect($effect[Different Way of Seeing Things]) == 0){
+                monkey_paw($effect[Different Way of Seeing Things]);
+            }
+            break;
+            case $stat[Moxie]: 
+            if (have_effect($effect[Thou Shant Not Sing]) == 0){
+                monkey_paw($effect[Thou Shant Not Sing]);
+            }
+            break;
+            }
+        break;
+        case "fam xp":
+        case "familiar xp":
+        case "familiar experience":
+            if (have_effect($effect[Blue Swayed]) == 0) {
+                # TODO: this has a variable xp boost    
+                monkey_paw($effect[Blue Swayed]);
+            } else {
+                abort("Add a new effect.");
+            }
+            break;
         case "hot dmg":
         case "hot damage":
             if (have_effect($effect[Dragged Through the Coals]) == 0) {
                 monkey_paw($effect[Dragged Through the Coals]);
             } else if (have_effect($effect[Abyssal Blood]) == 0) {
                 monkey_paw($effect[Abyssal Blood]); #Untested
+            } else {
+                abort("Add a new effect.");
+            }
+            break;
+        case "hot res":
+        case "hot resistance":
+            if (have_effect($effect[Fireproof Lips]) == 0) {
+                monkey_paw($effect[Fireproof Lips]);
+            } else {
+                abort("Add a new effect.");
+            }
+            break;
+        case "hp":
+            if (have_effect($effect[Preemptive Medicine]) ==0) {
+                monkey_paw($effect[Preemptive Medicine]);
             } else {
                 abort("Add a new effect.");
             }
@@ -99,10 +150,19 @@ void main (String request) {
             break;
         case "mox":
         case "moxie":
-            abort("Add a new effect.");
+            if (have_effect($effect[New and Improved]) == 0) {
+                monkey_paw($effect[New and Improved]);
+            } else if (have_effect($effect[A Contender]) == 0) {
+                monkey_paw($effect[A Contender]);
+            } else { 
+                abort("Add a new effect.");
+            }
+            break;
         case "mus":
         case "muscle":
-            if (have_effect($effect[A Contender]) == 0) {
+            if (have_effect($effect[New and Improved]) == 0) {
+                monkey_paw($effect[New and Improved]);
+            } else if (have_effect($effect[A Contender]) == 0) {
                 monkey_paw($effect[A Contender]);
             } else { 
                 abort("Add a new effect.");
@@ -110,7 +170,14 @@ void main (String request) {
             break;
         case "myst":
         case "mysticality":
-            abort("Add a new effect.");
+            if (have_effect($effect[New and Improved]) == 0) {
+                monkey_paw($effect[New and Improved]);
+            } else if (have_effect($effect[A Contender]) == 0) {
+                monkey_paw($effect[A Contender]);
+            } else { 
+                abort("Add a new effect.");
+            }
+            break;
         case "sleaze dmg":
         case "sleaze damage":
             if (have_effect($effect[Fifty Ways to Bereave Your Lover]) == 0) {
@@ -123,9 +190,19 @@ void main (String request) {
                 abort("Add a new effect.");
             }
             break;
+        case "spell dmg":
+        case "spell damage":
+            if(have_effect($effect[Witch Breaded]) == 0) {
+                monkey_paw($effect[Witch Breaded]);
+            } else if (have_effect($effect[Pisces in the Skyces]) == 0) {
+                monkey_paw($effect[Pisces in the Skyces]);
+            } else {
+                abort("Add a new effect");
+            }
+            break;
         case "spooky dmg":
         case "spooky damage":
-            if (have_effect($effect[Eyes All Black]) == 0) {#not tested
+            if (have_effect($effect[Eyes All Black]) == 0) {
                 monkey_paw($effect[Eyes All Black]);
             } else { 
                 abort("Add a new effect.");
@@ -143,6 +220,13 @@ void main (String request) {
         case "stench damage":
             if (have_effect($effect[Sewer-Drenched]) == 0) { #not tested
                 monkey_paw($effect[Sewer-Drenched]);
+            } else { 
+                abort("Add a new effect.");
+            }
+            break;
+        case "stench res":
+            if (have_effect($effect[Can't Smell Nothin']) == 0) {
+                monkey_paw($effect[Can't Smell Nothin']);
             } else { 
                 abort("Add a new effect.");
             }

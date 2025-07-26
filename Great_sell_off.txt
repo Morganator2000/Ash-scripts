@@ -56,6 +56,7 @@ make * cocoa egg
 make * fishy fish lasagna
 make * gnat lasagna
 make * long pork lasagna
+# TODO: Should I still be making this?
 make * sausage wonton
 make * grue egg omelette
 make * rusty metal key
@@ -886,6 +887,7 @@ autosell * Feng Shui for Big Dumb Idiots
 autosell * ferret bait
 autosell * fettucini Inconnu
 autosell * filthy hippy poncho
+autosell * filthy poultice
 autosell * fire of unknown origin
 autosell * fish-liver oil
 #autosell * fish-oil smoke bomb
@@ -913,6 +915,7 @@ autosell * fuzzy busby
 autosell * fuzzy earmuffs
 autosell * fuzzy montera
 autosell * gator shades
+autosell * gauze garter
 autosell * gearbox necklace
 autosell * genalen bottle
 autosell * ghost key

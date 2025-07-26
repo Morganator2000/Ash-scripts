@@ -1,9 +1,15 @@
+void use_item(item thing) {
+    if (item_amount(thing) >= 1) {
+        use(thing);
+    }
+}
+
 void main () {
     # Visit toot oriole
     # open letter from King Ralph XI
-    use($item[letter from King Ralph XI]);
+    use_item($item[letter from King Ralph XI]);
     # open pork elf goodies sack
-    use($item[pork elf goodies sack]);
+    use_item($item[pork elf goodies sack]);
     # Pretentious artist quest
     # gourd quest
     # guild quest
@@ -13,15 +19,18 @@ void main () {
         # overgrown lot
     # Visit the sot
     # open astral item
-    if (item_amount($item[astral hot dog dinner]) >= 1) {
-        use($item[astral hot dog dinner])
-    } else if (item_amount($item[astral six-pack]) >= 1) {
-        use($item[astral six-pack])
-    } else if (item_amount($item[carton of astral energy drinks]) >= 1) {
-        use($item[carton of astral energy drinks])
-    }
-    # equip starting gear
+    use_item($item[astral hot dog dinner]);
+    use_item($item[astral six-pack]);
+    use_item($item[[10882]carton of astral energy drinks]);
+    use_item($item[cold medicine cabinet]);
     # equip items of the month
     # if softcore
         # buy and pull clockwork maid
+
+    # if casual
+    if(my_path() == $path[none]) {
+        # Turn on backup camera reverser so text is forward.
+        cli_execute("backupcamera reverse on");
+    }
 }
+

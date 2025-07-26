@@ -6,6 +6,7 @@
 #TODO: use giant black monolith
 #TODO: spend mr. store credits
 #TODO: mayam calendar
+#TODO: Nash Crosby's still
 
 void main () {
 	cli_execute("try; use 1 circle drum");
@@ -93,5 +94,10 @@ void main () {
 		}
 	}
 	#end by maximizing adventures
-	cli_execute("maximize adv");
+	if (in_hardcore() && hippy_stone_broken()) {
+		cli_execute("maximize adv, pvp fights");
+	} else {
+		cli_execute("maximize adv");
+	}
+	
 }

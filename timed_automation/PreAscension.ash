@@ -1,8 +1,13 @@
 void main() {
     # Open all Mayday Supply Packages
     cli_execute("use * mayday supply package");
+    # Make Sweat-Ade
+    equip($item[Designer Sweatpants]);
+    cli_execute("try; cast Make Sweat-Ade");
+    cli_execute("try; cast Make Sweat-Ade");
 
     # Use lockpicking and make a pie, based on mall price
+    #TODO: Run in test script first
     if (have_skill($skill[Lock Picking])){
         int boris_price = mall_price($item[Boris's key lime pie]);
         int jarlsberg_price = mall_price($item[Jarlsberg's key lime pie]);
@@ -46,12 +51,7 @@ void main() {
         craft("cook", 1, $item[pie crust], best_lime);
         put_shop(max_price, 0, 1,best_pie);
     }
-    # Make Sweat-Ade
-    equip($item[Designer Sweatpants]);
-    while (have_skill($skill[Make Sweat-Ade])) {
-        use_skill($skill[Make Sweat-Ade]);
-    }
 
     #TODO: discard karma
-    #TODO: run logout
+    cli_execute("run logout");
 }

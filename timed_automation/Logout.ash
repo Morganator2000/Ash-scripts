@@ -1,6 +1,5 @@
 #Things I want to do when logging out
 
-#Overdrink maybe
 #pick from garden if "ripe"
 #TODO: add monkeypaw for something.
 #TODO: use giant black monolith
@@ -63,6 +62,20 @@ void main () {
 		cli_execute("try; skate merry-go-round");
 		cli_execute("try; skate eels");
 	}
+
+	# Use remaining Cursed Monkey Paw wishes
+
+	// int wishes_remaining = 5 - to_int(get_property("_monkeyPawWishesUsed"));
+	// wish_list = []
+	// if(gnomads_available() && get_property("_monkeyPawWishesUsed") > 1) {
+	// 	monkey_paw($item[flange]);
+	// 	monkey_paw($item[clockwork key]);
+	// }
+
+	// while(get_property("_monkeyPawWishesUsed") > 0) {
+	// 	monkey_paw($item[]);
+	// 	monkey_paw($effect[]);
+	// }
 
 	if (have_skill($skill[Summon Dice])) {
 		print("Now summoning dice... repeatedly", "blue");

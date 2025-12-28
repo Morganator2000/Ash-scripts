@@ -3,6 +3,13 @@ void main (String request) {
         abort("You have no wishes remaining");
     }
     switch (request) {
+        case "all res":
+            if (have_effect($effect[Feeling No Pain]) == 0) {
+                monkey_paw($effect[Feeling No Pain]);
+            } else {
+                abort("Add a new effect.");
+            }
+            break;
         case "cold dmg":
         case "cold damage":
             if (have_effect($effect[Staying Frosty]) == 0) {
@@ -176,6 +183,11 @@ void main (String request) {
                 monkey_paw($effect[A Contender]);
             } else { 
                 abort("Add a new effect.");
+            }
+            break;
+        case "prismatic dmg":
+            if (have_effect($effect[In a Lather]) ==0) {
+                monkey_paw($effect[In a Lather]);
             }
             break;
         case "sleaze dmg":

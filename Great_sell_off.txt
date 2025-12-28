@@ -56,13 +56,14 @@ make * cocoa egg
 make * fishy fish lasagna
 make * gnat lasagna
 make * long pork lasagna
-# TODO: Should I still be making this?
-make * sausage wonton
 make * grue egg omelette
 make * rusty metal key
 use * orcish meat locker
 make * opium grenade
 make * gatorskin umbrella
+make * oil cap
+make * brick of sand
+make * sandcastle
 
 #Put these in the closet for later use
 
@@ -92,6 +93,7 @@ mallsell -300 11-leaf clover
 mallsell * 334 scroll
 mallsell -1 Asleep in the Cemetery
 mallsell * autumn dollar
+mallsell * Azurite
 mallsell * bag of cheat-os
 mallsell * baggie of powdered sugar
 mallsell * bar of freeze-dried water
@@ -102,8 +104,11 @@ mallsell * Benetton's Medley of Diversity
 mallsell -1 Biddy Cracker's Old-Fashioned Cookbook
 mallsell * black eyedrops
 mallsell -1 Blizzards I Have Died In
-mallsell -1 bowling ball
-mallsell * bus pass
+mallsell * black pixel
+mallsell * blue pixel
+mallsell -5 bowling ball
+mallsell * brown pixel
+mallsell -5 bus pass
 mallsell * calavera concertina
 mallsell * can of sterno
 mallsell * charrrm bracelet
@@ -122,6 +127,7 @@ mallsell -1 Elron's Explosive Etude
 mallsell * energy drink IV
 mallsell * expensive cigar
 mallsell * evil golden arches
+mallsell * eye agate
 mallsell * fairy gravy boat
 mallsell * fancy beef jerky
 mallsell -1 filth-encrusted futon
@@ -136,15 +142,17 @@ mallsell -1 freezin' bindle
 mallsell -1 frigid air mattress
 mallsell * glark cable
 mallsell * gnat lasagna
+mallsell * green pixel
 mallsell * guy made of bee pollen
 mallsell * hobo fortress blueprints
 mallsell * iiti Kitty phone charm
-mallsell * imp air
+mallsell -5 imp air
 mallsell * incredible pizza
 mallsell * ivory cue ball
 mallsell * jar of frostigkraut
 mallsell * kick-ass kicks
 mallsell -1 Kissin' Cousins
+mallsell * lapis lazuli
 mallsell * large box
 mallsell * leathery bat skin
 mallsell -1 Let Me Be!
@@ -167,10 +175,13 @@ mallsell -1 Prelude of Precision
 mallsell * ratarang
 mallsell * Red Fox Glove
 mallsell * Red Pill
+mallsell * red pixel
+mallsell * roasted marshmallow
 mallsell * round green sunglasses
 mallsell -1 round purple sunglasses
 mallsell -1 rusty hedge trimmers
 mallsell * rusty piece of rebar
+mallsell * sandcastle
 mallsell * sausage wonton
 mallsell -10 savings bond
 mallsell * scented massage oil
@@ -204,6 +215,7 @@ mallsell * Uncle Jick's Brownie Mix
 mallsell * vitachoconutriment capsule
 mallsell * wad of slimy rags
 mallsell * war tongs
+mallsell * white pixel
 mallsell * Xiblaxian cache locator simcode
 mallsell * Xiblaxian direct marketing simcode
 mallsell * Xiblaxian encrypted political prisoner
@@ -513,6 +525,7 @@ pulverize * scorpion whip
 pulverize * security flashlight
 pulverize * serpentine sword
 pulverize * sewer snake
+pulverize -1 shadow skin
 pulverize -1 shellacked shell
 pulverize * shiny butcherknife
 pulverize -1 shocked shell
@@ -598,28 +611,15 @@ stash put * meatball
 stash put -20 Napalm In The Morning™ candle
 stash put -10 natural magick candle
 stash put -10 rainbow glitter candle
-stash put * recipe of before yore: boris's beer
-stash put * recipe of before yore: honey bun of boris
-stash put * recipe of before yore: ratatouille de jarlsberg
-stash put * recipe of before yore: jarlsberg's vegetable soup
-stash put * recipe of before yore: pete's wily whey bar
-stash put * recipe of before yore: st. pete's sneaky smoothie
-stash put * recipe of before yore: boris's bread
-stash put * recipe of before yore: roasted vegetable of j.
-stash put * recipe of before yore: pete's rich ricotta
-stash put * recipe of before yore: roasted vegetable focaccia
-stash put * recipe of before yore: plain calzone
-stash put * recipe of before yore: baked veggie ricotta
-stash put * recipe of before yore: deep dish of legend
-stash put * recipe of before yore: calzone of legend
-stash put * recipe of before yore: pizza of legend
 stash put * roll of toilet paper
 stash put -1 Scent of a Human™ candle
+stash put -10 scroll of minor invulnerability
 stash put -20 slimy fermented bile bladder
 stash put -20 slimy sweetbreads
 display put -1 spectre scepter
 stash put * stuffed crazy bastard sword
 stash put * stuffed martini
+stash put -10 table tennis ball
 stash put -2 The Beast Within™ candle
 stash put * useless powder
 stash put -20 votive of confidence
@@ -795,6 +795,7 @@ autosell * clutch of dodecapede eggs
 autosell * coal dust
 autosell * cobb's knob wurstbrau
 autosell * cocktail napkin
+autosell * coconut shell
 autosell * cold ninja mask
 autosell * colon annihilation sauce
 autosell * colorful toad
@@ -810,6 +811,7 @@ autosell * cool mushroom
 autosell * cool spore pod
 autosell * cornuthaum
 autosell * costume sword
+autosell * crappy brain
 autosell * crazy hobo notebook
 autosell * crazy little turkish delight
 autosell * cream stout
@@ -827,6 +829,7 @@ autosell * Dad's brandy
 autosell * dance card
 autosell * deactivated putty buddy
 autosell * dead meat bun
+autosell * decent brain
 autosell * decorative fountain
 autosell * delicious noodles
 autosell * delicious spicy noodles
@@ -949,6 +952,7 @@ autosell * gnoll teeth
 autosell * Gnollish flyswatter
 autosell * gnollish plunger
 autosell * gnollish slotted spoon
+autosell -6 goat cheese
 autosell * goat cheese pizza
 autosell * gob of wet hair
 autosell * gold boozehounds anonymous token
@@ -1020,6 +1024,7 @@ autosell * jocko homo's head
 autosell * Jolly Roger charrrm
 autosell * jumping bean burrito 
 autosell * jungle floor wax
+autosell * juniper berries 
 autosell -1 ketchup hound
 autosell -1 killing jar
 autosell * kneecapping stick
@@ -1072,8 +1077,10 @@ autosell * maple syrup
 autosell * mariachi g-string
 autosell -1 mariachi hat
 autosell * mariachi toothpaste
+autosell * Marquis de Poivre soda
 autosell * martini
 autosell * marzipan skull
+autosell * McMillicancuddy's Special Lager
 autosell * meat stack
 autosell * meat vortex
 autosell * megatofu
@@ -1111,6 +1118,7 @@ autosell -1 ninja rope
 autosell -500 new age healing crystal
 autosell -500 new age hurting crystal
 autosell * ninja mop
+autosell -1 oil cap
 autosell * oil of parrrlay
 autosell * one pill
 autosell * open sauce
@@ -1122,6 +1130,7 @@ autosell * O'RLY manual
 autosell * ornate picture frame
 autosell * out-of-tune biwa
 autosell * overcookie
+autosell * overpriced "imported" beer
 autosell * pacifier necklace
 autosell * PADL phone
 autosell -1 pail
@@ -1153,6 +1162,7 @@ autosell * pink slime
 autosell * pirate pelvis
 autosell * plaid swatch
 autosell * plain bagel
+autosell * plain old beer
 autosell * plain pizza
 autosell * plain snowcone
 autosell * plot hole
@@ -1194,6 +1204,21 @@ autosell * raw bread
 autosell * razor-sharp can lid
 autosell * really dense meat stack
 autosell * really thick spine
+autosell * recipe of before yore: boris's beer
+autosell * recipe of before yore: honey bun of boris
+autosell * recipe of before yore: ratatouille de jarlsberg
+autosell * recipe of before yore: jarlsberg's vegetable soup
+autosell * recipe of before yore: pete's wily whey bar
+autosell * recipe of before yore: st. pete's sneaky smoothie
+autosell * recipe of before yore: boris's bread
+autosell * recipe of before yore: roasted vegetable of j.
+autosell * recipe of before yore: pete's rich ricotta
+autosell * recipe of before yore: roasted vegetable focaccia
+autosell * recipe of before yore: plain calzone
+autosell * recipe of before yore: baked veggie ricotta
+autosell * recipe of before yore: deep dish of legend
+autosell * recipe of before yore: calzone of legend
+autosell * recipe of before yore: pizza of legend
 autosell * red-and-green sweater
 autosell -10 red blood cells
 autosell * red button
@@ -1228,6 +1253,7 @@ autosell * samurai turtle
 autosell -1 saucepan
 autosell * sausage pizza
 autosell * savoy truffle
+autosell * scroll of protection from lycanthropes
 autosell -1 seal-clubbing club
 autosell -1 seal-skull helmet
 autosell * sewer turtle
@@ -1265,6 +1291,7 @@ autosell * spaghetti with Skullheads
 autosell * Spam Witch sammich
 autosell * spark plug earring
 autosell * spiced rum
+autosell * spicy bean burrito
 autosell * spicy noodles
 autosell * Spider Web
 autosell * sponge cake
@@ -1320,6 +1347,7 @@ autosell * stuffed spooky gravy fairy
 autosell * stuffed stinky gravy fairy
 autosell * stuffed teddy butler
 autosell * stuffed tin of caviar
+autosell * stuffed treasure chest
 autosell * stuffed undead elbow macaroni
 autosell * stunt nuts
 autosell * stylish swimsuit
@@ -1574,6 +1602,7 @@ autosell * red-hot jawbreaker
 autosell * Redeye™ Eyedrops
 autosell * Rogue Windmill Rouge
 autosell * salt water taffy
+autosell * scroll of minor invulnerability
 autosell * scrunchie tourniquet
 autosell * Scuba Snack
 autosell * secret mummy herbs and spices
@@ -1622,6 +1651,112 @@ autosell * wrestling mask
 autosell * x-ray mirror
 autosell * zombie hollandaise
 autosell * Überraschthexengebräu
+
+# The sea
+use * flytrap pellet
+use * Mer-kin thingpouch
+use * imitation crab crate
+use * groupie bra
+use * mermaid's purse
+use * Mer-kin foodbucket
+use * 
+use * 
+use * 
+use * 
+use * 
+mallsell * fish stick
+mallsell * fish scimitar
+mallsell * fish bazooka
+mallsell * temporary teardrop tattoo
+mallsell * eel skin
+mallsell * shark cartilage
+mallsell -1 shark jumper
+mallsell * moist sailor's cap
+mallsell * rusty compass
+mallsell * rusty speargun
+mallsell * glowing syringe
+mallsell * rusty rivet
+mallsell * groupie spangles
+mallsell * collapsible baton
+mallsell * brand new key
+mallsell * brass dorsal fin
+mallsell * skate skates
+mallsell -1 skate board
+mallsell * marine aquamarine
+mallsell * anemone nematocyst
+mallsell * high-pressure seltzer bottle
+mallsell * midget clownfish
+mallsell * amber aviator shades
+mallsell * slug of rum
+mallsell * slug of shochu
+mallsell * slug of vodka
+mallsell * Mer-kin pinkslip
+mallsell * blank prescription sheet
+mallsell -1 nurse's hat
+mallsell * sea salt scrubs
+mallsell * seaode
+mallsell * 
+mallsell * 
+
+pulverize * brand new key
+pulverize * ice skate
+pulverize -1 skate board
+
+autosell * bazookafish bubble gum
+autosell * ganger bandana
+autosell * eel battery
+autosell -5 eel sauce
+autosell * shark tooth
+autosell * glob of green slime
+autosell * water-polo cap
+autosell -1 octopus's spade
+autosell -2 sea radish
+autosell * soggy seed packet
+autosell -1 straw hat
+autosell -5 octopus ink bladder 
+autosell * slab of sponge
+autosell -3 sea lace
+autosell * Mer-kin hookspear
+autosell * Mer-kin takebag
+autosell * live nautical mine
+autosell * rusty broken diving helmet
+autosell * rusty porthole
+autosell * groupie lipstick
+autosell * skate blade
+autosell * skate skin
+autosell * spangly unitard
+autosell * S.A.V.E. flyer
+autosell * barrrnacle
+autosell * bottle of melodramamine
+autosell * sea grease
+autosell * underwater slingshot
+autosell -1 Mer-kin digpick
+autosell * teflon ore
+autosell * velcro ore
+autosell * vinyl ore
+autosell -5 anemone sauce
+autosell * hair of the fish
+autosell * Alewife™ Ale
+autosell -5 Mer-kin weaksauce
+autosell * 
+autosell * 
+autosell * 
+autosell * 
+autosell * 
+autosell * 
+autosell * 
+autosell * 
+autosell * 
+autosell * 
+autosell * 
+autosell * 
+autosell * 
+autosell * 
+autosell * 
+autosell * 
+
+Sea produce
+
 
 #Send some stuff to Buffy
 send * antique bottle of cough syrup, * black sheepskin diploma, * blood of the Wereseal, * bubbly potion, * bucket of wine, * funky dried mushroom, * glittery mascara, * handful of nuts and berries, * Mae West, * melted Jell-o shot, * pirate tract, * scroll of drastic healing, * seal-brain elixir, * shot of flower schnapps, * sleazy hi mein, * smoky potion, * yellow paisley oyster egg to Buffy

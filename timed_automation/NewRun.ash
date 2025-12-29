@@ -64,6 +64,12 @@ void main () {
     # Set leprecondo furniture
     cli_execute("condo Omnipot, fine upholstered dining table set, beer pong table, internet connected laptop");
 
+    # open the McHugeLarge backpack
+    visit_url("inventory.php?action=skiduffel&pwd");
+    
+    # Run breakfast. Let's see what I can get done for now.
+    cli_execute("breakfast");
+
     # End by equiping what you need for the forest quest.
     visit_url("council.php");
     cli_execute("maximize -combat");

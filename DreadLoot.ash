@@ -1,4 +1,7 @@
 # prints out the quantity of each Dreadsylvanian item you have.
+void print_item(item it) {
+    print(it + ": " + available_amount(it));
+}
 
 void main(boolean clearScreen) {
     if(clearScreen) {cli_execute("clear");}
@@ -25,9 +28,17 @@ void main(boolean clearScreen) {
     print("Drapes-You-Regally: " + available_amount($item[Drapes-You-Regally]));
     print("Warms-Your-Tush: " + available_amount($item[Warms-Your-Tush]));
     print("Covers-Your-Head: " + available_amount($item[Covers-Your-Head]));
+    print_item($item[Gets-You-Drunk]);
+    print_item($item[Protects-Your-Junk]);
+    print_item($item[Quiets-Your-Steps]);
+    print_item($item[Helps-You-Sleep]);
     print("Great Wolf's headband: " + available_amount($item[Great Wolf's headband]));
     print("Great Wolf's right paw: " + available_amount($item[Great Wolf's right paw]));
     print("Great Wolf's left paw: " + available_amount($item[Great Wolf's left paw]));
+    print_item($item[Hunger™ Sauce]);
+    print_item($item[Great Wolf's lice]);
+    print_item($item[Great Wolf's rocket launcher]);
+    print_item($item[Great Wolf's beastly trousers]);
     print();
 
     print("The Village", "blue");
@@ -47,9 +58,17 @@ void main(boolean clearScreen) {
     print("Zombie mariachi hat: " + available_amount($item[zombie mariachi hat]));
     print("Zombie accordion: " + available_amount($item[zombie accordion]));
     print("Zombie mariachi pants: " + available_amount($item[zombie mariachi pants]));
+    print_item($item[Wriggling severed nose]);
+    print_item($item[HOA regulation book]);
+    print_item($item[HOA zombie eyes]);
+    print_item($item[HOA citation pad]);
     print("Mayor Ghost's cloak: " + available_amount($item[Mayor Ghost's cloak]));
     print("Mayor Ghost's khakis: " + available_amount($item[Mayor Ghost's khakis]));
     print("Mayor Ghost's toupee: " + available_amount($item[Mayor Ghost's toupee]));
+    print_item($item[Ghost pepper]);
+    print_item($item[Mayor Ghost's scissors]);
+    print_item($item[Mayor Ghost's sash]);
+    print_item($item[Mayor Ghost's gavel]);
     print();
 
 
@@ -70,9 +89,19 @@ void main(boolean clearScreen) {
     print("Thunkula's drinking cap: " + available_amount($item[Thunkula's drinking cap]));
     print("Drunkula's silky pants: " + available_amount($item[Drunkula's silky pants]));
     print("Drunkula's cape: " + available_amount($item[Drunkula's cape]));
+    print_item($item[Bottle of Bloodweiser]);
+    print_item($item[Drunkula's ring of haze]);
+    print_item($item[Drunkula's wineglass]);
+    print_item($item[Drunkula's bell]);
     print("Unkillable Skeleton's skullcap: " + available_amount($item[Unkillable Skeleton's skullcap]));
     print("Unkillable Skeleton's shinguards: " + available_amount($item[Unkillable Skeleton's shinguards]));
     print("Unkillable Skeleton's breastplate: " + available_amount($item[Unkillable Skeleton's breastplate]));
+    print_item($item[Electric Kool-Aid]);
+    print_item($item[Unkillable Skeleton's shield]);
+    print_item($item[Unkillable Skeleton's sawsword]);
+    print_item($item[Unkillable Skeleton's restless leg]);
+    print();
+    print_item($item[Skull capacitor]);
     print();
 
     print("Items required for Hard-mode bosses", "blue");
@@ -82,7 +111,7 @@ void main(boolean clearScreen) {
     print("moon-amber: " + available_amount($item[moon-amber]) + ". Acquired by climbing the tallest tree (woods) as a muscle class.");
     print("Falls-From-Sky", "blue");
     print("bloody kiwitini: " + available_amount($item[bloody kiwitini]) + ". Made in the laboratory (castle, key) as a moxie class with a blood kiwi and eau de mort.");
-    print("blood kiwi: " + available_amount($item[blood kiwi]) + ". Acquired by having a clanmate drop it from the tallest tree (woods) while you catch it at the bottom.");
+    print("blood kiwi: " + available_amount($item[blood kiwi]) + ". Acquired by having a muscle clanmate drop it from the tallest tree (woods) while you catch it at the bottom.");
     print("eau de mort: " + available_amount($item[eau de mort]) + ". Acquired at the Old Dukes' Estate (village, key).");
     print("Mayor Ghost", "blue");
     print("Dreadsylvania Auditor's badge: " + available_amount($item[Dreadsylvania Auditor's badge]) + ". Acquired in the cabin (woods) with a replica key.");
@@ -97,10 +126,10 @@ void main(boolean clearScreen) {
     print("Unkillable Skeleton", "blue");
     print("Dreadsylvanian shepherd's pie: " + available_amount($item[Dreadsylvanian shepherd's pie]) + ". Made in the duke's estate (village) as a myst class with the next 4 ingredients.");
     print("dreadful roast: " + available_amount($item[dreadful roast]) + ". Castle -> Great Hall -> Dining room.");
+    print("stinking agaricus: " + available_amount($item[stinking agaricus]) + ". Found in the dungeons (castle).");
+    print("dread tarragon: " + available_amount($item[dread tarragon]) + ". Woods -> Cabin -> kitchen.");
     print("bone flour: " + available_amount($item[bone flour]) + ". Grind an old dry bone in the cabin (woods) as a muscle class.");
     print("Old Dry Bone: " + available_amount($item[Old Dry Bone]) + ". Acquired from spooky skeleton (castle).");
-    print("stinking agaricus: " + available_amount($item[stinking agaricus]) + ". Found in the dungeons (castle).");
-    print("dread tarragon: " + available_amount($item[dread tarragon]) + ". Wooods -> Cabin -> kitchen.");
     print("Count Drunkula", "blue");
     print("ghost shawl: " + available_amount($item[ghost shawl]) + ". Made in the Old Duke's Estate (village, key) with 10 ghost threads.");
     print("ghost thread: " + available_amount($item[ghost thread]) + ". Acquired from spooky ghosts (village).");

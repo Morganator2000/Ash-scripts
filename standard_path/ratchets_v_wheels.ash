@@ -4,7 +4,7 @@
 
 # Wheel base chance: 15% per adventure.
     # Approximately 67 adventures to get 10 with no modifiers.
-# Ratcher base chance: 33% of getting the tomb rat, 20 % drop rate
+# Ratchet base chance: 33% of getting the tomb rat, 20 % drop rate
     # Approximately 150 adventures to get 10 with no modifiers.
 
 # It is expected that you will run this script once the control room is unlocked, so you

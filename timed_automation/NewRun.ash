@@ -25,8 +25,9 @@ void main () {
     visit_url("place.php?whichplace=town_wrong&action=townwrong_artist_noquest&getquest=1");
     # gourd quest
 	visit_url("place.php?whichplace=town_right&action=townright_gourd_loud&subaction=acceptgourdquest");
-    # guild quest
-    visit_url("guild.php$place=challenge");
+    # TODO: guild quest
+    visit_url("guild.php?guild=t");
+    # visit_url("guild.php$place=challenge");
     # skeleton store
     visit_url("shop.php?whichshop=meatsmith&action=talk");
     visit_url("choice.php?pwd&whichchoice=1059&option=1");
@@ -37,6 +38,7 @@ void main () {
     visit_url("shop.php?whichshop=doc&action=talk");
     visit_url("choice.php?whichchoice=1064&option=1");
     # Visit the sot. Maybe it will be somewhere I'm visiting.
+    # TODO print the output of where I should be going.
     visit_url("place.php?whichplace=speakeasy&action=olivers_sot");
 
     # open astral item
@@ -62,7 +64,7 @@ void main () {
     visit_url("campground.php?action=monolith");
 
     # Set leprecondo furniture
-    cli_execute("condo Omnipot, fine upholstered dining table set, beer pong table, internet connected laptop");
+    cli_execute("condo kegerator, high-end home workout system, internet connected laptop, ultimate retro game console");
 
     # open the McHugeLarge backpack
     visit_url("inventory.php?action=skiduffel&pwd");

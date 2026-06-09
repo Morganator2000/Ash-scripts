@@ -10,7 +10,7 @@ void main () {
     print("Crimbot Crimboutfit, sugar sphere, pool skill. " + mall_price($item[sugar sphere]));
     print("El Vibrato Relics, abandoned candy, much candy. " + mall_price($item[abandoned candy]));
     print("Eldritch Equipage, eldritch effluvium (" + mall_price($item[eldritch effluvium]) + ") or eldritch essence (" + mall_price($item[eldritch essence]) + ").");
-    print("Flagstone Finery, Flag by the Foot, hp and weight. " + mall_price($item[Flag by the Foot]));
+    print("Flagstone Finery, Flag by the Foot, hp and weight. " + mall_price($item[Flag by the Foot&trade;]));
     print("Gabardine Guise, Gabarbar, hp. " + mall_price($item[Gabarbar]));
     print("Hateful Habiliment, worst candy, -combat. " + mall_price($item[worst candy]));
     print("Legendary Regalia of the Chelonian Overlord. " + mall_price($item[chocolate turtle totem]));

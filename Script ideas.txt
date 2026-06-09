@@ -1,4 +1,2 @@
 Automate the isleWar quest to my liking
 Automate 8-bit realm up until the key
-Automated trading of dimes/quarters
-Automate the hidden temple unlock

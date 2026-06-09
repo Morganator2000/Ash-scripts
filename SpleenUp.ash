@@ -1,6 +1,3 @@
-
-
-
 void main () {
     #Get prices for the items
     int agua_price = mall_price($item[Agua de Vida]);
@@ -50,12 +47,5 @@ void main () {
 
     print();
     print("The best spleen item is " + best_spleen, "green");
-
-    #check if you have the right amount of that item. Buy from the mall if needed
-
-    #consume to max spleen
-
-    #check if using a mojo filter will help get a few more adventures.
-    #if yes, use a mojo then another one of the items.
 }
 

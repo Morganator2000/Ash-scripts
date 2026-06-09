@@ -46,7 +46,6 @@ use * tonic djinn
 use * very overdue library book
 use * warm subject gift certificate
 
-
 #Then we're going to craft a few things. Note that sauceror potions will need to be manually crafted (there's a reminder for it).
 
 make * duct tape wallet
@@ -60,7 +59,6 @@ make * grue egg omelette
 make * rusty metal key
 use * orcish meat locker
 make * opium grenade
-make * gatorskin umbrella
 make * oil cap
 make * brick of sand
 make * sandcastle
@@ -184,7 +182,7 @@ mallsell * rusty piece of rebar
 mallsell * sandcastle
 mallsell * sausage wonton
 mallsell -10 savings bond
-mallsell * scented massage oil
+mallsell -10 scented massage oil
 mallsell -1 Sensual Massage for Creeps
 mallsell * short writ of habeas corpus
 mallsell -1 sleazy bindle
@@ -195,6 +193,7 @@ mallsell -10 soggy used band-aid
 mallsell * spectral jelly
 mallsell -1 spooky bindle
 mallsell * spooky music box mechanism
+mallsell -1 spork
 mallsell -1 stained mattress
 mallsell * Steam Card: Dungeon Fist (#2)
 mallsell -1 stinkin' bindle
@@ -377,7 +376,7 @@ pulverize * Giant artisanal rice peeler
 pulverize * giant cactus quill
 pulverize * giant designer sunglasses
 pulverize * giant foam finger
-pulverize * giant gym membership card
+pulverize -1 giant gym membership card
 pulverize * giant motorcycle boots
 pulverize * giant penguin keychain
 pulverize -1 giant pinky ring
@@ -472,7 +471,7 @@ pulverize -1 orcish baseball cap
 pulverize -1 orcish cargo shorts
 pulverize -1 orcish frat-paddle
 pulverize * orcish stud finder
-pulverize * oven mitts
+pulverize -1 oven mitts
 pulverize * oversized pipe
 pulverize * oversized pizza cutter
 pulverize * oversized skullcap
@@ -1052,7 +1051,7 @@ autosell * leathery cat skin
 autosell * leathery rat skin
 autosell * leftovers of indeterminate origin
 autosell * lemon popsicle
-autosell * leotarrrd
+autosell -1 leotarrrd
 autosell * lihc eye
 autosell * lihc face
 autosell * lime-and-chile-flavored chewing gum
@@ -1300,7 +1299,6 @@ autosell -5 spooky mushroom
 autosell * spooky shrunken head
 autosell * spooky sound effects record
 autosell * spooky stick
-autosell * spork
 autosell * squat-thrust magazine
 autosell * stale baguette
 autosell * stalk of asparagus
@@ -1375,7 +1373,7 @@ autosell * Tasty fun good rice candy
 autosell * teddy bear backpack
 autosell * teeny-tiny ninja stars
 autosell -1 tenderizing hammer
-autosell * tequila grenade
+autosell -10 tequila grenade
 autosell * terrible poem
 autosell * that gum you like
 autosell * the funk
@@ -1659,11 +1657,6 @@ use * imitation crab crate
 use * groupie bra
 use * mermaid's purse
 use * Mer-kin foodbucket
-use * 
-use * 
-use * 
-use * 
-use * 
 mallsell * fish stick
 mallsell * fish scimitar
 mallsell * fish bazooka
@@ -1695,11 +1688,9 @@ mallsell * blank prescription sheet
 mallsell -1 nurse's hat
 mallsell * sea salt scrubs
 mallsell * seaode
-mallsell * 
-mallsell * 
 
 pulverize * brand new key
-pulverize * ice skate
+# pulverize * ice skate
 pulverize -1 skate board
 
 autosell * bazookafish bubble gum
@@ -1738,24 +1729,6 @@ autosell -5 anemone sauce
 autosell * hair of the fish
 autosell * Alewife™ Ale
 autosell -5 Mer-kin weaksauce
-autosell * 
-autosell * 
-autosell * 
-autosell * 
-autosell * 
-autosell * 
-autosell * 
-autosell * 
-autosell * 
-autosell * 
-autosell * 
-autosell * 
-autosell * 
-autosell * 
-autosell * 
-autosell * 
-
-Sea produce
 
 
 #Send some stuff to Buffy

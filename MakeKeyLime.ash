@@ -30,9 +30,11 @@ void main() {
         print("Best pie: " + best_pie, "green");
         
         #TODO make sure this part works
-        visit_url("runskillz.php?action=Skillz&whichskill=195&targetplayer=0&pwd&quantity=1&ajax=1&_=1772333355330");
+        print("Casting lockpicking with choice " + choice);
+        visit_url("runskill.php?action=Skillz&whichskill=195&quantity=1");
         visit_url("choice.php?whichchoice=1414&option=" + choice + "&pwd");
-        
+        print("cast complete");
+
         if (item_amount($item[lime]) < 1) {
             buy(1, $item[lime]);
         }

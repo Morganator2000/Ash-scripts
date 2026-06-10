@@ -5,6 +5,7 @@ void main () {
     skill_list[0] = $skill[Inappropriate Backrub];
     skill_list[1] = $skill[Chronic Indigestion];
     skill_list[2] = $skill[Snowclone];
+    # TODO even when I do have spooky breath it says I don't. Why?
     skill_list[3] = $skill[Spooky Breath];
     skill_list[4] = $skill[Tango of Terror];
     skill_list[5] = $skill[Stream of Sauce];
@@ -94,6 +95,10 @@ void main () {
         equip($slot[acc1], $item[Choker of the Ultragoth]);
         equip($slot[acc2], $item[oven mitts]);
         equip($slot[acc3], $item[Dreadsylvania Auditor's badge]);
+        if(item_amount($item[photo booth supply list]) > 0) {
+            print("Oh hey, you have a supply list too. I bet you want that instead right?");
+            equip($item[photo booth supply list]);
+        }
     } else {
         print("Requirements missing.", "red");
     }

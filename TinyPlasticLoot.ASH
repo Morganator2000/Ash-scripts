@@ -115,7 +115,6 @@ void main (string series) {
             break;
         default:
             abort("Invalid series. Choose either: 1, 2, 3, 1C, 1Cw, 2C, 3C, 4C, 5C, 6C, 7C, 8C, 9C, 10C, 11C, 12C, 13C, 14C, 15C, 16C, 17C, 18C, 19C, 1FF or DCS1.");
-            #TODO add die cast
     }
 
     # Make initial table.

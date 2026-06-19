@@ -149,11 +149,28 @@ void main () {
 		}
 	}
 	#end by maximizing adventures
-	# TODO it always does the green lavaco lamp. Make it get the right one based on mainstat, and futureproof it for when I get something better.
 	if (in_hardcore() && hippy_stone_broken()) {
 		cli_execute("maximize adv, pvp fights");
 	} else {
 		cli_execute("maximize adv");
+	}
+	# For some reason the maximizer always defaults to the Green LavaCo lamp, regarless of mainstat.
+	# TODO not future proof. Remove if you get a better +adv offhand
+	if(is_unrestricted($item[Red LavaCo Lamp™])) {
+		switch(my_primestat()) {
+			case $stat[Muscle]:
+				equip($item[Red LavaCo Lamp™]);
+				break;
+			case $stat[Mysticality]:
+				equip($item[Blue LavaCo Lamp™]);
+				break;
+			case $stat[Moxie]:
+				equip($item[Green LavaCo Lamp™]);
+				break;
+			default:
+				print("Hey wait, how do you not have a mainstat?", "orange");
+				break;
+		}
 	}
 	
 }

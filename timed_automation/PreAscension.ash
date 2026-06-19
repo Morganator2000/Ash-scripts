@@ -1,4 +1,6 @@
 void main() {
+    # run the same logout script first
+    cli_execute("run logout");
     # Open all Mayday Supply Packages
     cli_execute("use * mayday supply package");
     # Make Sweat-Ade
@@ -14,9 +16,11 @@ void main() {
     # TODO use Dr. hobo's map and map of the slug lord
     cli_execute("try; use Dr. Hobo's Map");
     cli_execute("try; use The Slug Lord's map");
-    # Use lockpicking and make a pie, based on mall price
-    cli_execute("run MakeKeyLime");
+    # TODO Use lockpicking and make a pie, based on mall price, once this works.
+    # cli_execute("run MakeKeyLime");
 
-    #TODO: discard karma
-     cli_execute("run logout");
+    # TODO check if you have lucky, then use it to get scented massage oil
+    if(have_effect($effect[Lucky!])) {
+        adventure(1, $location[Cobb's Knob Harem]);
+    }
 }

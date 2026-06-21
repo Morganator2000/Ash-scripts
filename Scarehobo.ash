@@ -129,6 +129,7 @@ void main (int adventures) {
 
         # Adventure. Note that we are just attacking for skins.
         int temporaryAdvCounter = my_adventures();
+        print("Adventure " + (adventure_counter + 1) + " of " + adventures, "blue");
         if (lowest_part == "skins") {
             adventure(1, $location[Hobopolis Town Square], "attack;");
         } else {

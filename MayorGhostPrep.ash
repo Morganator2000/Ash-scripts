@@ -5,15 +5,13 @@ void main () {
     skill_list[0] = $skill[Inappropriate Backrub];
     skill_list[1] = $skill[Chronic Indigestion];
     skill_list[2] = $skill[Snowclone];
-    # TODO even when I do have spooky breath it says I don't. Why?
-    skill_list[3] = $skill[Spooky Breath];
+    skill_list[3] = $skill[Harpoon!];
     skill_list[4] = $skill[Tango of Terror];
     skill_list[5] = $skill[Stream of Sauce];
     skill_list[6] = $skill[Sing];
     skill_list[7] = $skill[Disco Dance of Doom];
     skill_list[8] = $skill[Ravioli Shurikens];
     skill_list[9] = $skill[Spectral Snapper];
-    skill_list[10] = $skill[Harpoon!];
 
     print("Skills:");
     foreach skill_name in skill_list {
@@ -23,6 +21,21 @@ void main () {
         } else {
             print("Don't have "+ skill_list[skill_name], "red");
         }
+    }
+    boolean acquire_spooky_breath = false;
+    if(have_effect($effect[Spooky Breath]) > 0) {
+        print("Have Spooky Breath", "blue");
+        skill_counter = skill_counter + 1;
+    } else if (item_amount($item[hot 'n' scarys]) > 0) {
+        print("You do not currently have Spooky Breath, but you can use a hot 'n' scarys", "orange");
+        acquire_spooky_breath = true;
+        skill_counter = skill_counter + 1;
+    } else if (item_amount($item[Spooky Hi Mein]) > 0 && fullness_limit() - my_fullness() >= 5) {
+        print("You do not currently have Spooky Breath, but you can eat a Spooky Hi Mein", "orange");
+        acquire_spooky_breath = true;
+        skill_counter = skill_counter + 1;
+    } else {
+        print("Don't have Spooky Breath", "red");
     }
     print();
     if (skill_counter == 11) {
@@ -95,8 +108,11 @@ void main () {
         equip($slot[acc1], $item[Choker of the Ultragoth]);
         equip($slot[acc2], $item[oven mitts]);
         equip($slot[acc3], $item[Dreadsylvania Auditor's badge]);
+        if(acquire_spooky_breath) {
+            print("Don't forget to acquire Spooky Breath", "orange");
+        }
         if(item_amount($item[photo booth supply list]) > 0) {
-            print("Oh hey, you have a supply list too. I bet you want that instead right?");
+            print("Oh hey, you have a supply list too. I bet you want that instead right?", "orange");
             equip($item[photo booth supply list]);
         }
     } else {

@@ -1,4 +1,5 @@
-
+# TODO future-proof this by getting a list of outfits the player owns, then selectively remove outfits
+# Honestly, just remove all outfits that give candies that sell for under 1000 meat.
 
 void main () {
     print("Animelf apparel, blind-packed capsule toy. " + mall_price($item[blind-packed capsule toy]));

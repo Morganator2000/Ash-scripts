@@ -89,5 +89,3 @@ void main () {
     print_item("El Vibrato leg guards");
     print("MODIFY SPHERE against a towering construct while you have a power sphere, the helmet, and the sphere", "orange");
 }
-
-# print_item("");

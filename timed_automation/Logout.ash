@@ -18,6 +18,7 @@ void main () {
 		use_skill(1, $skill[Summon Carrot]);
 	}
 	if (have_skill($skill[Emotionally Chipped])) {
+		# Maybe one day Feel Disappointed will do something.
 		use_skill(3, $skill[Feel Disappointed]);
 		use_skill(3, $skill[Feel Excitement]);
 		use_skill(3, $skill[Feel Lonely]);
@@ -113,6 +114,9 @@ void main () {
 	// 	monkey_paw($item[flange]);
 	// 	monkey_paw($item[clockwork key]);
 	// }
+
+	# Foresee peril in your clanmates
+	cli_execute("try; run foresee_peril");
 
 	if (have_skill($skill[Summon Dice])) {
 		print("Now summoning dice... repeatedly", "blue");

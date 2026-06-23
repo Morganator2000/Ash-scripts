@@ -70,12 +70,15 @@ void main (){
     for i from 0 to 12 by 1 {
         if (mall_price(fratItems[i]) > fratDimes[i]*200) {
             if (fratItems[i] == $item[beer helmet] || fratItems[i] == $item[distressed denim pants] || fratItems[i] == $item[bejeweled pledge pin]) {
-                cli_execute("mallsell -1 " + fratItems[i]);
+                #cli_execute("mallsell -1 " + fratItems[i]);
+                put_shop(mall_price(fratItems[i]), 0, item_amount(fratItems[i]) -1, fratItems[i]);
             } else {
-                cli_execute("mallsell * " + fratItems[i]);
+                #cli_execute("mallsell * " + fratItems[i]);
+                put_shop(mall_price(fratItems[i]), 0, item_amount(fratItems[i]), fratItems[i]);
             }
+            print("Placed " + fratItems[i] + " in mall.");
         } else {
-            print("Trade " + fratItems[i], "purple");
+            print("Exchange " + fratItems[i], "purple");
         }
     }
 
@@ -84,12 +87,14 @@ void main (){
     for i from 0 to 13 by 1 {
         if (mall_price(hippyItems[i]) > hippyQuarters[i]*200) {
             if (hippyItems[i] == $item[bullet-proof corduroys] || hippyItems[i] == $item[round purple sunglasses] || hippyItems[i] == $item[reinforced beaded headband]) {
-                cli_execute("mallsell -1 " + hippyItems[i]);
+                #cli_execute("mallsell -1 " + hippyItems[i]);
+                put_shop(mall_price(hippyItems[i]), 0, item_amount(hippyItems[i]) -1, hippyItems[i]);
             } else {
-                cli_execute("mallsell * " + hippyItems[i]);
+                #cli_execute("mallsell * " + hippyItems[i]);
+                put_shop(mall_price(hippyItems[i]), 0, item_amount(hippyItems[i]), hippyItems[i]);
             }
         } else {
-            print("Trade " + hippyItems[i], "green");
+            print("Exchange " + hippyItems[i], "green");
         }
     }
 

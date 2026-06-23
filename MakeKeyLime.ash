@@ -31,9 +31,21 @@ void main() {
         
         #TODO make sure this part works
         print("Casting lockpicking with choice " + choice);
-        visit_url("runskill.php?action=Skillz&whichskill=195&quantity=1");
-        visit_url("choice.php?whichchoice=1414&option=" + choice + "&pwd");
+        // visit_url("runskill.php?action=Skillz&whichskill=195&quantity=1");
+        // string choice_url = "choice.php?whichchoice=1414&option=" + to_string(choice);
+        // visit_url(choice_url);
+        // print("cast complete");
+
+        # Alternate method
+        use_skill(1, $skill[Lock Picking]);
+        run_choice(choice);
         print("cast complete");
+
+        # CLI method
+        // use_skill(1, $skill[Lock Picking]);
+        // string cli_command = "choice" + to_string(choice);
+        // cli_execute(cli_command);
+        // print("cast complete");
 
         if (item_amount($item[lime]) < 1) {
             buy(1, $item[lime]);

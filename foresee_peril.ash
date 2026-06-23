@@ -3,7 +3,7 @@ string [int] get_clan_member_names(string roster_html) {
     string [int] member_names;
     int index = 0;
 
-    # So this is a complicated pattern. We're checking for player names and the possible "(inactive)".
+    # So this is a complicated pattern. We're checking for player names and the possible "(inactive)" tag.
     matcher player_matcher = create_matcher("href=\"showplayer\\.php\\?who=\\d+\">(.*?)</a>(?:<font color=gray><b>\\s*\\(inactive\\)</b>)?", roster_html);
 
     while (player_matcher.find()) {

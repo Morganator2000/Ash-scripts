@@ -1,2 +1,6 @@
 Automate the isleWar quest to my liking
 Automate 8-bit realm up until the key
+
+TODOS:
+Star Key Lime script
+Cold Cabinet

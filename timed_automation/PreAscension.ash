@@ -17,7 +17,7 @@ void main() {
     cli_execute("try; use Dr. Hobo's Map");
     cli_execute("try; use The Slug Lord's map");
     # TODO Use lockpicking and make a pie, based on mall price, once this works.
-    # cli_execute("run MakeKeyLime");
+    # cli_execute("try; run MakeKeyLime");
 
     # TODO check if you have lucky, then use it to get scented massage oil
     if(have_effect($effect[Lucky!])) {

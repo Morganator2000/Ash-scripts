@@ -29,6 +29,7 @@ void main () {
     print("FLOOR: " + available_amount($item[El Vibrato punchcard FLOOR]));
     print("SELF: " + available_amount($item[El Vibrato punchcard SELF]));
     print("SPHERE: " + available_amount($item[El Vibrato punchcard SPHERE]));
+    print("ATTACK WALL against a hulking construct","orange");
     print("TARGET: " + available_amount($item[El Vibrato punchcard TARGET]));
     print("WALL: " + available_amount($item[El Vibrato punchcard WALL]));
     print();

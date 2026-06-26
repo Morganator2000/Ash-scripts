@@ -20,7 +20,7 @@ void main() {
     # cli_execute("try; run MakeKeyLime");
 
     # TODO check if you have lucky, then use it to get scented massage oil
-    if(have_effect($effect[Lucky!])) {
+    if(have_effect($effect[Lucky!]) && (my_adventures() > 0)) {
         adventure(1, $location[Cobb's Knob Harem]);
     }
 }

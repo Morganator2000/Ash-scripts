@@ -33,7 +33,7 @@ void main(int numberOfPies) {
     } else if(profit < 1000) {
         abort("Not enough of a profit is to be made.");
     } else {
-        print("All is good, let's make some pies", "green");
+        print("Let's make some pies", "green");
     }
 
     int piesCreated = 0;
@@ -91,7 +91,7 @@ void main(int numberOfPies) {
     }
     //buy materials to finish off on-hand materials
 
-    //buy dirrectly from the mall
+    //buy directly from the mall
     if (numberOfPies > piesCreated) {
         int piesLeft = numberOfPies - piesCreated;
         print("Buying ingredients from the mall", "blue");
@@ -111,8 +111,9 @@ void main(int numberOfPies) {
         craft("cook", piesLeft, $item[Pie Crust], $item[Star Key Lime]);
         piesCreated = piesCreated + piesLeft;
     }
+    # TODO find a better way to set the price besides undercut.
     cli_execute("mallsell " + piesCreated + " Star Key Lime Pie");
-    cli_execute("undercut");
+    # cli_execute("undercut");
     print();
     print("Leftover ingredients", "blue");
     print("Limes: " + item_amount($item[lime]));
@@ -124,5 +125,6 @@ void main(int numberOfPies) {
     print("Wads of Dough: " + item_amount($item[wad of Dough]));
     print();
     print("Created and sold "  + piesCreated + " pies!", "green");
-    print("Estimated net gain: " + piesCreated * profit + " meat", "green");
+    print("Estimated gross profit: " + piesCreated * pie_price + " meat", "green");
+    print("Estimated net profit: " + piesCreated * profit + " meat", "green");
 }

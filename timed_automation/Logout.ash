@@ -1,18 +1,20 @@
 #Things I want to do when logging out
 
-# TODO: spend mr. store 2002 credits
 # TODO: mayam calendar
 # TODO: Nash Crosby's still
-# TODO remaining photobooth effects
 
 void main () {
 	# Waiting a few seconds in case I want to cancel the logout script.
 	wait(3);
+	# TODO put mr. store 2002 effects here
+	cli_execute("try; run 2002MrStore");
+
+	# get effects for the start of the next day
 	cli_execute("try; use 1 circle drum");
 	if (item_amount($item[fishy pipe]) > 0){
 		cli_execute("try; use 1 fishy pipe");
 	}
-	cli_execute("try; use 1 red and green rain stick");
+	# cli_execute("try; use 1 red and green rain stick");
 	cli_execute("try; use 1 portable steam unit");
 	if (have_skill($skill[Summon Carrot])) {
 		use_skill(1, $skill[Summon Carrot]);
@@ -25,9 +27,6 @@ void main () {
 		use_skill(3, $skill[Feel Nervous]);
 		use_skill(3, $skill[Feel Peaceful]);
 	}
-	cli_execute("try; numberology 69");
-	cli_execute("try; numberology 69");
-	cli_execute("try; numberology 69");
 
 	visit_url("place.php?whichplace=monorail&action=monorail_lyle");
 	cli_execute("try; telescope high"); 
@@ -55,8 +54,30 @@ void main () {
 		cli_execute("try; styx moxie");
 	}
 
+	# clan photo booth effects. Get the mox one first, then mainstat
+	cli_execute("try; photobooth effect wild");
+	switch(my_primestat()) {
+		case $stat[Muscle]:
+			cli_execute("try; photobooth effect tower");
+			cli_execute("try; photobooth effect tower");
+			break;
+		case $stat[Mysticality]:
+			cli_execute("try; photobooth effect space");
+			cli_execute("try; photobooth effect space");
+			break;
+		case $stat[Moxie]:
+			cli_execute("try; photobooth effect wild");
+			cli_execute("try; photobooth effect wild");
+			break;
+	}
+
 	# Activate campground monolith
 	visit_url("campground.php?action=monolith");
+
+	# Numberology. I only have three uses for now.
+	cli_execute("try; numberology 69");
+	cli_execute("try; numberology 69");
+	cli_execute("try; numberology 69");
 
 	#go underwater
 	if (item_amount($item[old SCUBA tank]) > 0 && item_amount($item[das boot]) > 0) {
@@ -153,23 +174,23 @@ void main () {
 		}
 	}
 	#end by maximizing adventures
-	if (in_hardcore() && hippy_stone_broken()) {
+	if (hippy_stone_broken()) {
 		cli_execute("maximize adv, pvp fights");
 	} else {
 		cli_execute("maximize adv");
 	}
 	# For some reason the maximizer always defaults to the Green LavaCo lamp, regarless of mainstat.
 	# TODO not future proof. Remove if you get a better +adv offhand
-	if(is_unrestricted($item[Red LavaCo Lamp™])) {
+	if(is_unrestricted($item[red LavaCo Lamp&trade;])) {
 		switch(my_primestat()) {
 			case $stat[Muscle]:
-				equip($item[Red LavaCo Lamp™]);
+				equip($item[Red LavaCo Lamp&trade;]);
 				break;
 			case $stat[Mysticality]:
-				equip($item[Blue LavaCo Lamp™]);
+				equip($item[Blue LavaCo Lamp&trade;]);
 				break;
 			case $stat[Moxie]:
-				equip($item[Green LavaCo Lamp™]);
+				equip($item[Green LavaCo Lamp&trade;]);
 				break;
 			default:
 				print("Hey wait, how do you not have a mainstat?", "orange");

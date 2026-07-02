@@ -6,7 +6,7 @@ void rotate_chamber() {
     } else if (item_amount($item[Tomb Ratchet]) > 0) {
         visit_url("choice.php?whichchoice=929&option=2&pwd");
     } else {
-        abort("Something's really wrong here. You shouldn't have got to this point without a wheel/ratchet.")
+        abort("Something's really wrong here. You shouldn't have got to this point without a wheel/ratchet.");
     }
 }
 

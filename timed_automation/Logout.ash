@@ -74,6 +74,14 @@ void main () {
 	# Activate campground monolith
 	visit_url("campground.php?action=monolith");
 
+	# Dreadsylvania flasks
+	if(item_amount($item[brass Dreadsylvanian flask]) > 0) {
+		use(1, $item[brass Dreadsylvanian flask]);
+	}
+	if(item_amount($item[silver Dreadsylvanian flask]) > 0) {
+		use(1, $item[silver Dreadsylvanian flask]);
+	}
+
 	# Numberology. I only have three uses for now.
 	cli_execute("try; numberology 69");
 	cli_execute("try; numberology 69");
@@ -179,6 +187,8 @@ void main () {
 	} else {
 		cli_execute("maximize adv");
 	}
+	# switch to extra adventures familiar
+	equip($familiar[quantum entangler], $item[quantum watch]);
 	# For some reason the maximizer always defaults to the Green LavaCo lamp, regarless of mainstat.
 	# TODO not future proof. Remove if you get a better +adv offhand
 	if(is_unrestricted($item[red LavaCo Lamp&trade;])) {

@@ -5,9 +5,14 @@
 void main(int numberOfPies) {
     if(!have_chef() && free_cooks() < 1) {
         abort("No Chef-in-the-box detected. Please set up, and adjust item acquisition setting to automatically repair upon explosion.");
-    } else if(free_cooks() > 0) {
-        print("You have no chef-in-a-box but " + free_cooks() + " free cooks available. Adjusting number of pies to compensate.");
-        numberOfPies = free_cooks();
+    } else if(have_chef() && free_cooks() > 0) {
+        print("You have no chef-in-a-box but " + free_cooks() + " free cooks available.");
+        if (numberOfPies > free_cooks()){
+            print("Adjusting number of pies to compensate."," orange");
+            numberOfPies = free_cooks();
+        }
+    } else {
+        abort("You have no free cooks and no chef-in-the-box, therefore this is not worthwhile for you");
     }
 
     int pie_price = mall_price($item[Star Key Lime Pie]);
@@ -30,7 +35,7 @@ void main(int numberOfPies) {
     print("Expected profit per pie: " + profit + " meat", "blue");
     if (profit < 0) {
         abort("You will lose money here.");
-    } else if(profit < 1000) {
+    } else if (profit < 1000) {
         abort("Not enough of a profit is to be made.");
     } else {
         print("Let's make some pies", "green");

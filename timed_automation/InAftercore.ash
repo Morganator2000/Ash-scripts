@@ -12,6 +12,8 @@ void main (boolean longterm) {
     use_item($item[Cold Medicine Cabinet]);
     # Reverse the backup camera
     cli_execute("backupcamera reverse on");
+    # open the McHugeLarge backpack
+    visit_url("inventory.php?action=skiduffel&pwd");
     # Set leprecondo furniture
     # TODO I need an aftercore setup
     cli_execute("condo fully-stocked wet bar, fruit-smashing robot, padded weight bench, internet connected laptop");
@@ -38,6 +40,11 @@ void main (boolean longterm) {
 
     if (item_amount($item[Moist sack]) >= 1) {
         cli_execute("use * Moist sack");
+    }
+
+    # Switch Eudora
+    if (eudora() != "Our Daily Candles") {
+        eudora("Our Daily Candles");
     }
 
     # get a clockwork maid setup if long term is true

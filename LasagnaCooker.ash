@@ -1,4 +1,16 @@
 void main(numberOfLasagnas) {
+    # First let's make sure cooking is a good idea first of all.
+    if(!have_chef() && free_cooks() < 1) {
+        abort("No Chef-in-the-box detected. Please set up, and adjust item acquisition setting to automatically repair upon explosion.");
+    } else if(have_chef() && free_cooks() > 0) {
+        print("You have no chef-in-a-box but " + free_cooks() + " free cooks available.");
+        if (numberOfPies > free_cooks()){
+            print("Adjusting number of pies to compensate."," orange");
+            numberOfPies = free_cooks();
+        }
+    } else {
+        abort("You have no free cooks and no chef-in-the-box, therefore this is not worthwhile for you");
+    }
     //Start by gathering some prices
     //The goal here is to generate the most profit per lasagna.
     //keep in mind that pastamancers/saucerers will have access to the league's prices.

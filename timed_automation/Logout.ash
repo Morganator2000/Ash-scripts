@@ -2,6 +2,13 @@
 
 # TODO: mayam calendar
 # TODO: Nash Crosby's still
+# TODO: change all of these to be contitionals to improve execution time.
+
+void use_item(item thing) {
+    if (item_amount(thing) >= 1) {
+        use(thing);
+    }
+}
 
 void main () {
 	# Waiting a few seconds in case I want to cancel the logout script.
@@ -10,15 +17,11 @@ void main () {
 	cli_execute("try; run 2002MrStore");
 
 	# get effects for the start of the next day
-	cli_execute("try; use 1 circle drum");
-	if (item_amount($item[fishy pipe]) > 0){
-		cli_execute("try; use 1 fishy pipe");
-	}
+	use_item($item[circle drum]);
+	use_item($item[defective Game Grid token]);
+	use_item($item[fishy pipe]);
 	# cli_execute("try; use 1 red and green rain stick");
-	cli_execute("try; use 1 portable steam unit");
-	if (have_skill($skill[Summon Carrot])) {
-		use_skill(1, $skill[Summon Carrot]);
-	}
+	use_item($item[portable steam unit]);
 	if (have_skill($skill[Emotionally Chipped])) {
 		# Maybe one day Feel Disappointed will do something.
 		use_skill(3, $skill[Feel Disappointed]);
@@ -54,6 +57,17 @@ void main () {
 		cli_execute("try; styx moxie");
 	}
 
+	#go underwater
+	if (item_amount($item[old SCUBA tank]) > 0 && item_amount($item[das boot]) > 0) {
+		print("Going underwater", "blue");
+		equip($item[old SCUBA tank]);
+		equip($item[das boot]);
+		cli_execute("try; mom stats");
+		cli_execute("try; skate band shell");
+		cli_execute("try; skate merry-go-round");
+		cli_execute("try; skate eels");
+	}
+
 	# clan photo booth effects. Get the mox one first, then mainstat
 	cli_execute("try; photobooth effect wild");
 	switch(my_primestat()) {
@@ -82,21 +96,14 @@ void main () {
 		use(1, $item[silver Dreadsylvanian flask]);
 	}
 
+	if (have_skill($skill[Summon Carrot])) {
+		use_skill(1, $skill[Summon Carrot]);
+	}
+
 	# Numberology. I only have three uses for now.
 	cli_execute("try; numberology 69");
 	cli_execute("try; numberology 69");
 	cli_execute("try; numberology 69");
-
-	#go underwater
-	if (item_amount($item[old SCUBA tank]) > 0 && item_amount($item[das boot]) > 0) {
-		print("Going underwater", "blue");
-		equip($item[old SCUBA tank]);
-		equip($item[das boot]);
-		cli_execute("try; mom stats");
-		cli_execute("try; skate band shell");
-		cli_execute("try; skate merry-go-round");
-		cli_execute("try; skate eels");
-	}
 
 	# Use Archaeologist's Spade
 	if(item_amount($item[Archaeologist's Spade]) == 1) {
@@ -188,7 +195,8 @@ void main () {
 		cli_execute("maximize adv");
 	}
 	# switch to extra adventures familiar
-	equip($familiar[quantum entangler], $item[quantum watch]);
+	cli_execute("try; familiar quantum entangler");
+	cli_execute("try; equip quantum watch");
 	# For some reason the maximizer always defaults to the Green LavaCo lamp, regarless of mainstat.
 	# TODO not future proof. Remove if you get a better +adv offhand
 	if(is_unrestricted($item[red LavaCo Lamp&trade;])) {

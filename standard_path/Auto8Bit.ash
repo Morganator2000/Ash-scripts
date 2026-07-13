@@ -7,5 +7,8 @@
 #end loop
 
 void main () {
+    if(eight_bit_points() >= 10000) {
+        abort("You've got enough points.");
+    }
     print(eight_bit_points());
 }

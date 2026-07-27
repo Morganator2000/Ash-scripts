@@ -1,6 +1,9 @@
 # Adventure at the hobopolis town square, trying to get the least abundant hobo part each time.
 # To run this you need stuffed mortar shell, flavor of magic, and an outfit called "Spell Dmg" that has no lantern effects.
 
+# TODO wandering monsters mess with the counts. The script aborts as you did not collect a hobo part.
+# TODO make the scarehobos in the loop. May as well.
+
 # get counts of Richard's items
 int [string] get_richard_inventory() {
     int [string] counts;

@@ -47,7 +47,7 @@ void main () {
 			++games_played;
 		}
 	}
-	cli_execute("try; teatree royaltea"); 
+	cli_execute("try; teatree shake"); 
 	cli_execute("try; hatter All-Hallow's Steve's fright wig"); 
 	cli_execute("try; fortune buff item"); 
 	cli_execute("try; concert d");
@@ -153,6 +153,9 @@ void main () {
 
 	# Foresee peril in your clanmates
 	cli_execute("try; run foresee_peril");
+
+	# Use hot tub to restore hp if possible.
+	cli_execute("try; hottub");
 
 	if (have_skill($skill[Summon Dice])) {
 		print("Now summoning dice... repeatedly", "blue");

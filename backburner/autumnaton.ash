@@ -5,6 +5,8 @@
     # Mojo Filter
     # Rusty Hedge Trimmers
     # Stone Wool
+    # tomb ratchets
+    # Tattered scraps of paper
 
 # location [0] get_autumnaton_locations( )
 

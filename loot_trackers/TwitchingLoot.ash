@@ -154,4 +154,5 @@ void main() {
     print_item("wooden lute");
     print_item("wooden staff");
     print_item("wooden sword");
+    print_item("Staff of Anachronistic Churning");
 }

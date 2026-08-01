@@ -13,8 +13,11 @@ void use_item(item thing) {
 void main () {
 	# Waiting a few seconds in case I want to cancel the logout script.
 	wait(3);
-	# TODO put mr. store 2002 effects here
-	cli_execute("try; run 2002MrStore");
+	
+	# Get Mr. Store 2002 Items
+	if(item_amount($item[2002 Mr. Store Catalog]) > 0){
+		cli_execute("try; run 2002MrStore");
+	}
 
 	# get effects for the start of the next day
 	use_item($item[circle drum]);
@@ -197,25 +200,25 @@ void main () {
 	} else {
 		cli_execute("maximize adv");
 	}
-	# switch to extra adventures familiar
-	cli_execute("try; familiar quantum entangler");
-	cli_execute("try; equip quantum watch");
+	
 	# For some reason the maximizer always defaults to the Green LavaCo lamp, regarless of mainstat.
 	# TODO not future proof. Remove if you get a better +adv offhand
-	if(is_unrestricted($item[red LavaCo Lamp&trade;])) {
-		switch(my_primestat()) {
-			case $stat[Muscle]:
-				equip($item[Red LavaCo Lamp&trade;]);
-				break;
-			case $stat[Mysticality]:
-				equip($item[Blue LavaCo Lamp&trade;]);
-				break;
-			case $stat[Moxie]:
-				equip($item[Green LavaCo Lamp&trade;]);
-				break;
-			default:
-				print("Hey wait, how do you not have a mainstat?", "orange");
-				break;
+	if (!hippy_stone_broken()) {
+		if(is_unrestricted($item[red LavaCo Lamp&trade;])) {
+			switch(my_primestat()) {
+				case $stat[Muscle]:
+					equip($item[Red LavaCo Lamp&trade;]);
+					break;
+				case $stat[Mysticality]:
+					equip($item[Blue LavaCo Lamp&trade;]);
+					break;
+				case $stat[Moxie]:
+					equip($item[Green LavaCo Lamp&trade;]);
+					break;
+				default:
+					print("Hey wait, how do you not have a mainstat?", "orange");
+					break;
+			}
 		}
 	}
 	

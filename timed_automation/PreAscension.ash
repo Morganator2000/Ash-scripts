@@ -2,7 +2,7 @@ void main() {
     # run the same logout script first
     cli_execute("run logout");
     # Open all Mayday Supply Packages
-    cli_execute("use * mayday supply package");
+    cli_execute("use * mayday supply package"); 
     # Make Sweat-Ade
     equip($item[Designer Sweatpants]);
     cli_execute("try; cast Make Sweat-Ade");
@@ -20,7 +20,7 @@ void main() {
     # cli_execute("try; run MakeKeyLime");
 
     # TODO check if you have lucky, then use it to get scented massage oil
-    if(have_effect($effect[Lucky!]) && (my_adventures() > 0)) {
+    if(have_effect($effect[Lucky!]) > 0 && my_adventures() > 0) {
         adventure(1, $location[Cobb's Knob Harem]);
     }
 }

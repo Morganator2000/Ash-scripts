@@ -8,6 +8,8 @@ void use_item(item thing) {
 void main (boolean longterm) {
     # Take everything from Hagnk
     cli_execute("pull all");
+    # Unlock hidden tavern if you havent already
+    use_item($item[Book of matches]);
     # Set up cold medicine cabinet
     use_item($item[Cold Medicine Cabinet]);
     # Reverse the backup camera

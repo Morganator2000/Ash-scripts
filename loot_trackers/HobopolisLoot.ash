@@ -10,8 +10,8 @@ void print_item(item it) {
     print(it + ": " + available_amount(it), colour);
 }
 
-void main(boolean clearScreen) {
-    if(clearScreen) {cli_execute("clear");}
+void main() {
+    cli_execute("clear");
     
 
     print("Town Square");

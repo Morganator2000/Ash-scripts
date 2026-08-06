@@ -23,10 +23,14 @@ int [string] get_counts() {
 }
 
 void main() {
-    string still_url = "shop.php?whichshop=still";
+    # TODO Make sure you can access the still in the first place
+    
+    # Make sure you still have uses
     if (stills_available() == 0) {
         abort("Nash's still is all used up");
     }
+
+    string still_url = "shop.php?whichshop=still";
 
     int [string] ingredients = get_counts();
     boolean have_ingredients = false;

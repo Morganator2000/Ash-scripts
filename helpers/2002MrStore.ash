@@ -1,5 +1,5 @@
+# spend remaining mr. store 2002 credits
 void main() {
-# TODO: spend mr. store 2002 credits
 	if(item_amount($item[2002 Mr. Store Catalog]) > 0) {
 		string store_page = visit_url("shop.php?whichshop=mrstore2002");
 		# You have 3 Mr. Store 2002 Credits
@@ -13,13 +13,13 @@ void main() {
 			}
 		}
 		item [13] store_items;
-		store_items[0] = $item[Spooky VHS Tape]; # shop.php?whichshop=mrstore2002&action=buyitem&quantity=1&whichrow=1379&pwd
-		store_items[1] = $item[&quot;I survived Y2K&quot; T-Shirt]; # shop.php?whichshop=mrstore2002&action=buyitem&quantity=1&whichrow=1378&pwd
-		store_items[2] = $item[Letter from Carrie Bradshaw];
-		store_items[3] = $item[pro skateboard];
-		store_items[4] = $item[Mr. Accessaturday];
+		store_items[0] = $item[Spooky VHS Tape]; # 							shop.php?whichshop=mrstore2002&action=buyitem&quantity=1&whichrow=1379&pwd
+		store_items[1] = $item[&quot;I survived Y2K&quot; T-Shirt]; # 		shop.php?whichshop=mrstore2002&action=buyitem&quantity=1&whichrow=1378&pwd
+		store_items[2] = $item[Letter from Carrie Bradshaw]; # 				shop.php?whichshop=mrstore2002&action=buyitem&quantity=1&whichrow=1380&pwd
+		store_items[3] = $item[pro skateboard]; # 							shop.php?whichshop=mrstore2002&action=buyitem&quantity=1&whichrow=1381&pwd
+		store_items[4] = $item[Mr. Accessaturday];	#						shop.php?whichshop=mrstore2002&action=buyitem&quantity=1&whichrow=1382&pwd
 		store_items[5] = $item[Meat Butler];
-		store_items[6] = $item[Loathing Idol Microphone]; # shop.php?whichshop=mrstore2002&action=buyitem&quantity=1&whichrow=1384&pwd
+		store_items[6] = $item[Loathing Idol Microphone]; # 				shop.php?whichshop=mrstore2002&action=buyitem&quantity=1&whichrow=1384&pwd
 		store_items[7] = $item[Charter: Nellyville];
 		store_items[8] = $item[Manual of Secret Door Detection];
 		store_items[9] = $item[Flash Liquidizer Ultra Dousing Accessory];
@@ -40,6 +40,7 @@ void main() {
 				most_profitable = store_items[i];
 			}
 		}
+		# TODO currently this is only ever grabbing the loathing idol microphone
 		while(credits > 0) {
 			string item_string = "shop.php?whichshop=mrstore2002&action=buyitem&quantity=1&whichrow=" + 
 			visit_url("shop.php?whichshop=mrstore2002&action=buyitem&quantity=1&whichrow=1384&pwd");

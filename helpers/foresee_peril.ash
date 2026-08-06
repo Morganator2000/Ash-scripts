@@ -69,7 +69,11 @@ void main() {
             print(player + " was in fact in peril, hopefully that item will help", "green");
             foretells_remaining -= 1;
         }
-        # Whether successful or not, remove them from the list.
+        # Whether successful or not, remove them from the list. What this is 
+        # doing is copying whoever is last in the list with whoever you just 
+        # attempted (overwriting them), then removing the last name from the 
+        # list, effectively removing the person you just attempted without 
+        # messing with the mapping.
         int last_index = list_size - 1;
         member_list[player_index] = member_list[last_index];
         remove member_list[last_index];

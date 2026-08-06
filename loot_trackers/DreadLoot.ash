@@ -3,8 +3,8 @@ void print_item(item it) {
     print(it + ": " + available_amount(it));
 }
 
-void main(boolean clearScreen) {
-    if(clearScreen) {cli_execute("clear");}
+void main() {
+    cli_execute("clear");
     print("Colour scheme: Blue is for locations, fuchsia for types of monsters.");
     print("Red is for an item that is needed at the anvil");
     print("Purple is a consumable. Orange is an item to unlock a hard-mode boss.");
@@ -101,7 +101,26 @@ void main(boolean clearScreen) {
     print_item($item[Unkillable Skeleton's sawsword]);
     print_item($item[Unkillable Skeleton's restless leg]);
     print();
+
+    print("Other Items", "blue");
     print_item($item[Skull capacitor]);
+    print_item($item[cool iron ingot]);
+    print_item($item[cool iron helmet]);
+    print_item($item[cool iron breastplate]);
+    print_item($item[cool iron greaves]);
+    print_item($item[hangman's hood]);
+    print_item($item[cursed ring finger ring]);
+    print_item($item[Dreadsylvanian clockwork key]);
+    print_item($item[intricate music box parts]);
+    if(have_familiar($familiar[Mechanical Songbird])) {
+        print("You have the Mechanical Songbird familiar", "green");
+    } else {
+        print("You do not have the Mechanical Songbird familiar", "red");
+        if(item_amount($item[unwound mechanical songbird]) > 0) {
+            print("But you do have " + available_amount($item[unwound mechanical songbird]) + " unwound mechanical songbird.");
+        }
+    }
+    print_item($item[intricate clockwork egg]);
     print();
 
     print("Items required for Hard-mode bosses", "blue");

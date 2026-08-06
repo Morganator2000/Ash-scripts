@@ -1,4 +1,6 @@
 void main() {
+    # TODO spend interesting coins because you may as well.
+
     # run the same logout script first
     cli_execute("run logout");
     # Open all Mayday Supply Packages

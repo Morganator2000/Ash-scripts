@@ -9,6 +9,7 @@
     # Tattered scraps of paper
 
 # location [0] get_autumnaton_locations( )
+# cli: autumnaton send [location]
 
 function autumnAton() {
   const item = toItem("autumn-aton");

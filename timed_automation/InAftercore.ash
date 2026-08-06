@@ -16,8 +16,7 @@ void main (boolean longterm) {
     cli_execute("backupcamera reverse on");
     # open the McHugeLarge backpack
     visit_url("inventory.php?action=skiduffel&pwd");
-    # Set leprecondo furniture
-    # TODO I need an aftercore setup
+    # Set leprecondo furniture aftercore setup
     cli_execute("condo fully-stocked wet bar, fruit-smashing robot, padded weight bench, internet connected laptop");
     # Get skills from books
     use_item($item[The Big Book of Communism (used)]);

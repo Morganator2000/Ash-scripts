@@ -118,6 +118,8 @@ void main () {
 		visit_url("choice.php?pwd&whichchoice=1596&option=4");
 		}
 	}
+	# TODO after using spade, use the once-per day items
+
 	# Use Prismatic beret busking
 	if(item_amount($item[Prismatic Beret]) > 0){
 		equip($item[Prismatic Beret]);
@@ -133,6 +135,76 @@ void main () {
 	}
 
 	# Use remaining Cursed Monkey Paw wishes
+	void use_remaining_monkey_wishes() {
+		int wishes_left = 5 - get_property("_monkeyPawWishesUsed").to_int();
+		if (wishes_left <= 0) {
+			print("No Cursed Monkey Paw wishes remaining today.", "blue");
+			return;
+		}
+		if (gnomads_available() && wishes_left > 1) {
+			monkey_paw($item[flange]);
+			wishes_left -= 1;
+		}
+		if (gnomads_available() && wishes_left > 1) {
+			monkey_paw($item[clockwork key]);
+			wishes_left -= 1;
+		}
+			
+		// If we're already out, exit!
+		
+
+		print("Wishes remaining: " + wishes_left + ". Fulfilling priority wishlist...", "purple");
+
+		// 3. Build prioritized list of effects
+		effect [int] wish_list;
+		int i = 0;
+
+		wish_list[i] = $effect[Always be Collecting]; i += 1;
+		wish_list[i] = $effect[Disquiet Riot]; i += 1;
+
+		// Add mainstat-specific effect
+		switch(my_primestat()) {
+			case $stat[Muscle]:
+				wish_list[i] = $effect[HGH-charged]; i += 1;
+				break;
+			case $stat[Mysticality]:
+				wish_list[i] = $effect[Different Way of Seeing Things]; i += 1;
+				break;
+			case $stat[Moxie]: 
+				wish_list[i] = $effect[Thou Shant Not Sing]; i += 1;
+				break;
+		}
+
+		wish_list[i] = $effect[Low on the Hog]; i += 1;
+		wish_list[i] = $effect[New and Improved]; i += 1;
+
+		// 4. Iterate through priority list ONLY while we have wishes remaining
+		foreach idx, eff in wish_list {
+			// Stop checking as soon as we run out!
+			if (get_property("_monkeyPawWishesUsed").to_int() >= 5) {
+				print("Used all 5 Cursed Monkey Paw wishes for today!", "green");
+				break;
+			}
+
+			// Skip effect if we already have it active
+			if (have_effect(eff) > 0) {
+				continue;
+			}
+
+			// Use native monkey_paw function instead of cli_execute for clean, fast handling
+			print("Wishing for effect: " + eff, "blue");
+			monkey_paw(eff);
+		}
+	}
+
+
+
+	if(gnomads_available() && get_property("_monkeyPawWishesUsed") > 1) {
+		monkey_paw($item[flange]);
+		monkey_paw($item[clockwork key]);
+	}
+
+	# TODO there's a way to speed up this execution. Right?
 	cli_execute("try; monkeypaw effect Always be Collecting");
 	cli_execute("try; monkeypaw effect Disquiet Riot");
 	switch(my_primestat())  {
@@ -149,17 +221,17 @@ void main () {
 	cli_execute("try; monkeypaw effect Low on the Hog");
 	cli_execute("try; monkeypaw effect New and Improved");
 
-	// if(gnomads_available() && get_property("_monkeyPawWishesUsed") > 1) {
-	// 	monkey_paw($item[flange]);
-	// 	monkey_paw($item[clockwork key]);
-	// }
 
 	# Foresee peril in your clanmates
 	cli_execute("try; run foresee_peril");
 
+	# Use the clan fortune teller on clanmates.
+	cli_execute("try; run FortuenTeller");
+
 	# Use hot tub to restore hp if possible.
 	cli_execute("try; hottub");
 
+	# TODO there is absolutely a better way to restore MP here.
 	if (have_skill($skill[Summon Dice])) {
 		print("Now summoning dice... repeatedly", "blue");
 

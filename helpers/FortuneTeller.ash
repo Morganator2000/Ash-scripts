@@ -2,12 +2,11 @@
 # it also sends a message with what they should reply with.
 
 # get list of clan members that can have their fortune told.
-# because of the way the fortune command works, I may need to return player IDs instead of names.
+# because of the way the fortune command works, I may to return player IDs instead of names.
 string [int] get_clan_member_names(string roster_html) {
     string [int] member_names;
     int index = 0;
 
-    # TODO do I need them to be in aftercore?
     # So this is a complicated pattern. We're checking for player names and the possible "(inactive)" tag.
     matcher player_matcher = create_matcher("href=\"showplayer\\.php\\?who=\\d+\">(.*?)</a>(?:<font color=gray><b>\\s*\\(inactive\\)</b>)?", roster_html);
 
@@ -21,22 +20,24 @@ string [int] get_clan_member_names(string roster_html) {
         if (name == to_lower_case(my_name())) {
             continue;
         }
+        # Save player to the map then move on to the next one.
         string id = get_player_id(name);
         member_names[index] = id;
         index += 1;
     }
-
     return member_names;
 }
 
 # Add some randomness to the messages so I don't seem like a bot.
+# I am aware of the irony of getting a computer program to make me sound not like a bot.
 string make_kmail_message() {
     string [int] intro_messages {
         "I just sent you a fortune request.",
         "Did you see the fortune request I sent?",
         "You should have just received a fortune from Madame Zatara.",
         "You got a fortune from me yeah?",
-        "You know the fortune I sent you?"
+        "You know the fortune I sent you?",
+        "I just used the clan fortune teller on you."
     };
     string [int] polite_asks {
         "Please make your answers %s.",
@@ -55,21 +56,21 @@ string make_kmail_message() {
        "for the highest compatibility",
        "to give the best odds of a good result"
     };
-
+    # pick random messages.
     int intro_idx = random(count(intro_messages));
     int politeness_idx = random(count(polite_asks));
     int outro_idx = random(count(outro_messages));
     string chosen_intro = intro_messages[intro_idx];
     string chosen_politeness = polite_asks[politeness_idx];
-    string important_part = "'pizza', 'batman', and 'thin' ";
+    string important_part = "'beer', 'robin', and 'thin' ";
     string chosen_outro = outro_messages[outro_idx];
 
+    # string together the messages into a coherent sentence.
     string ending = important_part + chosen_outro;
     matcher s_matcher = create_matcher("%s", chosen_politeness);
-
     string second_sentence = replace_first(s_matcher, ending);
-
     string full_message = chosen_intro + " " + second_sentence;
+
     return full_message;
 }
 
@@ -80,7 +81,6 @@ void main() {
     matcher fortune_matcher = create_matcher("relationship with a clanmate (\\d+) time", fortune_html);
     if (fortune_matcher.find()) {
         fortunes_remaining = to_int(fortune_matcher.group(1));
-        print(fortunes_remaining);
     }
     if (fortunes_remaining == 0) {
         abort("No more fortunes can be told today.");
@@ -110,8 +110,7 @@ void main() {
             # Send fortune and message
             print("Sent fortune request to " + player_name, "blue");
             string kmail_message = make_kmail_message();
-            string message_command = "send to " + player_id + " " + kmail_message;
-            # TODO so this part isn't working.
+            string message_command = "send to " + player_id + " || " + kmail_message;
             cli_execute(message_command);
             fortunes_remaining -= 1;
         }

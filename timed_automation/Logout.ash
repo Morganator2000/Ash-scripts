@@ -192,15 +192,15 @@ void main () {
 				monkey_paw(buff);
 			}
 		}
+		use_remaining_monkey_wishes();
 	}
 
-	use_remaining_monkey_wishes();
 
 	# Foresee peril in your clanmates
 	cli_execute("try; run foresee_peril");
 
 	# Use the clan fortune teller on clanmates.
-	cli_execute("try; run FortuenTeller");
+	#cli_execute("try; run FortuneTeller");
 
 	# Use hot tub to restore hp if possible.
 	cli_execute("try; hottub");

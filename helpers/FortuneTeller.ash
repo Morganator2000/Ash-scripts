@@ -1,6 +1,10 @@
 # Script to be used on logout that automatically tells the fortune of another player.
 # it also sends a message with what they should reply with.
 
+# TODO: Players who do not want to be contacted
+# Max2wastaken
+# Fenryk
+
 # get list of clan members that can have their fortune told.
 # because of the way the fortune command works, I may to return player IDs instead of names.
 string [int] get_clan_member_names(string roster_html) {
@@ -105,7 +109,7 @@ void main() {
         string fortune_request = "choice.php?pwd&whichchoice=1278&option=1&which=1&whichid=" + player_id + "&q1=pizza&q2=batman&q3=thick";
         string fortune_response = visit_url(fortune_request);
         if(contains_text(fortune_response, "You're already waiting on your results with")) {
-            print("A previous fortune is still in progress", "orange");
+            print("You're still waiting on " + player_name, "orange");
         } else {
             # Send fortune and message
             print("Sent fortune request to " + player_name, "blue");

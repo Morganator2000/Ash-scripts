@@ -24,21 +24,21 @@ void main (boolean longterm) {
     use_item($item[Elf Guard Field Manual: Culinary Arts (used)]);
     use_item($item[Elf Guard Field Manual: Extortion (used)]);
     use_item($item[Elf Guard Field Manual: Wilderness Sleeping (used)]);
-    # use_item($item[Shanty: Only Dogs Love Drunken Sailors (used)]);
+    use_item($item[Shanty: Only Dogs Love a Drunken Sailor (used)]);
     # cli_execute("run Great_sell_off");
     # Open gifts
     if (item_amount($item[plain brown wrapper]) >= 1) {
         cli_execute("use * plain brown wrapper");
     }
-
+    if (item_amount($item[chocolate box]) >= 1) {
+        cli_execute("use * chocolate box");
+    }
     if (item_amount($item[dreadful box]) >= 1) {
         cli_execute("use * dreadful box");
     }
-
     if (item_amount($item[Bindle of joy]) >= 1) {
         cli_execute("use * Bindle of joy");
     }
-
     if (item_amount($item[Moist sack]) >= 1) {
         cli_execute("use * Moist sack");
     }

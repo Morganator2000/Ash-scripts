@@ -76,18 +76,13 @@ void main (int adventures) {
        abort("You need flavour of magic (pastamancer lv 15 skill)."); 
     }
 
-    # this currently works for me because I've manually made a "Spell Dmg" outfit without lanterns.
-    if (!have_outfit("Spell Dmg")) {
-        # create the spell dmg outfit. Lanterns mess with the parts acquisition
-        # so we'll try to exclude them.
-        cli_execute("maximize spell dmg percent, -lantern");
-        cli_execute("outfit save Spell Dmg");
-    }
-
     if(adventures > my_adventures()) {
         print("You don't have that many adventures. Compensating...", "red");
         adventures = my_adventures();
     } 
+
+    # Maximizer string for spell damage, excluding lantern effects because those mess with the damage type.
+    string max_spell_dmg = "maximize spell dmg percent, -equip miniature crystal ball, -equip porcelain porkpie, -equip petrified wood water purifier, -equip snow mobile, -equip big hot pepper, -equip meteorb, -equip Rain-Doh green lantern, -equip cursed ship's lantern, -equip unwrapped knock-off retro superhero cape, -equip petrified wood wizard's pouch, -equip Congressional Medal of Insanity, -equip Novelty Belt Buckle of Violence";
 
     # Get counts of hobo parts and display.
     int [string] hobo_parts = get_richard_inventory();
@@ -106,27 +101,27 @@ void main (int adventures) {
         switch (lowest_part) {
             case "charred boots":
                 use_skill(1, $skill[Spirit of Cayenne]);
-                outfit("Spell Dmg");
+                cli_execute(max_spell_dmg);
                 break;
             case "frozen eyes":
                 use_skill(1, $skill[Spirit of Peppermint]);
-                outfit("Spell Dmg");
+                cli_execute(max_spell_dmg);
                 break;
             case "stinking guts":
                 use_skill(1, $skill[Spirit of Garlic]);
-                outfit("Spell Dmg");
+                cli_execute(max_spell_dmg);
                 break;
             case "creepy skulls":
                 use_skill(1, $skill[Spirit of Wormwood]);
-                outfit("Spell Dmg");
+                cli_execute(max_spell_dmg);
                 break;
             case "crotches":
                 use_skill(1, $skill[Spirit of Bacon Grease]);
-                outfit("Spell Dmg");
+                cli_execute(max_spell_dmg);
                 break;
             case "skins":
                 # Skins are the exception, here we just go with weapon dmg and attack.
-                cli_execute("maximize weapon dmg percent");
+                cli_execute("maximize weapon dmg percent, -equip miniature crystal ball");
                 break;
         }
 

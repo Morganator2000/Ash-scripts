@@ -82,7 +82,7 @@ void main (int adventures) {
     } 
 
     # Maximizer string for spell damage, excluding lantern effects because those mess with the damage type.
-    string max_spell_dmg = "maximize spell dmg percent, -equip miniature crystal ball, -equip porcelain porkpie, -equip petrified wood water purifier, -equip snow mobile, -equip big hot pepper, -equip meteorb, -equip Rain-Doh green lantern, -equip cursed ship's lantern, -equip unwrapped knock-off retro superhero cape, -equip petrified wood wizard's pouch, -equip Congressional Medal of Insanity, -equip Novelty Belt Buckle of Violence";
+    string max_spell_dmg = "maximize spell dmg percent, -familiar, -equip porcelain porkpie, -equip petrified wood water purifier, -equip snow mobile, -equip big hot pepper, -equip meteorb, -equip Rain-Doh green lantern, -equip cursed ship's lantern, -equip unwrapped knock-off retro superhero cape, -equip petrified wood wizard's pouch, -equip Congressional Medal of Insanity, -equip Novelty Belt Buckle of Violence";
 
     # Get counts of hobo parts and display.
     int [string] hobo_parts = get_richard_inventory();
@@ -121,7 +121,7 @@ void main (int adventures) {
                 break;
             case "skins":
                 # Skins are the exception, here we just go with weapon dmg and attack.
-                cli_execute("maximize weapon dmg percent, -equip miniature crystal ball");
+                cli_execute("maximize weapon dmg percent, -familiar");
                 break;
         }
 
@@ -146,14 +146,19 @@ void main (int adventures) {
         if(current_count - previous_count != 1) {
             print("Something is wrong. The following part was not acquired and it should have been:", "red");
             print(lowest_part);
-            abort("Check to make sure you're not running any latern effects and that your damage output is high enough.");
+            abort("Check to make sure you're not running any lantern effects and that your damage output is high enough.");
         }
     }
+    # Make scarehobos
+    hobo_parts = get_richard_inventory();
+    string lowest_part = get_least_abundant_part(hobo_parts); 
+    int scarehobos_made = hobo_parts[lowest_part];
+    visit_url("clan_hobopolis.php?preaction=simulacrum&place=3&qty=1&makeall=1");
     # Print an update on the parts.
     hobo_parts = get_richard_inventory();
     print("Current parts:");
     foreach hobo_part, quantity in hobo_parts {
         print("Richard has " + quantity + " " + hobo_part);
     }
-    print("All done! Do note that this script does not make the scarehobos for you.", "green");
+    print("All done! You built " + scarehobos_made + " scarehobos.", "green");
 }

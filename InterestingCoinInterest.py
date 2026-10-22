@@ -32,5 +32,9 @@ def runSimulation(initialCoins, goal):
     print("With " + str(initialCoins) + " coins, you will reach your goal of " + str(goal) + " coins in " + str(days) + " days!")
 
 # Run the simulation
+print("Goal: Familiar")
 runSimulation(4, 10000000)
+print("Goal: Tattoo")
 runSimulation(4, 16777215)
+print("Goal: get to tattoo, but buy familiar, then tattoo")
+runSimulation(6777215, 16777215)

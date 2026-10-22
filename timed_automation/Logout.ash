@@ -61,6 +61,7 @@ void main () {
 	}
 
 	#go underwater
+	# TODO this can be more efficient
 	if (item_amount($item[old SCUBA tank]) > 0 && item_amount($item[das boot]) > 0) {
 		print("Going underwater", "blue");
 		equip($item[old SCUBA tank]);
@@ -69,6 +70,8 @@ void main () {
 		cli_execute("try; skate band shell");
 		cli_execute("try; skate merry-go-round");
 		cli_execute("try; skate eels");
+		cli_execute("try; skate lulz");
+		cli_execute("try; skate comet");
 	}
 
 	# clan photo booth effects. Get the mox one first, then mainstat
@@ -197,7 +200,9 @@ void main () {
 
 
 	# Foresee peril in your clanmates
-	cli_execute("try; run foresee_peril");
+	if(item_amount($item[Peridot of Peril]) < 1) {
+		cli_execute("try; run foresee_peril");
+	}
 
 	# Use the clan fortune teller on clanmates.
 	#cli_execute("try; run FortuneTeller");
@@ -249,17 +254,24 @@ void main () {
 	
 	# For some reason the maximizer always defaults to the Green LavaCo lamp, regarless of mainstat.
 	# TODO not future proof. Remove if you get a better +adv offhand
+	# TODO is hardcore avatar of pete unrestricted? Somehow I'm hitting the green lamp code.
 	if (!hippy_stone_broken()) {
 		if(is_unrestricted($item[red LavaCo Lamp&trade;])) {
 			switch(my_primestat()) {
 				case $stat[Muscle]:
-					equip($item[Red LavaCo Lamp&trade;]);
+					if(item_amount($item[Red LavaCo Lamp&trade;]) > 0) {
+						equip($item[Red LavaCo Lamp&trade;]);
+					}
 					break;
 				case $stat[Mysticality]:
-					equip($item[Blue LavaCo Lamp&trade;]);
+					if(item_amount($item[Blue LavaCo Lamp&trade;]) > 0) {
+						equip($item[Blue LavaCo Lamp&trade;]);
+					}
 					break;
 				case $stat[Moxie]:
-					equip($item[Green LavaCo Lamp&trade;]);
+					if(item_amount($item[Green LavaCo Lamp&trade;]) > 0) {
+						equip($item[Green LavaCo Lamp&trade;]);
+					}
 					break;
 				default:
 					print("Hey wait, how do you not have a mainstat?", "orange");

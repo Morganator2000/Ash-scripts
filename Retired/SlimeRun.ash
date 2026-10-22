@@ -1,4 +1,4 @@
-#This is the base damage from being covered in slime, without taking slime resistance into account.
+# This is the base damage from being covered in slime, without taking slime resistance into account.
 float[11] slime_percent;
  slime_percent[0] = 0;
  slime_percent[1] = 5.334167;
@@ -12,7 +12,7 @@ float[11] slime_percent;
  slime_percent[9] = .066667;
  slime_percent[10] = .01;
 
-//this will be a percentage reduction based on your slime resistance
+# this will be a percentage reduction based on your slime resistance
 float slime_res = elemental_resistance($element[slime]); 
 
 # how much damage you will take at the start of combat.
@@ -30,21 +30,21 @@ int slime_damage () {
 
 string combat_run_away(int round, monster enemy, string text){
     print("Attempting to run away", "blue");
-    #Batter Up!
+    # Batter Up!
     if (have_skill($skill[Batter Up!]) && my_fury() >= 5) {return "skill Batter Up!";}
-    #cosmic bowling ball "bowl a curveball"
+    # cosmic bowling ball "bowl a curveball"
     else if (combat_skill_available($skill[bowl a curveball])) {return "skill bowl a curveball";}
-    #fish-oil smoke bomb
+    # fish-oil smoke bomb
     else if (item_amount($item[fish-oil smoke bomb]) >= 1) {return "item fish-oil smoke bomb";}
-    #feel hatred
+    # feel hatred
     else if (combat_skill_available($skill[feel hatred])) {return "skill feel hatred";}
-    #tennis ball
+    # tennis ball
     else if (item_amount($item[tennis ball]) >= 1) {return "item tennis ball";}
-    #green smoke bomb
+    # green smoke bomb
     else if (item_amount($item[green smoke bomb]) >= 1) {return "item green smoke bomb";} 
-    #CLEESH to not consume an adventure
+    # CLEESH to not consume an adventure
     else if (combat_skill_available($skill[CLEESH])) {return "skill CLEESH"; "attack with weapon";}
-    #abort if there are no runaway options
+    # abort if there are no runaway options
     else {return abort("You have no way of running away for free.");}
 }
 
@@ -54,7 +54,7 @@ void maintain_ML(int minML) {
     cli_execute("mood clear");
     if (currentML < minML) {
         int MLIncr = minML - currentML;
-        //Start with the monster aggravation device, as this is "free" ml
+        # Start with the monster aggravation device, as this is "free" ml
         boolean mcd_max() {
             int maxmcd = 10;
             if(canadia_available()) {
@@ -65,7 +65,7 @@ void maintain_ML(int minML) {
             }
             return change_mcd(maxmcd);
         }
-        #prioritize the slime res items first.
+        # prioritize the slime res items first.
         if (have_effect($effect[Slimebreath]) == 0 && MLIncr > 1) {
             cli_execute("trigger lose_effect, Slimebreath, chew 1 slimy alveolus");
             MLIncr = MLIncr - 50;
@@ -79,7 +79,7 @@ void maintain_ML(int minML) {
             MLIncr = MLIncr - 25;
         }
         
-        #then go by a ML per meat basis. Good luck. Here's the code for various effects.
+        # then go by a ML per meat basis. Good luck. Here's the code for various effects.
         // cli_execute("trigger lose_effect, Pride of the Puffin, cast 1 Pride of the Puffin");
         // cli_execute("trigger lose_effect, Angering Pizza Purists, eat 1 plain calzone");
         // cli_execute("trigger lose_effect, Bloodthirsty, drink 1 blood and blood");
@@ -119,16 +119,16 @@ void main (int turnsToAdventure, int minML) {
     # If you enter a number greater than your current adventures, it will use all of them.
     if(turnsToAdventure > my_adventures()) turnsToAdventure = my_adventures();
 
-    #Now the adventure loop. This will repeat as long as there are adventures remaining.
+    # Now the adventure loop. This will repeat as long as there are adventures remaining.
     while( my_adventures() > 0 && (turnsToAdventure-adventureCounter) > 0 ) {
-        #first, do one adventure at low ml then run away. This will maximize the turns of covered in slime.
-        #It will skip this part if you're already covered in slime.
+        # first, do one adventure at low ml then run away. This will maximize the turns of covered in slime.
+        # It will skip this part if you're already covered in slime.
         if (have_effect($effect[Coated in Slime]) == 0) {
             cli_execute("uneffect annoyance");
             change_mcd(0);
-            cli_execute("maximize -ml"); //use other -ml items if needed?
+            cli_execute("maximize -ml"); # TODO use other -ml items if needed?
             int temporaryAdvCounter = my_adventures();
-            adv1($location[The Slime Tube], -1, "combat_run_away"); //if this adventure is a non-combat, you need to do it again.
+            adv1($location[The Slime Tube], -1, "combat_run_away");
             if (temporaryAdvCounter > my_adventures()) {
                 ## Our adventures decreased. Therefore this did take an adventure.
                 adventureCounter = adventureCounter + 1;
@@ -138,30 +138,31 @@ void main (int turnsToAdventure, int minML) {
         }
         cli_execute("outfit +slime"); 
         cli_execute("equip tiny stillsuit");
-        cli_execute("cast annoyance"); //this will be removed once maintain_ML is fixed
-        if(canadia_available()) {//this will be removed once maintain_ML is fixed
+        cli_execute("cast annoyance"); # TODO this will be removed once maintain_ML is fixed
+        if(canadia_available()) {# TODO this will be removed once maintain_ML is fixed
             change_mcd(11);
         } else {
             change_mcd(10);
         }
         int slimeDamage = slime_damage();
 
-        #Now that you're covered in slime, fight slimes until the damage exceeds your max hp.
+        # Now that you're covered in slime, fight slimes until the damage exceeds your max hp.
         while(slimeDamage <= my_maxhp() && (turnsToAdventure-adventureCounter) > 0) {
             while(slimeDamage > my_hp()) {
-                cli_execute("cast * cocoon"); //Is there a better way to heal?
+                cli_execute("cast * cocoon"); # TODO Is there a better way to heal?
             }
             // if (minML < monster_level_adjustment()) {
             //     maintain_ML(minML);
             // }
             int temporaryAdvCounter = my_adventures();
-            adventure(1, $location[The Slime Tube]); //Add a way to heal in combat if needed. 
+            adventure(1, $location[The Slime Tube]); # TODO Add a way to heal in combat if needed. 
             if (temporaryAdvCounter > my_adventures()) {
                 ## Our adventures decreased. Therefore this did take an adventure.
                 adventureCounter = adventureCounter + 1;
             }
             print ("Finished adventure " +adventureCounter +" of " +turnsToAdventure, "orange");
-            slimeDamage = slime_damage(); #recalculate slime damage for the next round.
+            # recalculate slime damage for the next round.
+            slimeDamage = slime_damage();
         }
         if (slimeDamage >= my_maxhp() || turnsToAdventure == adventureCounter) {
             if(slimeDamage >= my_maxhp()) {

@@ -139,6 +139,7 @@ void main() {
     print_item($item[Frosty's snowball sack]);
     print();
     print_item($item[Frosty's frosty mug]);
+    print_item($item[Staff of the Deepest Freeze]);    
     print();
     print();
     

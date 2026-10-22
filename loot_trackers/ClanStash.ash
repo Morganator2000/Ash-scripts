@@ -1,4 +1,7 @@
 # Find the most valuable items in the clan stash.
+#   TODO our clan has a bunch of fecking dusty animal bones that are low value 
+#   but mall_price() returns high, due to the top 5 thing it does. Frankly, 
+#   these objects should just be excluded.
 
 string wiki_link(item it) {
     string url = to_wiki_url(it);
@@ -37,7 +40,7 @@ void main(int price_threshold) {
         int price = historical_price(it);
 
         # Use mall_price() instead if you want exact, live pricing (slower)
-        # int price = historical_price(it);
+        # int price = malls_price(it);
         
         if (price >= price_threshold) {
             StashEntry entry;

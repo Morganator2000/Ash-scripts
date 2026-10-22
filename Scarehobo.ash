@@ -121,7 +121,7 @@ void main (int adventures) {
                 break;
             case "skins":
                 # Skins are the exception, here we just go with weapon dmg and attack.
-                cli_execute("maximize weapon dmg percent, -familiar");
+                cli_execute("maximize mus, weapon dmg percent, -familiar");
                 break;
         }
 

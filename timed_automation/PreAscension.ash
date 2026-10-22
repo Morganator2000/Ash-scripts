@@ -7,6 +7,7 @@ void main() {
     cli_execute("use * mayday supply package"); 
     # Make Sweat-Ade
     equip($item[Designer Sweatpants]);
+    # TODO this part isn't working
     cli_execute("try; cast Make Sweat-Ade");
     cli_execute("try; cast Make Sweat-Ade");
 

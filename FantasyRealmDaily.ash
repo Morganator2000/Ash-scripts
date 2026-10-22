@@ -9,6 +9,8 @@
 # This should get you a low 285 rubees or a high of 345 rubees (315 average) for 35 adventures. 
 # That's about 9 rubees per adventure
 # TODO sometimes it is appropriate to use a custom combat script rather than forcing attack.
+#TODO: fix throw_things() to account for when combat items are missing.
+#TODO: free adventures (from stuff like breathitin) break this script.
 
 string throw_things(int round, monster opp, string text){
     if(round == 1) {
@@ -66,13 +68,13 @@ void main() {
     # Bandit crossroad (no hours spent), gain 15 rubees
     cli_execute("maximize mus");
     equip_fantasy_gear();
-    adventure(5, $location[The Bandit Crossroads], "attack;");
+    adventure(5, $location[The Bandit Crossroads]);
     print("Finished at the Bandit Crossroad", "green");
 
     # Putrid Swamp (no hours spent), gain 15 rubees
     cli_execute("maximize stench res");
     equip_fantasy_gear();
-    adventure(5, $location[The Putrid Swamp], "attack;");
+    adventure(5, $location[The Putrid Swamp]);
     print("Finished at the Putrid Swamp", "green");
 
     # Mystic wood (1 hour spent), gain 15 rubees
@@ -86,7 +88,7 @@ void main() {
     cli_execute("maximize mus");
     equip_fantasy_gear();
     equip($slot[acc1], $item[bezoar ring]);
-    adventure(5, $location[The Druidic Campsite], "attack;");
+    adventure(5, $location[The Druidic Campsite]);
     print("Finished at the Druidic Campsite", "green");
 
     # Towering Mountains (1 hour spent), gain 15 rubees 
@@ -136,6 +138,3 @@ void main() {
     print("You have gained " + rubees_earned + " Rubee&trade;s from this run.", "green");
     print("You now have " + current_rubees + " Rubee&trade;s.", "green");
 }
-
-#TODO: fix throw_things() to account for when combat items are missing.
-#TODO: what happens when the adventure was free?

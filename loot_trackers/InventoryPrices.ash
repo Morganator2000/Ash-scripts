@@ -12,8 +12,7 @@ record ItemEntry {
     int price;
 };
 
-void main(int minPrice, int maxPrice) {
-    
+void main(int minPrice, int maxPrice) {    
     int[item] inventory = get_inventory();
     
     if (count(inventory) == 0) {
@@ -28,7 +27,7 @@ void main(int minPrice, int maxPrice) {
         # Avoid checking quest items or non-tradable items that break price lookups
         if (!is_tradeable(it)) continue;
 
-        int price = historical_price(it);
+        int price = mall_price(it);
         
         # Only include items that meet the range
         if (price >= minPrice && price <= maxPrice) {
@@ -47,7 +46,7 @@ void main(int minPrice, int maxPrice) {
     # sort items by mall price (descending)
     sort valuable_items by -value.price;
 
-    # Print in table form
+    # build the table
     string table = "<table style='border: 1px solid #444; border-collapse: collapse; font-family: sans-serif;'>";
     table += "<tr style='background-color: #2c3e50; color: white;'>";
     table += "<th style='padding: 6px; text-align: left; border: 1px solid #444;'>Item</th>";
@@ -75,6 +74,46 @@ void main(int minPrice, int maxPrice) {
     # Close the table
     table += "</table>";
 
-    # Print table
-    print_html(table);
+    # build the html file
+    # TODO the final output doesn't use flechets. It replaces them with &gt; or whatever.
+    string html = "<!DOCTYPE html><html><head><title>Inventory Value Report</title>";
+    # Add style, which I'm pretty sure is optional
+    html += "<style>";
+    html += "body { font-family: sans-serif; padding: 20px; background-color: #f4f4f9; }";
+    html += "table { border-collapse: collapse; width: 100%; max-width: 800px; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }";
+    html += "th, td { padding: 10px 12px; border: 1px solid #ddd; }";
+    html += "th { background-color: #2c3e50; color: white; text-align: left; }";
+    html += "tr:nth-child(even) { background-color: #f9f9f9; }";
+    html += ".num { text-align: right; }";
+    html += "</style></head><body>";
+
+    html += "<h2>Inventory Value Report</h2>";
+    html += "<p>Items priced between " + to_string(minPrice, "%,d") + " and " + to_string(maxPrice, "%,d") + " Meat.</p>";
+
+    # Insert the table
+    html += table;
+
+    # close off the file
+    html += "</body></html>";
+
+    # file output
+    # File output path relative to KoLmafia root
+    string filename = "inventory_report.html";
+
+    # Buffer and write to file
+    buffer file_buffer;
+    append(file_buffer, html);
+    if (buffer_to_file(file_buffer, filename)) {
+        print_html(html);
+    } else {
+        print("error");
+    }
+
+    # Write the string directly using buffer_to_file
+    buffer_to_file(file_buffer, filename);
+
+    print("Report saved to " + filename, "green");
+
+    // # Print table
+    // print_html(table);
 }

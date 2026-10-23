@@ -144,11 +144,11 @@ void main() {
     print("Dreadsylvanian seed pod: " + available_amount($item[Dreadsylvanian seed pod]) + ". Root around the tallest tree (woods).");
     print("Unkillable Skeleton", "blue");
     print("Dreadsylvanian shepherd's pie: " + available_amount($item[Dreadsylvanian shepherd's pie]) + ". Made in the duke's estate (village) as a myst class with the next 4 ingredients.");
-    print("dreadful roast: " + available_amount($item[dreadful roast]) + ". Castle -> Great Hall -> Dining room.");
+    print("dreadful roast: " + available_amount($item[dreadful roast]) + ". Acquired in the great hall (castle)");
     print("stinking agaricus: " + available_amount($item[stinking agaricus]) + ". Found in the dungeons (castle).");
-    print("dread tarragon: " + available_amount($item[dread tarragon]) + ". Woods -> Cabin -> kitchen.");
+    print("dread tarragon: " + available_amount($item[dread tarragon]) + ". Found in the cabin (woods).");
     print("bone flour: " + available_amount($item[bone flour]) + ". Grind an old dry bone in the cabin (woods) as a muscle class.");
-    print("Old Dry Bone: " + available_amount($item[Old Dry Bone]) + ". Acquired from spooky skeleton (castle).");
+    print("Old Dry Bone: " + available_amount($item[Old Dry Bone]) + ". Acquired from spooky skeletons (castle).");
     print("Count Drunkula", "blue");
     print("ghost shawl: " + available_amount($item[ghost shawl]) + ". Made in the Old Duke's Estate (village, key) with 10 ghost threads.");
     print("ghost thread: " + available_amount($item[ghost thread]) + ". Acquired from spooky ghosts (village).");
